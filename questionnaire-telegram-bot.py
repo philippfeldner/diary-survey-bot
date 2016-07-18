@@ -1,9 +1,19 @@
 import time
 import telegram
-import participant
+from participant import Participant
 import questions
 import threading
 import admin
+import sqlite3
+
+
+participants = dict()
+
+
+def initialize_participants():
+    while 1:  # TODO as long as there are users stored in the DB
+        participant_t = Participant(0)
+        participants[3] = participant_t
 
 
 # This function handles the
@@ -22,7 +32,7 @@ def message_handler(bot, update_id):
             reply = ' '
             bot.sendMessage(chat_id=chat_id, text=reply, parse_mode='HTML', disable_web_page_preview=True)
         else:
-            participant.response()
+            participants[chat_id].response()
     return update_id
 
 
