@@ -1,2 +1,4 @@
-participant/in_progress/*.json
-participant/completed/*.json
+in_progress/*.txt
+completed/*.txt
+participant/*.db
+questions/*.json
