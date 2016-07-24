@@ -6,7 +6,11 @@
 
 
 from telegram.ext import Updater, CommandHandler, Job, ConversationHandler, MessageHandler
+from telegram import Bot, Update
+import users.participant as participant
+from users import Participant
 import logging
+from data import question_handler
 import admin.settings as settings
 
 
@@ -15,20 +19,23 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.DEBUG)
 
 
-def start(bot, update):
-    participant.register(bot, update)
+def start(bot: Bot, update: Update):
+    bot.send_message()
+    Participant(update.message.chat_id)
 
 
-def stop(bot, update):
-    participant.stop(bot, update)
+def stop(bot: Bot, update: Update):
+    bot.send_message()
+    user = participant.dict_p[update.message.chat_id]
+    user.delete_participant()  # type: Participant
 
 
-def info(bot, update):
-    bot.sendMessage(update.chat_id, text='INFO PLACEHOLDER')
+def info(bot: Bot, update: Update):
+    bot.sendMessage(update.message.chat_id, text='INFO PLACEHOLDER')
 
 
-def error(bot, update, error):
-    logger.warn('Update "%s" caused error "%s"' % (update, error))
+def handler(bot, update):
+    message = question_handler()
 
 
 def main():

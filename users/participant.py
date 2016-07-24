@@ -1,7 +1,7 @@
 import sqlite3
 import pickle
 
-INIT, SET_1, SET_2, ADDITIONAL, FEEDBACK = range(5)
+INIT, SET = range(2)
 dict_p = dict()
 
 
@@ -15,6 +15,7 @@ class Participant:
     time_offset_ = 0
     conditions_ = []
 
+    state = INIT
     q_current_ = -1
     q_idle_ = False
 
@@ -106,6 +107,11 @@ def initialize_participants():
     cursor.execute("SELECT * FROM participants ORDER BY (ID)")
     participants = cursor.fetchall()
     # TODO
+
+
+def clean_database():
+    return
+    # Todo
 
 
 
