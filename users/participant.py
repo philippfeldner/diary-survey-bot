@@ -1,8 +1,9 @@
 import sqlite3
 import pickle
+import time
 
 INIT, SET = range(2)
-dict_p = dict()
+dict_p = {}
 
 
 class Participant:
@@ -20,15 +21,17 @@ class Participant:
     q_idle_ = False
 
     def __init__(self, chat_id=None):
-        self.id = chat_id
-        db = sqlite3.connect('participants.db')
-        db.execute("INSERT INTO participants "
-                   "(ID, conditions, time_offset, time_t, day_t, country, gender, language)"
+        self.chat_id_ = chat_id
+        db = sqlite3.connect('users/participants.db')
+        db.execute("INSERT INTO participants (ID, conditions, time_offset, time_t, day_t, country, gender, language) "
                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                    (chat_id, None, 0, '', 0, '', '', ''))
         db.commit()
         db.close()
         dict_p[self.chat_id_] = self
+        text = "User: " + str(self.chat_id_) + " registered. " + time.strftime("%X %x\n")
+        with open('log.txt', 'a') as log:
+            log.write(text)
 
     def set_language(self, language):
         self.language_ = language
@@ -56,7 +59,7 @@ class Participant:
 
     def increase_day_t(self):
         self.day_ += 1
-        db = sqlite3.connect('participants.db')
+        db = sqlite3.connect('users/participants.db')
         db.execute("UPDATE participants SET day_t=? WHERE ID=?", (self.day_, self.chat_id_))
         db.commit()
         db.close()
@@ -64,7 +67,7 @@ class Participant:
 
     def set_time_t(self, time):
         self.time_t_ = time
-        db = sqlite3.connect('participants.db')
+        db = sqlite3.connect('users/participants.db')
         db.execute("UPDATE participants SET time_t=? WHERE ID=?", (time, self.chat_id_))
         db.commit()
         db.close()
@@ -72,7 +75,7 @@ class Participant:
 
     def set_time_offset(self, offset):
         self.time_offset_ = offset
-        db = sqlite3.connect('participants.db')
+        db = sqlite3.connect('users/participants.db')
         db.execute("UPDATE participants SET time_offset=? WHERE ID=?", (offset, self.chat_id_))
         db.commit()
         db.close()
@@ -80,7 +83,7 @@ class Participant:
 
     def set_conditions(self, conditions):
         self.conditions_ += conditions
-        db = sqlite3.connect('participants.db')
+        db = sqlite3.connect('users/participants.db')
         cursor = db.cursor()
         cursor.execute("SELECT conditions FROM participants WHERE ID=?", self.chat_id_)
         fetch = cursor.fetchone()  # type: list
@@ -93,16 +96,17 @@ class Participant:
         return
 
     def delete_participant(self):
-        db = sqlite3.connect('participants.db')
+        db = sqlite3.connect('users/participants.db')
         db.execute("DELETE FROM participants WHERE ID=?", self.chat_id_)
         db.commit()
         db.close()
-        dict_p.pop(self.chat_id_)
+        del dict_p[self.chat_id_]
+        print('deleted' + str(self.chat_id_))
         return 0
 
 
 def initialize_participants():
-    db = sqlite3.connect('participants.db')
+    db = sqlite3.connect('users/participants.db')
     cursor = db.cursor()
     cursor.execute("SELECT * FROM participants ORDER BY (ID)")
     participants = cursor.fetchall()
