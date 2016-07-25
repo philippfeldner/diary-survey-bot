@@ -1,6 +1,6 @@
 import json
-from users import participant
+from user import participant
 
 
-def question_handler(bot, update):
+def question_handler(bot, update, user):
     return
