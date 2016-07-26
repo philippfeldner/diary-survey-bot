@@ -165,7 +165,7 @@ def initialize_participants():
         print(participants)
         for row in participants:
             user = Participant(row[0], init=False)
-            user.conditions_ = row[1]
+            user.conditions_ = pickle.loads(row[1])
             user.time_t_ = row[2]
             user.country_ = row[3]
             user.gender_ = row[4]

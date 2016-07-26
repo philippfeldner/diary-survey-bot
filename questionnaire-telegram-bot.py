@@ -39,9 +39,9 @@ def info(bot: Bot, update: Update):
 
 
 def main():
-    updater = Updater("")
+    updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
     dp = updater.dispatcher
-    # global user_map
+    global user_map
     user_map = initialize_participants()
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('stop', stop))
