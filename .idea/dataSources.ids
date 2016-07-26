@@ -6,14 +6,14 @@
     <schema name="" catalog=""/>
     <table name="participants" schema="" catalog="" type="TABLE">
       <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="conditions" sqlType="BLOB" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="time_offset" sqlType="NUMERIC" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="conditions" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="time_t" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="day_t" sqlType="NUMERIC" precision="0" scale="-1" nullable="true" jdbcType="6"/>
       <column name="country" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="gender" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="language" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <primary-key columns="id"/>
+      <column name="init_state" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="time_offset" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="day" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
     </table>
   </data-source>
 </component>

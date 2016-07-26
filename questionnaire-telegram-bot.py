@@ -3,7 +3,7 @@ from telegram import Bot, Update
 from user import Participant
 from data.questions import question_handler
 from user.participant import User
-import sqlite3
+from user.participant import initialize_participants
 
 user_map = User()
 
@@ -39,9 +39,10 @@ def info(bot: Bot, update: Update):
 
 
 def main():
-    updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
+    updater = Updater("")
     dp = updater.dispatcher
-
+    # global user_map
+    user_map = initialize_participants()
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))
