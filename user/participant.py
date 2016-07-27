@@ -1,23 +1,10 @@
-import sqlite3
 import pickle
+import sqlite3
 import time
 
+from data.data_set import DataSet
+
 INIT, SET = range(2)
-LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
-
-
-class User:
-    participants = {}
-
-    def __init__(self):
-        return
-
-    def get_participant(self, chat_id):
-        return self.participants[chat_id]
-
-    def add_participant(self, user):
-        self.participants[user.chat_id] = user
-        return
 
 
 class Participant:
@@ -29,10 +16,9 @@ class Participant:
     time_t_ = ''
     time_offset_ = 0xFFFF
     conditions_ = []
-    init_state_ = -1
+    question_id_ = -1
 
     state = INIT
-    q_current_ = -1
     q_idle_ = False
 
     def __init__(self, chat_id=None, init=True):
@@ -41,9 +27,9 @@ class Participant:
             try:
                 db = sqlite3.connect('user/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
-                           "country, gender, language, init_state, time_offset, day)"
+                           "country, gender, language, question_id, time_offset, day)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, None, '', '', '', '', -1, 0xFFFF, -1))
+                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 0xFFFF, -1))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
@@ -156,7 +142,7 @@ class Participant:
 
 
 def initialize_participants():
-    user_map = User()
+    user_map = DataSet()
     try:
         db = sqlite3.connect('user/participants.db')
         cursor = db.cursor()

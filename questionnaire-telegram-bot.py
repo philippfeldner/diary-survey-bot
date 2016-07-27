@@ -1,36 +1,39 @@
 from telegram.ext import Updater, CommandHandler, Job, MessageHandler, Filters
-from telegram import Bot, Update
+from telegram import Bot, Update, ReplyKeyboardMarkup
 from user import Participant
 from data.questions import question_handler
-from user.participant import User
+from data.data_set import DataSet
+from user.participant import DataSet
 from user.participant import initialize_participants
+from data.keyboard_presets import countries_rk
 
-user_map = User()
+data_set = DataSet()
 
 
 def start(bot: Bot, update: Update):
-    global user_map
-    if update.message.chat_id not in user_map.participants:
-        participant = Participant(update.message.chat_id)
-        user_map.participants[update.message.chat_id] = participant
-    # Message for /start
+    # reply_markup = ReplyKeyboardMarkup(countries_rk)
     bot.send_message(chat_id=update.message.chat_id, text="Test")
+
+    global data_set
+    if update.message.chat_id not in data_set.participants:
+        participant = Participant(update.message.chat_id)
+        data_set.participants[update.message.chat_id] = participant
+    # Message for /start
 
 
 def stop(bot: Bot, update: Update):
-    global user_map
+    global data_set
     chat_id = update.message.chat_id
-    user = user_map.participants[update.message.chat_id]
+    user = data_set.participants[update.message.chat_id]
     user.delete_participant()
-    del user_map.participants[update.message.chat_id]
+    del data_set.participants[update.message.chat_id]
     # Message for /stop
     bot.send_message(chat_id=chat_id, text="Test")
 
 
 def msg_handler(bot, update):
-    global user_map
-    user = user_map.participants[update.message.chat_id]
-    question_handler(bot, update, user)
+    global data_set
+    question_handler(bot, update, data_set)
     
 
 def info(bot: Bot, update: Update):
@@ -41,8 +44,8 @@ def info(bot: Bot, update: Update):
 def main():
     updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
     dp = updater.dispatcher
-    global user_map
-    user_map = initialize_participants()
+    global data_set
+    data_set = initialize_participants()
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))

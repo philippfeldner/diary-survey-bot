@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9d5a5b4-9edf-4a3d-b9ca-9cd59760119e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/data_set.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/keyboard_presets.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/participants.db" afterPath="$PROJECT_DIR$/user/participants.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/settings.py" afterPath="$PROJECT_DIR$/admin/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/questions.py" afterPath="$PROJECT_DIR$/data/questions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/questionnaire-telegram-bot.py" afterPath="$PROJECT_DIR$/questionnaire-telegram-bot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/__init__.py" afterPath="$PROJECT_DIR$/user/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/participant.py" afterPath="$PROJECT_DIR$/user/participant.py" />
     </list>
     <ignored path="questionnaire-telegram-bot.iws" />
@@ -18,7 +25,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$questionnaire_telegram_bot.coverage" NAME="questionnaire-telegram-bot Coverage Results" MODIFIED="1469557081243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$questionnaire_telegram_bot.coverage" NAME="questionnaire-telegram-bot Coverage Results" MODIFIED="1469646943193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$generate_keyboard.coverage" NAME="generate_keyboard Coverage Results" MODIFIED="1469645934679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,14 +43,14 @@
     <favorites_list name="questionnaire-telegram-bot" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.54750514">
+    <splitter split-orientation="horizontal" split-proportion="0.747807">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="questionnaire-telegram-bot.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/questionnaire-telegram-bot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="738">
-                  <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+                <state relative-caret-position="630">
+                  <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#78#0" expanded="true" />
                   </folding>
@@ -50,26 +58,70 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="participant.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="questions.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/data/questions.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="data_set.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/data/data_set.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="774">
+                  <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/admin/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="36">
+                  <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247971765/builtins.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="618">
+                  <caret line="2884" column="6" selection-start-line="2884" selection-start-column="6" selection-end-line="2884" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="participant.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/user/participant.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3006">
-                  <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+                <state relative-caret-position="342">
+                  <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
                   <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                    <marker date="1469559035185" expanded="true" signature="833:857" placeholder="INSERT INTO participants... " />
-                    <marker date="1469559035185" expanded="true" signature="833:968" placeholder="INSERT INTO participants... " />
-                    <marker date="1469559035185" expanded="true" signature="833:1032" placeholder="INSERT INTO participants... " />
-                    <marker date="1469559035185" expanded="true" signature="1701:1746" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="2056:2099" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="2411:2455" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="2758:2800" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="3124:3167" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="3490:3538" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="3905:3951" placeholder="SELECT condi... participants" />
-                    <marker date="1469559035185" expanded="true" signature="4196:4243" placeholder="UPDATE parti... " />
-                    <marker date="1469559035185" expanded="true" signature="4524:4559" placeholder="DELETE FROM " />
-                    <marker date="1469559035185" expanded="true" signature="5133:5173" placeholder="SELECT * FRO... participants" />
+                    <element signature="e#0#13#0" expanded="true" />
+                    <marker date="1469653966237" expanded="true" signature="532:556" placeholder="INSERT INTO participants... " />
+                    <marker date="1469653966237" expanded="true" signature="532:668" placeholder="INSERT INTO participants... " />
+                    <marker date="1469653966237" expanded="true" signature="532:732" placeholder="INSERT INTO participants... " />
+                    <marker date="1469653966237" expanded="true" signature="1413:1458" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="1768:1811" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="2123:2167" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="2470:2512" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="2836:2879" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="3202:3250" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="3617:3663" placeholder="SELECT condi... participants" />
+                    <marker date="1469653966237" expanded="true" signature="3908:3955" placeholder="UPDATE parti... " />
+                    <marker date="1469653966237" expanded="true" signature="4236:4271" placeholder="DELETE FROM " />
+                    <marker date="1469653966237" expanded="true" signature="4848:4888" placeholder="SELECT * FRO... participants" />
                   </folding>
                 </state>
               </provider>
@@ -89,15 +141,15 @@
           </file>
           <file leaf-file-name="participants" pinned="false" current-in-tab="false">
             <entry file="dbDummy://dbtable:/a925b50e/76af6b00-face-404f-9e57-a81ae3efb9db/participants">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
               <provider editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -105,8 +157,8 @@
           <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/log.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+                <state relative-caret-position="702">
+                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -118,15 +170,15 @@
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="participants" pinned="false" current-in-tab="true">
             <entry file="dbDummy://dbtable:/a925b50e/76af6b00-face-404f-9e57-a81ae3efb9db/participants">
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
               <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
                 <state>
                   <filtering enabled="true" />
+                </state>
+              </provider>
+              <provider editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -158,16 +210,20 @@
         <option value="$PROJECT_DIR$/participant/__init__.py" />
         <option value="$PROJECT_DIR$/questions/questions.py" />
         <option value="$PROJECT_DIR$/questions/__init__.py" />
-        <option value="$PROJECT_DIR$/admin/settings.py" />
         <option value="$PROJECT_DIR$/data/__init__.py" />
         <option value="$PROJECT_DIR$/users/__init__.py" />
         <option value="$PROJECT_DIR$/users/participant.py" />
         <option value="$PROJECT_DIR$/user/__init__.py" />
-        <option value="$PROJECT_DIR$/data/questions.py" />
         <option value="$PROJECT_DIR$/log.txt" />
         <option value="dbtable:/a925b50e/76af6b00-face-404f-9e57-a81ae3efb9db/participants" />
-        <option value="$PROJECT_DIR$/questionnaire-telegram-bot.py" />
+        <option value="$PROJECT_DIR$/data/reply_keyboard_presets.py" />
+        <option value="$PROJECT_DIR$/generate_keyboard.py" />
+        <option value="$PROJECT_DIR$/data/keyboard_presets.py" />
         <option value="$PROJECT_DIR$/user/participant.py" />
+        <option value="$PROJECT_DIR$/data/questions.py" />
+        <option value="$PROJECT_DIR$/admin/settings.py" />
+        <option value="$PROJECT_DIR$/data/data_set.py" />
+        <option value="$PROJECT_DIR$/questionnaire-telegram-bot.py" />
       </list>
     </option>
   </component>
@@ -209,7 +265,66 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="questionnaire-telegram-bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
@@ -218,7 +333,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/data_set.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
@@ -242,6 +357,24 @@
       <module name="questionnaire-telegram-bot" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/questionnaire-telegram-bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="generate_keyboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="questionnaire-telegram-bot" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generate_keyboard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -454,12 +587,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.questionnaire-telegram-bot" />
+      <item index="1" class="java.lang.String" itemvalue="Python.generate_keyboard" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Python.questionnaire-telegram-bot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.generate_keyboard" />
       </list>
     </recent_temporary>
   </component>
@@ -492,24 +627,24 @@
     <frame x="-1" y="30" width="1922" height="1051" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29803494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30724174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45305678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45260915" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18853363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38300222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19251925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38300222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -530,43 +665,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/participant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1469559035185" expanded="true" signature="833:857" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="833:968" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="833:1032" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="1701:1746" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2056:2099" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2411:2455" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2758:2800" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3124:3167" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3490:3538" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3905:3951" placeholder="SELECT condi... participants" />
-            <marker date="1469559035185" expanded="true" signature="4196:4243" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="4524:4559" placeholder="DELETE FROM " />
-            <marker date="1469559035185" expanded="true" signature="5133:5173" placeholder="SELECT * FRO... participants" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.4/dist-packages/telegram/ext/updater.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.4/dist-packages/telegram/ext/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/questionnaire-telegram-bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -597,20 +695,20 @@
         <state relative-caret-position="234">
           <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1469559035185" expanded="true" signature="833:857" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="833:968" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="833:1032" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="1701:1746" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2056:2099" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2411:2455" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2758:2800" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3124:3167" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3490:3538" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3905:3951" placeholder="SELECT condi... participants" />
-            <marker date="1469559035185" expanded="true" signature="4196:4243" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="4524:4559" placeholder="DELETE FROM " />
-            <marker date="1469559035185" expanded="true" signature="5133:5173" placeholder="SELECT * FRO... participants" />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1469653966237" expanded="true" signature="532:556" placeholder="INSERT INTO participants... " />
+            <marker date="1469653966237" expanded="true" signature="532:668" placeholder="INSERT INTO participants... " />
+            <marker date="1469653966237" expanded="true" signature="532:732" placeholder="INSERT INTO participants... " />
+            <marker date="1469653966237" expanded="true" signature="1413:1458" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="1768:1811" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="2123:2167" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="2470:2512" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="2836:2879" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="3202:3250" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="3617:3663" placeholder="SELECT condi... participants" />
+            <marker date="1469653966237" expanded="true" signature="3908:3955" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="4236:4271" placeholder="DELETE FROM " />
+            <marker date="1469653966237" expanded="true" signature="4848:4888" placeholder="SELECT * FRO... participants" />
           </folding>
         </state>
       </provider>
@@ -689,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247971765/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="5108" column="8" selection-start-line="5108" selection-start-column="8" selection-end-line="5108" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.4/dist-packages/telegram/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -714,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="1570" column="4" selection-start-line="1570" selection-start-column="4" selection-end-line="1570" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,13 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -831,17 +914,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/questions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.4/dist-packages/telegram/message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247971765/_sqlite3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="279" column="8" selection-start-line="279" selection-start-column="8" selection-end-line="279" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -857,62 +940,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/log.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247971765/_sqlite3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="279" column="8" selection-start-line="279" selection-start-column="8" selection-end-line="279" selection-end-column="8" />
+        <state relative-caret-position="702">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/a925b50e/76af6b00-face-404f-9e57-a81ae3efb9db/participants">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_keyboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/keyboard_presets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="211" column="26" selection-start-line="211" selection-start-column="26" selection-end-line="211" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247971765/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="2884" column="6" selection-start-line="2884" selection-start-column="6" selection-end-line="2884" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/participant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1469653966237" expanded="true" signature="532:556" placeholder="INSERT INTO participants... " />
+            <marker date="1469653966237" expanded="true" signature="532:668" placeholder="INSERT INTO participants... " />
+            <marker date="1469653966237" expanded="true" signature="532:732" placeholder="INSERT INTO participants... " />
+            <marker date="1469653966237" expanded="true" signature="1413:1458" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="1768:1811" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="2123:2167" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="2470:2512" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="2836:2879" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="3202:3250" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="3617:3663" placeholder="SELECT condi... participants" />
+            <marker date="1469653966237" expanded="true" signature="3908:3955" placeholder="UPDATE parti... " />
+            <marker date="1469653966237" expanded="true" signature="4236:4271" placeholder="DELETE FROM " />
+            <marker date="1469653966237" expanded="true" signature="4848:4888" placeholder="SELECT * FRO... participants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/questions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/questionnaire-telegram-bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+        <state relative-caret-position="630">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/participant.py">
+    <entry file="file://$PROJECT_DIR$/data/data_set.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3006">
-          <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+        <state relative-caret-position="774">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1469559035185" expanded="true" signature="833:857" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="833:968" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="833:1032" placeholder="INSERT INTO participants... " />
-            <marker date="1469559035185" expanded="true" signature="1701:1746" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2056:2099" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2411:2455" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="2758:2800" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3124:3167" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3490:3538" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="3905:3951" placeholder="SELECT condi... participants" />
-            <marker date="1469559035185" expanded="true" signature="4196:4243" placeholder="UPDATE parti... " />
-            <marker date="1469559035185" expanded="true" signature="4524:4559" placeholder="DELETE FROM " />
-            <marker date="1469559035185" expanded="true" signature="5133:5173" placeholder="SELECT * FRO... participants" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

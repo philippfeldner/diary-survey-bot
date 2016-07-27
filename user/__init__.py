@@ -1,7 +1,7 @@
 from .participant import Participant
-from .participant import User
+from data.data_set import DataSet
 
-__all__ = [Participant, User]
+__all__ = [Participant, DataSet]
 
 
 
