@@ -31,9 +31,9 @@ def stop(bot: Bot, update: Update):
     bot.send_message(chat_id=chat_id, text="Test")
 
 
-def msg_handler(bot, update):
+def msg_handler(bot, update, job_queue):
     global data_set
-    question_handler(bot, update, data_set)
+    question_handler(bot, update, data_set, job_queue)
     
 
 def info(bot: Bot, update: Update):
@@ -45,7 +45,7 @@ def main():
     updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
     dp = updater.dispatcher
     global data_set
-    data_set = initialize_participants()
+    data_set = initialize_participants(dp.job_queue)
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))

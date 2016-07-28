@@ -1,6 +1,7 @@
 import pickle
 import sqlite3
 import time
+from telegram.ext import JobQueue
 
 from data.data_set import DataSet
 
@@ -107,7 +108,9 @@ class Participant:
             print(error)
         return
 
-    def set_conditions(self, conditions):
+    def add_conditions(self, conditions):
+        if conditions == []:
+            return
         self.conditions_ += conditions
         try:
             db = sqlite3.connect('user/participants.db')
@@ -123,6 +126,17 @@ class Participant:
         except sqlite3.Error as error:
             print(error)
         return
+
+    def increase_question_id(self):
+        self.question_id_ += 1
+        try:
+            db = sqlite3.connect('user/participants.db')
+            db.execute("UPDATE participants SET question_id=? WHERE ID=?", (self.question_id_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.question_id_
 
     def delete_participant(self):
         try:
@@ -140,15 +154,21 @@ class Participant:
             print(error)
         return 0
 
+    def requirements(self, condition, restriction):
+        if condition == [] or condition in self.conditions_:
+            return True
+        else:
+            return False
 
-def initialize_participants():
+
+def initialize_participants(job_queue: JobQueue):
     user_map = DataSet()
     try:
         db = sqlite3.connect('user/participants.db')
         cursor = db.cursor()
         cursor.execute("SELECT * FROM participants ORDER BY (ID)")
         participants = cursor.fetchall()
-        print(participants)
+        # print(participants)
         for row in participants:
             user = Participant(row[0], init=False)
             user.conditions_ = pickle.loads(row[1])
@@ -160,6 +180,10 @@ def initialize_participants():
             user.time_offset_ = row[7]
             user.day_ = row[8]
             user_map.participants[row[0]] = user
+            if user.time_t_ == '':
+                return  # TODO
+            else:
+                job_queue  # TODO
     except sqlite3.Error as error:
         print(error)
     return user_map
