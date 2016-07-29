@@ -1,0 +1,5593 @@
+[
+  {
+    "id": 0,
+    "day": 1,
+    "choice": [
+      "Yes, let's start",
+      "No, I changed my mind and I don't want to participate"
+    ],
+    "question": "Hey there and thanks for participating! For your chance to win a 150€ Amazon voucher and – if you wish – to get your personal physical activity and mood overview, we ask you to answer some questions via the app Telegram each evening for the coming six weeks, with a follow-up week one month after the main part of the study. The questions will mainly be about your physical activity and your use (or non-use) of Pokémon GO. All in all, you will be chatting with our chatbot for less than an hour and you can always e-mail us if you need additional support. Please know that your participation is voluntary and that you can decide to stop anytime by just sending us a message that says `stop´ in the Telegram chat. We also promise not to pass your personal information to others. We will only use your data for scientific purposes and if we use them in a publication, this will only be in aggregated form. This means that we only look at what happens in the whole group and not at what a single person answers. The only exception will be if you ask us to give you a personal physical activity and mood overview at the end of the study – then we will prepare a graph with only your data in it and send it to you (and no one else). To participate, you must be at least 18 years old. If you have any questions, please feel free to send an e-mail with the subject Pokemon to pokemon@uni-graz.at. Ready to start?",
+    "conditions_required": [],
+    "conditions": [
+      "No, I changed my mind and I don't want to participate"
+    ],
+    "commands": []
+  },
+  {
+    "id": 1,
+    "day": 1,
+    "choice": [],
+    "question": "Thank you for your participation! If you want to, we would appreciate a message why you don't feel like continuing the study. Anyway, if you change your mind, you can resume by sending us a message with the word start.",
+    "conditions_required": [
+      [
+        "No, I changed my mind and I don't want to participate",
+        0
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 2,
+    "day": 1,
+    "choice": [
+      "I want more information about apps that count my steps",
+      "I already have an app that counts my steps and I would like to use that one",
+      "No thanks, I want to participate without counting my steps per day"
+    ],
+    "question": "Before we start: We are very interested in your daily physical acticity. If you would like to double your chances of winning, then please install an app that counts your steps per day and tell us each evening your daily time spent walking according to your app.",
+    "conditions_required": [],
+    "conditions": [
+      "I want more information about apps that count my steps"
+    ],
+    "commands": []
+  },
+  {
+    "id": 3,
+    "day": 1,
+    "choice": [
+      "Done and continue",
+      "No, I changed my mind and I don't want to use a step counter"
+    ],
+    "question": "Thanks for deciding to install a step counting app. We recommend the app Accupedo Pedometer. You can download it in your App Store / Play Store. If you find another step counter that you like better, of course you can use that one.",
+    "conditions_required": [
+      [
+        "I want more information about apps that count my steps",
+        2
+      ]
+    ],
+    "conditions": [
+      "Done and continue"
+    ],
+    "commands": []
+  },
+  {
+    "id": 4,
+    "day": 1,
+    "choice": [
+      "UHRZEIT UHRZEIT UHRZEIT UHRZEIT UHRZEIT - Auswahl zwischen 6pm und 1am??"
+    ],
+    "question": "One more important thing: We will send you a few short questions every evening. What is a convenient time for you? Please pick a time at the end of your day, when you're usually about to go to sleep and try to answer the questions within an hour of the prompt we send you.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 5,
+    "day": 1,
+    "choice": [
+      "UUUUUUUUUUUUUUUUUUUUUUUUUUHRZEIT????"
+    ],
+    "question": "What's the time right now at your place? We ask this, so we will be able to send you the daily questions at the time you have set, depending on your current time zone.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 6,
+    "day": 1,
+    "choice": [
+      "Continue"
+    ],
+    "question": "Thank you! Right now, we will start by sending you a couple of questions. No worries, you will remain anonymous.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 7,
+    "day": 1,
+    "choice": [
+      "male",
+      "female"
+    ],
+    "question": "Gender",
+    "conditions_required": [],
+    "conditions": [
+      "female"
+    ],
+    "commands": []
+  },
+  {
+    "id": 8,
+    "day": 1,
+    "choice": [],
+    "question": "Age",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 9,
+    "day": 1,
+    "choice": [],
+    "question": "Which country are you from?",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 10,
+    "day": 1,
+    "choice": [
+      "urban",
+      "rural"
+    ],
+    "question": "Do you live in a rather urban or rural area?",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 11,
+    "day": 1,
+    "choice": [],
+    "question": "About how much time per day do you use your mobile phone to play games? Please indicate hours and minutes in the format hh:mm. For example, if you play for 2 hours and 15 minutes, write 02:15.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 12,
+    "day": 1,
+    "choice": [],
+    "question": "About how much time per day are you up and about (walking or jogging)? Please indicate hours and minutes in the format hh:mm.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 13,
+    "day": 1,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Do you exercise regularly?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 14,
+    "day": 1,
+    "choice": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "question": "On what days do you typically exercise?",
+    "conditions_required": [
+      [
+        "yes",
+        13
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 15,
+    "day": 1,
+    "choice": [
+      "yes",
+      "no",
+      "I play it",
+      "I have already played it, but do not play it anymore"
+    ],
+    "question": "Have you heard of the app Pokémon GO?",
+    "conditions_required": [],
+    "conditions": [
+      "I play it",
+      "I have already played it, but do not play it anymore"
+    ],
+    "commands": []
+  },
+  {
+    "id": 16,
+    "day": 1,
+    "choice": [],
+    "question": "How many days ago did you start playing?",
+    "conditions_required": [
+      [
+        "I play it",
+        15
+      ],
+      [
+        "I have already played it, but do not play it anymore",
+        15
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 17,
+    "day": 1,
+    "choice": [
+      "daily",
+      "every other day",
+      "a couple of times per week",
+      "a couple of times per month"
+    ],
+    "question": "How often do you play?",
+    "conditions_required": [
+      [
+        "I play it",
+        15
+      ],
+      [
+        "I have already played it, but do not play it anymore",
+        15
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 18,
+    "day": 1,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "How are you at the moment? Please note: You can also click the empty boxes, if your feelings are somewhere in between.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 19,
+    "day": 1,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please indicate hours and minutes in the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 20,
+    "day": 1,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please indicate hours and minutes in the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 21,
+    "day": 1,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 22,
+    "day": 1,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        21
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 23,
+    "day": 1,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        21
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 24,
+    "day": 1,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        21
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 25,
+    "day": 1,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 26,
+    "day": 2,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 27,
+    "day": 2,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please indicate hours and minutes in the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 28,
+    "day": 2,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please indicate hours and minutes in the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 29,
+    "day": 2,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 30,
+    "day": 2,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        29
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 31,
+    "day": 2,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        29
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 32,
+    "day": 2,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        29
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 33,
+    "day": 2,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 34,
+    "day": 3,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 35,
+    "day": 3,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 36,
+    "day": 3,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 37,
+    "day": 3,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 38,
+    "day": 3,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        37
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 39,
+    "day": 3,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        37
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 40,
+    "day": 3,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        37
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 41,
+    "day": 3,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 42,
+    "day": 4,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 43,
+    "day": 4,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 44,
+    "day": 4,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 45,
+    "day": 4,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 46,
+    "day": 4,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        45
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 47,
+    "day": 4,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        45
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 48,
+    "day": 4,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        45
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 49,
+    "day": 4,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 50,
+    "day": 5,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 51,
+    "day": 5,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 52,
+    "day": 5,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 53,
+    "day": 5,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 54,
+    "day": 5,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        53
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 55,
+    "day": 5,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        53
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 56,
+    "day": 5,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        53
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 57,
+    "day": 5,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 58,
+    "day": 6,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 59,
+    "day": 6,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 60,
+    "day": 6,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 61,
+    "day": 6,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 62,
+    "day": 6,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        61
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 63,
+    "day": 6,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        61
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 64,
+    "day": 6,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        61
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 65,
+    "day": 6,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 66,
+    "day": 7,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 67,
+    "day": 7,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 68,
+    "day": 7,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 69,
+    "day": 7,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 70,
+    "day": 7,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        69
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 71,
+    "day": 7,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        69
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 72,
+    "day": 7,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        69
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 73,
+    "day": 7,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 74,
+    "day": 8,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 75,
+    "day": 8,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 76,
+    "day": 8,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 77,
+    "day": 8,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 78,
+    "day": 8,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        77
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 79,
+    "day": 8,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        77
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 80,
+    "day": 8,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        77
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 81,
+    "day": 8,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 82,
+    "day": 9,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 83,
+    "day": 9,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 84,
+    "day": 9,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 85,
+    "day": 9,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 86,
+    "day": 9,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        85
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 87,
+    "day": 9,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        85
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 88,
+    "day": 9,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        85
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 89,
+    "day": 9,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 90,
+    "day": 10,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 91,
+    "day": 10,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 92,
+    "day": 10,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 93,
+    "day": 10,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 94,
+    "day": 10,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        93
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 95,
+    "day": 10,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        93
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 96,
+    "day": 10,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        93
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 97,
+    "day": 10,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 98,
+    "day": 11,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 99,
+    "day": 11,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 100,
+    "day": 11,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 101,
+    "day": 11,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 102,
+    "day": 11,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        101
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 103,
+    "day": 11,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        101
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 104,
+    "day": 11,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        101
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 105,
+    "day": 11,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 106,
+    "day": 12,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 107,
+    "day": 12,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 108,
+    "day": 12,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 109,
+    "day": 12,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 110,
+    "day": 12,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        109
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 111,
+    "day": 12,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        109
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 112,
+    "day": 12,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        109
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 113,
+    "day": 12,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 114,
+    "day": 13,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 115,
+    "day": 13,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 116,
+    "day": 13,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 117,
+    "day": 13,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 118,
+    "day": 13,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        117
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 119,
+    "day": 13,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        117
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 120,
+    "day": 13,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        117
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 121,
+    "day": 13,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 122,
+    "day": 14,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 123,
+    "day": 14,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 124,
+    "day": 14,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 125,
+    "day": 14,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 126,
+    "day": 14,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        125
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 127,
+    "day": 14,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        125
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 128,
+    "day": 14,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        125
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 129,
+    "day": 14,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 130,
+    "day": 15,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 131,
+    "day": 15,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 132,
+    "day": 15,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 133,
+    "day": 15,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 134,
+    "day": 15,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        133
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 135,
+    "day": 15,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        133
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 136,
+    "day": 15,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        133
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 137,
+    "day": 15,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 138,
+    "day": 16,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 139,
+    "day": 16,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 140,
+    "day": 16,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 141,
+    "day": 16,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 142,
+    "day": 16,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        141
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 143,
+    "day": 16,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        141
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 144,
+    "day": 16,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        141
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 145,
+    "day": 16,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 146,
+    "day": 17,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 147,
+    "day": 17,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 148,
+    "day": 17,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 149,
+    "day": 18,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 150,
+    "day": 17,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        149
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 151,
+    "day": 17,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        149
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 152,
+    "day": 17,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        149
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 153,
+    "day": 17,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 154,
+    "day": 18,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 155,
+    "day": 18,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 156,
+    "day": 18,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 157,
+    "day": 18,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 158,
+    "day": 18,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        157
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 159,
+    "day": 18,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        157
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 160,
+    "day": 18,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        157
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 161,
+    "day": 18,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 162,
+    "day": 19,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 163,
+    "day": 19,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 164,
+    "day": 19,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 165,
+    "day": 19,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 166,
+    "day": 19,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        165
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 167,
+    "day": 19,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        165
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 168,
+    "day": 19,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        165
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 169,
+    "day": 19,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 170,
+    "day": 20,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 171,
+    "day": 20,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 172,
+    "day": 20,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 173,
+    "day": 20,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 174,
+    "day": 20,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        173
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 175,
+    "day": 20,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        173
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 176,
+    "day": 20,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        173
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 177,
+    "day": 20,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 178,
+    "day": 21,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 179,
+    "day": 21,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 180,
+    "day": 21,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 181,
+    "day": 21,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 182,
+    "day": 21,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        181
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 183,
+    "day": 21,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        181
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 184,
+    "day": 21,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        181
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 185,
+    "day": 21,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 186,
+    "day": 22,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 187,
+    "day": 22,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 188,
+    "day": 22,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 189,
+    "day": 22,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 190,
+    "day": 22,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        189
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 191,
+    "day": 22,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        189
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 192,
+    "day": 22,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        189
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 193,
+    "day": 22,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 194,
+    "day": 23,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 195,
+    "day": 23,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 196,
+    "day": 23,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 197,
+    "day": 23,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 198,
+    "day": 23,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        197
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 199,
+    "day": 23,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        197
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 200,
+    "day": 23,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        197
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 201,
+    "day": 23,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 210,
+    "day": 24,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 210,
+    "day": 24,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 211,
+    "day": 24,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 212,
+    "day": 24,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 213,
+    "day": 24,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        212
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 214,
+    "day": 24,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        212
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 215,
+    "day": 24,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        212
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 216,
+    "day": 24,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 217,
+    "day": 25,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 218,
+    "day": 25,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 219,
+    "day": 25,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 220,
+    "day": 25,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 221,
+    "day": 25,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        220
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 222,
+    "day": 25,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        220
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 223,
+    "day": 25,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        220
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 224,
+    "day": 25,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 225,
+    "day": 26,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 226,
+    "day": 26,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 227,
+    "day": 26,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 228,
+    "day": 26,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 229,
+    "day": 26,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        228
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 230,
+    "day": 26,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        228
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 231,
+    "day": 26,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        228
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 232,
+    "day": 26,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 233,
+    "day": 27,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 234,
+    "day": 27,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 235,
+    "day": 27,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 236,
+    "day": 27,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 237,
+    "day": 27,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        236
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 238,
+    "day": 27,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        236
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 239,
+    "day": 27,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        236
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 240,
+    "day": 27,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 241,
+    "day": 28,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 242,
+    "day": 28,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 243,
+    "day": 28,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 244,
+    "day": 28,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 245,
+    "day": 28,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        244
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 246,
+    "day": 28,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        244
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 247,
+    "day": 28,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        244
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 248,
+    "day": 28,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 249,
+    "day": 29,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 250,
+    "day": 29,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 251,
+    "day": 29,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 252,
+    "day": 29,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 253,
+    "day": 29,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        252
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 254,
+    "day": 29,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        252
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 255,
+    "day": 29,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        252
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 256,
+    "day": 29,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 257,
+    "day": 30,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 258,
+    "day": 30,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 259,
+    "day": 30,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 260,
+    "day": 30,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 261,
+    "day": 30,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        260
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 262,
+    "day": 30,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        260
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 263,
+    "day": 30,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        260
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 264,
+    "day": 30,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 265,
+    "day": 31,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 266,
+    "day": 31,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 267,
+    "day": 31,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 268,
+    "day": 31,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 269,
+    "day": 31,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        268
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 270,
+    "day": 31,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        268
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 271,
+    "day": 31,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        268
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 272,
+    "day": 31,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 273,
+    "day": 32,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 274,
+    "day": 32,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 275,
+    "day": 32,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 276,
+    "day": 32,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 278,
+    "day": 32,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        276
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 279,
+    "day": 32,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        276
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 280,
+    "day": 32,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        276
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 281,
+    "day": 32,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 282,
+    "day": 33,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 283,
+    "day": 33,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 284,
+    "day": 33,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 285,
+    "day": 33,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 286,
+    "day": 33,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        285
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 287,
+    "day": 33,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        285
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 288,
+    "day": 33,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        285
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 289,
+    "day": 33,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 290,
+    "day": 34,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 291,
+    "day": 34,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 292,
+    "day": 34,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 293,
+    "day": 34,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 294,
+    "day": 34,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        293
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 295,
+    "day": 34,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        293
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 296,
+    "day": 34,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        293
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 297,
+    "day": 34,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 298,
+    "day": 35,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 299,
+    "day": 35,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 300,
+    "day": 35,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 301,
+    "day": 35,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 302,
+    "day": 35,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        301
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 303,
+    "day": 35,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        301
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 304,
+    "day": 35,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        301
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 305,
+    "day": 35,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 306,
+    "day": 36,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 307,
+    "day": 36,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 308,
+    "day": 36,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 309,
+    "day": 36,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 310,
+    "day": 36,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        309
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 311,
+    "day": 36,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        309
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 312,
+    "day": 36,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        309
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 313,
+    "day": 36,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 314,
+    "day": 37,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 315,
+    "day": 37,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 316,
+    "day": 37,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 317,
+    "day": 37,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 318,
+    "day": 37,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        317
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 319,
+    "day": 37,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        317
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 320,
+    "day": 37,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        317
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 321,
+    "day": 37,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 322,
+    "day": 38,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 323,
+    "day": 38,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 324,
+    "day": 38,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 325,
+    "day": 38,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 326,
+    "day": 38,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        325
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 327,
+    "day": 38,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        325
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 328,
+    "day": 38,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        325
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 329,
+    "day": 38,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 330,
+    "day": 39,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 331,
+    "day": 39,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 332,
+    "day": 39,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 333,
+    "day": 39,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 334,
+    "day": 39,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        333
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 335,
+    "day": 39,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        333
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 336,
+    "day": 39,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        333
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 337,
+    "day": 39,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 338,
+    "day": 40,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 339,
+    "day": 40,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 340,
+    "day": 40,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 341,
+    "day": 40,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 342,
+    "day": 40,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        341
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 343,
+    "day": 40,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        341
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 344,
+    "day": 40,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        341
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 345,
+    "day": 40,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 346,
+    "day": 41,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 347,
+    "day": 41,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 348,
+    "day": 41,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 349,
+    "day": 41,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 350,
+    "day": 41,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        349
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 351,
+    "day": 41,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        349
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 352,
+    "day": 41,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        349
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 353,
+    "day": 41,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 354,
+    "day": 42,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 355,
+    "day": 42,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 356,
+    "day": 42,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 357,
+    "day": 42,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 358,
+    "day": 42,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        357
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 359,
+    "day": 42,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        357
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 360,
+    "day": 42,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        357
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 361,
+    "day": 42,
+    "choice": [],
+    "question": "Thank you and congratulations! You already completed 85% of the survey. Now, we will pause for one month and then we will ask you the same questions again for one more week. If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at. I hope to hear from you then! Lisa",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 362,
+    "day": 71,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, great to have you back! How are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 363,
+    "day": 71,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 364,
+    "day": 71,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 365,
+    "day": 71,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 366,
+    "day": 71,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        365
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 367,
+    "day": 71,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        365
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 368,
+    "day": 71,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        365
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 369,
+    "day": 71,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 370,
+    "day": 72,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 371,
+    "day": 72,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 372,
+    "day": 72,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 373,
+    "day": 72,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 374,
+    "day": 72,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        373
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 375,
+    "day": 72,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        373
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 376,
+    "day": 72,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        373
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 377,
+    "day": 72,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 378,
+    "day": 73,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 379,
+    "day": 73,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 380,
+    "day": 73,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 381,
+    "day": 73,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 382,
+    "day": 73,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        381
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 383,
+    "day": 73,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        381
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 384,
+    "day": 73,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        381
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 385,
+    "day": 73,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 386,
+    "day": 74,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 387,
+    "day": 74,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 388,
+    "day": 74,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 389,
+    "day": 74,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 390,
+    "day": 74,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        389
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 391,
+    "day": 74,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        389
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 392,
+    "day": 74,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        389
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 393,
+    "day": 74,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 394,
+    "day": 75,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 395,
+    "day": 75,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 396,
+    "day": 75,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 397,
+    "day": 75,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 398,
+    "day": 75,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        397
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 399,
+    "day": 75,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        397
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 400,
+    "day": 75,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        397
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 401,
+    "day": 75,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 402,
+    "day": 76,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 403,
+    "day": 76,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 403,
+    "day": 76,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 405,
+    "day": 76,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 406,
+    "day": 76,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        405
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 407,
+    "day": 76,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        405
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 408,
+    "day": 76,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        405
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 409,
+    "day": 76,
+    "choice": [],
+    "question": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 410,
+    "day": 77,
+    "choice": [
+      ":(",
+      "   ",
+      "   ",
+      ":|",
+      "   ",
+      "   ",
+      ":D"
+    ],
+    "question": "Hey, how are you at the moment? Please remember: You can also click the empty boxes.",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 411,
+    "day": 77,
+    "choice": [],
+    "question": "About how much time were you up and about (walking or jogging) today? Please use the format hh:mm",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 412,
+    "day": 77,
+    "choice": [],
+    "question": "According to your step counting app, how much time did you spend walking or jogging today? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "Done and continue",
+        3
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 413,
+    "day": 77,
+    "choice": [
+      "yes",
+      "no"
+    ],
+    "question": "Have you played Pokémon GO today?",
+    "conditions_required": [],
+    "conditions": [
+      "yes"
+    ],
+    "commands": []
+  },
+  {
+    "id": 414,
+    "day": 77,
+    "choice": [],
+    "question": "How long did you play? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        413
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 415,
+    "day": 77,
+    "choice": [],
+    "question": "About how much time did you spend walking or jogging while playing? Please use the format hh:mm",
+    "conditions_required": [
+      [
+        "yes",
+        413
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 416,
+    "day": 77,
+    "choice": [],
+    "question": "What is your current level?",
+    "conditions_required": [
+      [
+        "yes",
+        413
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 417,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "never",
+      "hardly ever",
+      "seldom",
+      "sometimes",
+      "often",
+      "very often",
+      "always"
+    ],
+    "question": "Alright, since this is the last day of our study, we would like to ask you some more questions. If you have played Pokémon GO, how often did you play with friends?",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 418,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "never",
+      "hardly ever",
+      "seldom",
+      "sometimes",
+      "often",
+      "very often",
+      "always"
+    ],
+    "question": "How often do you meet new people because of the game?",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 419,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "How much do the following statements apply to you? I like to play Pokémon GO with my friends",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 420,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "I like that you play Pokémon GO outside in the fresh air",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 421,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "I like that you walk while playing",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 422,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "I like that you get little rewards while playing",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 423,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "I like that you are part of a team in the game",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 424,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "I like that you collect Pokémon, points, and items",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 425,
+    "day": 77,
+    "choice": [
+      "I don't play",
+      "does not apply at all",
+      "does not apply",
+      "does not really apply",
+      "partly",
+      "applies a bit",
+      "applies",
+      "applies a lot"
+    ],
+    "question": "I like the gym battles",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 426,
+    "day": 77,
+    "choice": [
+      "That's my secret",
+      "I will give you the approximate date"
+    ],
+    "question": "Finally, we have one more question concerning your menstrual cycle. Since mood is related to hormonal fluctuations, it is important for us to know when your last menstruation started. We know that this is very personal information, but we would be glad if you would give us the date anyway.",
+    "conditions_required": [
+      [
+        "female",
+        7
+      ]
+    ],
+    "conditions": [
+      "I will give you the approximate date"
+    ],
+    "commands": []
+  },
+  {
+    "id": 427,
+    "day": 77,
+    "choice": [],
+    "question": "Date:",
+    "conditions_required": [
+      [
+        "I will give you the approximate date",
+        426
+      ]
+    ],
+    "conditions": [],
+    "commands": []
+  },
+  {
+    "id": 428,
+    "day": 77,
+    "choice": [],
+    "question": "That's it! Thank you so much for your participation, you made an important contribution to the exploration of the influence of apps on physical activity. If you would like to participate in the raffle for a 150€ Amazon voucher, please send an e-mail with the subject `Pokemon Win´ to goals@gmx.at. If you would like to have personal Feedback about your physical activity and mood during the past weeks, please send us your e-mail address here in the chat, so we can match the address with your data. Additionally, if you would like to get more info about our study, you're invited to send an e-mail with the subject `Pokemon Info´ to goals@gmx.at. Thank you very much and take care! Lisa",
+    "conditions_required": [],
+    "conditions": [],
+    "commands": []
+  }
+]

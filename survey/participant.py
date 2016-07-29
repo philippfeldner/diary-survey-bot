@@ -5,7 +5,6 @@ from telegram.ext import JobQueue
 
 from survey.data_set import DataSet
 
-INIT, SET = range(2)
 
 
 class Participant:
@@ -154,7 +153,7 @@ class Participant:
             print(error)
         return 0
 
-    def requirements(self, condition, restriction):
+    def requirements(self, condition):
         if condition == [] or condition in self.conditions_:
             return True
         else:
@@ -180,10 +179,10 @@ def initialize_participants(job_queue: JobQueue):
             user.time_offset_ = row[7]
             user.day_ = row[8]
             user_map.participants[row[0]] = user
-            if user.time_t_ == '':
-                return  # TODO
-            else:
-                job_queue  # TODO
+            # if user.time_t_ == '':
+            #    return  # TODO
+            # else:
+            #    job_queue  # TODO
     except sqlite3.Error as error:
         print(error)
     return user_map

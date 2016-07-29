@@ -31,13 +31,17 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet):
     question_id = user.increase_question_id()
     q_current = q_set[question_id]
 
+    # if "MANDATORY" in q_current['conditions']:
+
+
+
     # find next question for the user
     while not user.requirements(q_current['conditions']):
         question_id = user.increase_question_id()
         q_current = q_set[question_id]
 
     if q_current['day'] == user.day_:
-        bot.send_message() # Todo
+        bot.send_message()  # Todo
     else:
 
         day_offset = q_current[1] - user.day_

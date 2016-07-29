@@ -7,7 +7,7 @@ from survey.participant import initialize_participants
 from survey.questions import question_handler
 from survey.participant import Participant
 
-data_set = DataSet()
+data_set = None
 
 
 def start(bot: Bot, update: Update):
