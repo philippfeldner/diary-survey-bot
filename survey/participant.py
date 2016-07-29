@@ -3,7 +3,7 @@ import sqlite3
 import time
 from telegram.ext import JobQueue
 
-from data.data_set import DataSet
+from survey.data_set import DataSet
 
 INIT, SET = range(2)
 
@@ -26,7 +26,7 @@ class Participant:
         self.chat_id_ = chat_id
         if init:
             try:
-                db = sqlite3.connect('user/participants.db')
+                db = sqlite3.connect('survey/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
                            "country, gender, language, question_id, time_offset, day)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
@@ -45,7 +45,7 @@ class Participant:
     def set_language(self, language):
         self.language_ = language
         try:
-            db = sqlite3.connect('participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET language=? WHERE ID=?", (language, self.chat_id_))
             db.commit()
             db.close()
@@ -56,7 +56,7 @@ class Participant:
     def set_gender(self, gender):
         self.gender_ = gender
         try:
-            db = sqlite3.connect('participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET gender=? WHERE ID=?", (gender, self.chat_id_))
             db.commit()
             db.close()
@@ -67,7 +67,7 @@ class Participant:
     def set_country(self, country):
         self.country_ = country
         try:
-            db = sqlite3.connect('participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET country=? WHERE ID=?", (country, self.chat_id_))
             db.commit()
             db.close()
@@ -78,7 +78,7 @@ class Participant:
     def increase_day_t(self):
         self.day_ += 1
         try:
-            db = sqlite3.connect('user/participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET day_t=? WHERE ID=?", (self.day_, self.chat_id_))
             db.commit()
             db.close()
@@ -89,7 +89,7 @@ class Participant:
     def set_time_t(self, time_t):
         self.time_t_ = time
         try:
-            db = sqlite3.connect('user/participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET time_t=? WHERE ID=?", (time_t, self.chat_id_))
             db.commit()
             db.close()
@@ -100,7 +100,7 @@ class Participant:
     def set_time_offset(self, offset):
         self.time_offset_ = offset
         try:
-            db = sqlite3.connect('user/participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET time_offset=? WHERE ID=?", (offset, self.chat_id_))
             db.commit()
             db.close()
@@ -113,7 +113,7 @@ class Participant:
             return
         self.conditions_ += conditions
         try:
-            db = sqlite3.connect('user/participants.db')
+            db = sqlite3.connect('survey/participants.db')
             cursor = db.cursor()
             cursor.execute("SELECT conditions FROM participants WHERE ID=?", self.chat_id_)
             fetch = cursor.fetchone()  # type: list
@@ -130,7 +130,7 @@ class Participant:
     def increase_question_id(self):
         self.question_id_ += 1
         try:
-            db = sqlite3.connect('user/participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET question_id=? WHERE ID=?", (self.question_id_, self.chat_id_))
             db.commit()
             db.close()
@@ -140,7 +140,7 @@ class Participant:
 
     def delete_participant(self):
         try:
-            db = sqlite3.connect('user/participants.db')
+            db = sqlite3.connect('survey/participants.db')
             db.execute("DELETE FROM participants WHERE ID=?", (self.chat_id_,))
             db.commit()
             db.close()
@@ -164,7 +164,7 @@ class Participant:
 def initialize_participants(job_queue: JobQueue):
     user_map = DataSet()
     try:
-        db = sqlite3.connect('user/participants.db')
+        db = sqlite3.connect('survey/participants.db')
         cursor = db.cursor()
         cursor.execute("SELECT * FROM participants ORDER BY (ID)")
         participants = cursor.fetchall()

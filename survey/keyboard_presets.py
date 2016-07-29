@@ -1,3 +1,5 @@
+from telegram import Emoji
+
 countries_rk = [["Afghanistan"],
                 ["Albania"],
                 ["Algeria"],
@@ -213,3 +215,7 @@ countries_rk = [["Afghanistan"],
                 ["Zaire"],
                 ["Zambia"],
                 ["Zimbabwe"]]
+
+smiley_scale_5 = [[Emoji.TIRED_FACE], [Emoji.PERSON_FROWNING]]
+
+languages = ["Deutsch", "English", "Espagnol", "Francais"]

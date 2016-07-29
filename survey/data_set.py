@@ -11,19 +11,23 @@ class DataSet:
 
     def __init__(self):
         try:
-            self.q_set_de_ = json.load('question_set_de.json')
+            with open('question_set_de.json') as file:
+                self.q_set_de_ = json.load(file)
         except FileNotFoundError:
             print('Language: German not available!')
         try:
-            self.q_set_en_ = json.load('question_set_en.json')
+            with open('question_set_en.json') as file:
+                self.q_set_de_ = json.load(file)
         except FileNotFoundError:
             print('Language: English not available!')
         try:
-            self.q_set_es_ = json.load('question_set_es.json')
+            with open('question_set_es.json') as file:
+                self.q_set_de_ = json.load(file)
         except FileNotFoundError:
             print('Language: Spanish not available!')
         try:
-            self.q_set_fr_ = json.load('question_set_fr.json')
+            with open('question_set_fr.json') as file:
+                self.q_set_de_ = json.load(file)
         except FileNotFoundError:
             print('Language: French not available!')
         return

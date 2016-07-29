@@ -1,18 +1,18 @@
-from telegram.ext import Updater, CommandHandler, Job, MessageHandler, Filters
 from telegram import Bot, Update, ReplyKeyboardMarkup
-from user import Participant
-from data.questions import question_handler
-from data.data_set import DataSet
-from user.participant import DataSet
-from user.participant import initialize_participants
-from data.keyboard_presets import countries_rk
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
+from survey.keyboard_presets import smiley_scale_5
+from survey.participant import DataSet
+from survey.participant import initialize_participants
+from survey.questions import question_handler
+from survey.participant import Participant
 
 data_set = DataSet()
 
 
 def start(bot: Bot, update: Update):
-    # reply_markup = ReplyKeyboardMarkup(countries_rk)
-    bot.send_message(chat_id=update.message.chat_id, text="Test")
+    reply_markup = ReplyKeyboardMarkup(smiley_scale_5)
+    bot.send_message(chat_id=update.message.chat_id, text="Test", reply_markup=reply_markup)
 
     global data_set
     if update.message.chat_id not in data_set.participants:
