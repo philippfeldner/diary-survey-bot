@@ -45,7 +45,7 @@ def main():
     updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
     dp = updater.dispatcher
     global data_set
-    data_set = initialize_participants(dp.job_queue)
+    data_set = initialize_participants(dp.job_queue)  # type: DataSet
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))
