@@ -11,8 +11,9 @@
     "conditions": [
       "Nein, ich möchte doch nicht mitmachen"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 1,
     "day": 1,
@@ -25,8 +26,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 2,
     "day": 1,
@@ -40,8 +42,9 @@
     "conditions": [
       "Ich hätte gerne weitere Informationen über die Schrittzähl-App"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 3,
     "day": 1,
@@ -59,8 +62,9 @@
     "conditions": [
       "Erledigt und weiter"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 4,
     "day": 1,
@@ -70,8 +74,9 @@
     "question": "Jetzt noch etwas ganz Wichtiges: Wir werden dir jeden Abend ein paar kurze Fragen stellen. Wann dürfen wir dich denn kontaktieren? Bitte wähle eine Zeit gegen Ende deines Tages wenn du normalerweise schon bald ins Bett gehst und versuche, die Fragen innerhalb von einer Stunde zu beantworten.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 5,
     "day": 1,
@@ -81,8 +86,9 @@
     "question": "Wie spät ist es bei dir gerade? Wir fragen dich das, damit wir dir die täglichen Fragen zur von dir ausgewählten Zeit - abhängig von deiner Zeitzone - schicken können.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 6,
     "day": 1,
@@ -92,8 +98,9 @@
     "question": "Danke für dein Interesse! Wir werden dir nun gleich ein paar Fragen stellen. Keine Angst, du bleibst trotzdem anonym.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 7,
     "day": 1,
@@ -106,8 +113,9 @@
     "conditions": [
       "weiblich"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 8,
     "day": 1,
@@ -115,8 +123,9 @@
     "question": "Alter",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 9,
     "day": 1,
@@ -124,8 +133,9 @@
     "question": "Aus welchem Land bist du?",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 10,
     "day": 1,
@@ -136,8 +146,9 @@
     "question": "Wohnst du in der Stadt oder auf dem Land?",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 11,
     "day": 1,
@@ -145,8 +156,9 @@
     "question": "Ungefähr wie lange pro Tag nutzt du dein Handy? Bitte gib Stunden und Minuten im Format hh:mm an. Wenn du zum Beispiel pro Tag 2 Stunden und 15 Minuten spielst, würdest du schreiben 02:15.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 12,
     "day": 1,
@@ -154,8 +166,9 @@
     "question": "Ungefähr wie lange pro Tag bist du auf den Beinen (gehen oder laufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 13,
     "day": 1,
@@ -168,8 +181,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 14,
     "day": 1,
@@ -190,8 +204,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 15,
     "day": 1,
@@ -207,8 +222,9 @@
       "Ich spiele Pokémon GO",
       "Ich habe schon gespielt, aber spiele jetzt nicht mehr"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 16,
     "day": 1,
@@ -225,8 +241,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 17,
     "day": 1,
@@ -248,8 +265,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 18,
     "day": 1,
@@ -265,8 +283,9 @@
     "question": "Wie geht es dir momentan? Bitte beachte: Du kannst auch die leeren Boxen anklicken, wenn du das Gefühl hast, dass diese Mittelstufen deine Gefühle besser beschreiben würden.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 19,
     "day": 1,
@@ -274,8 +293,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 20,
     "day": 1,
@@ -288,8 +308,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 21,
     "day": 1,
@@ -302,8 +323,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 22,
     "day": 1,
@@ -316,8 +338,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 23,
     "day": 1,
@@ -330,8 +353,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 24,
     "day": 1,
@@ -344,8 +368,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 25,
     "day": 1,
@@ -353,8 +378,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 26,
     "day": 2,
@@ -370,8 +396,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 27,
     "day": 2,
@@ -379,8 +406,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 28,
     "day": 2,
@@ -393,8 +421,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 29,
     "day": 2,
@@ -407,8 +436,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 30,
     "day": 2,
@@ -421,8 +451,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 31,
     "day": 2,
@@ -435,8 +466,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 32,
     "day": 2,
@@ -449,8 +481,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 33,
     "day": 2,
@@ -458,8 +491,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 34,
     "day": 3,
@@ -475,8 +509,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 35,
     "day": 3,
@@ -484,8 +519,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 36,
     "day": 3,
@@ -498,8 +534,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 37,
     "day": 3,
@@ -512,8 +549,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 38,
     "day": 3,
@@ -526,8 +564,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 39,
     "day": 3,
@@ -540,8 +579,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 40,
     "day": 3,
@@ -554,8 +594,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 41,
     "day": 3,
@@ -563,8 +604,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 42,
     "day": 4,
@@ -580,8 +622,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 43,
     "day": 4,
@@ -589,8 +632,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 44,
     "day": 4,
@@ -603,8 +647,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 45,
     "day": 4,
@@ -617,8 +662,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 46,
     "day": 4,
@@ -631,8 +677,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 47,
     "day": 4,
@@ -645,8 +692,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 48,
     "day": 4,
@@ -659,8 +707,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 49,
     "day": 4,
@@ -668,8 +717,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 50,
     "day": 5,
@@ -685,8 +735,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 51,
     "day": 5,
@@ -694,8 +745,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 52,
     "day": 5,
@@ -708,8 +760,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 53,
     "day": 5,
@@ -722,8 +775,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 54,
     "day": 5,
@@ -736,8 +790,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 55,
     "day": 5,
@@ -750,8 +805,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 56,
     "day": 5,
@@ -764,8 +820,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 57,
     "day": 5,
@@ -773,8 +830,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 58,
     "day": 6,
@@ -790,8 +848,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 59,
     "day": 6,
@@ -799,8 +858,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 60,
     "day": 6,
@@ -813,8 +873,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 61,
     "day": 6,
@@ -827,8 +888,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 62,
     "day": 6,
@@ -841,8 +903,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 63,
     "day": 6,
@@ -855,8 +918,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 64,
     "day": 6,
@@ -869,8 +933,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 65,
     "day": 6,
@@ -878,8 +943,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 66,
     "day": 7,
@@ -895,8 +961,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 67,
     "day": 7,
@@ -904,8 +971,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 68,
     "day": 7,
@@ -918,8 +986,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 69,
     "day": 7,
@@ -932,8 +1001,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 70,
     "day": 7,
@@ -946,8 +1016,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 71,
     "day": 7,
@@ -960,8 +1031,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 72,
     "day": 7,
@@ -974,8 +1046,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 73,
     "day": 7,
@@ -983,8 +1056,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 74,
     "day": 8,
@@ -1000,8 +1074,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 75,
     "day": 8,
@@ -1009,8 +1084,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 76,
     "day": 8,
@@ -1023,8 +1099,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 77,
     "day": 8,
@@ -1037,8 +1114,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 78,
     "day": 8,
@@ -1051,8 +1129,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 79,
     "day": 8,
@@ -1065,8 +1144,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 80,
     "day": 8,
@@ -1079,8 +1159,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 81,
     "day": 8,
@@ -1088,8 +1169,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 82,
     "day": 9,
@@ -1105,8 +1187,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 83,
     "day": 9,
@@ -1114,8 +1197,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 84,
     "day": 9,
@@ -1128,8 +1212,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 85,
     "day": 9,
@@ -1142,8 +1227,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 86,
     "day": 9,
@@ -1156,8 +1242,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 87,
     "day": 9,
@@ -1170,8 +1257,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 88,
     "day": 9,
@@ -1184,8 +1272,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 89,
     "day": 9,
@@ -1193,8 +1282,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 90,
     "day": 10,
@@ -1210,8 +1300,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 91,
     "day": 10,
@@ -1219,8 +1310,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 92,
     "day": 10,
@@ -1233,8 +1325,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 93,
     "day": 10,
@@ -1247,8 +1340,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 94,
     "day": 10,
@@ -1261,8 +1355,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 95,
     "day": 10,
@@ -1275,8 +1370,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 96,
     "day": 10,
@@ -1289,8 +1385,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 97,
     "day": 10,
@@ -1298,8 +1395,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 98,
     "day": 11,
@@ -1315,8 +1413,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 99,
     "day": 11,
@@ -1324,8 +1423,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 100,
     "day": 11,
@@ -1338,8 +1438,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 101,
     "day": 11,
@@ -1352,8 +1453,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 102,
     "day": 11,
@@ -1366,8 +1468,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 103,
     "day": 11,
@@ -1380,8 +1483,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 104,
     "day": 11,
@@ -1394,8 +1498,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 105,
     "day": 11,
@@ -1403,8 +1508,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 106,
     "day": 12,
@@ -1420,8 +1526,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 107,
     "day": 12,
@@ -1429,8 +1536,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 108,
     "day": 12,
@@ -1443,8 +1551,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 109,
     "day": 12,
@@ -1457,8 +1566,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 110,
     "day": 12,
@@ -1471,8 +1581,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 111,
     "day": 12,
@@ -1485,8 +1596,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 112,
     "day": 12,
@@ -1499,8 +1611,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 113,
     "day": 12,
@@ -1508,8 +1621,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 114,
     "day": 13,
@@ -1525,8 +1639,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 115,
     "day": 13,
@@ -1534,8 +1649,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 116,
     "day": 13,
@@ -1548,8 +1664,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 117,
     "day": 13,
@@ -1562,8 +1679,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 118,
     "day": 13,
@@ -1576,8 +1694,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 119,
     "day": 13,
@@ -1590,8 +1709,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 120,
     "day": 13,
@@ -1604,8 +1724,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 121,
     "day": 13,
@@ -1613,8 +1734,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 122,
     "day": 14,
@@ -1630,8 +1752,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 123,
     "day": 14,
@@ -1639,8 +1762,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 124,
     "day": 14,
@@ -1653,8 +1777,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 125,
     "day": 14,
@@ -1667,8 +1792,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 126,
     "day": 14,
@@ -1681,8 +1807,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 127,
     "day": 14,
@@ -1695,8 +1822,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 128,
     "day": 14,
@@ -1709,8 +1837,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 129,
     "day": 14,
@@ -1718,8 +1847,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 130,
     "day": 15,
@@ -1735,8 +1865,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 131,
     "day": 15,
@@ -1744,8 +1875,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 132,
     "day": 15,
@@ -1758,8 +1890,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 133,
     "day": 15,
@@ -1772,8 +1905,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 134,
     "day": 15,
@@ -1786,8 +1920,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 135,
     "day": 15,
@@ -1800,8 +1935,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 136,
     "day": 15,
@@ -1814,8 +1950,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 137,
     "day": 15,
@@ -1823,8 +1960,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 138,
     "day": 16,
@@ -1840,8 +1978,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 139,
     "day": 16,
@@ -1849,8 +1988,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 140,
     "day": 16,
@@ -1863,8 +2003,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 141,
     "day": 16,
@@ -1877,8 +2018,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 142,
     "day": 16,
@@ -1891,8 +2033,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 143,
     "day": 16,
@@ -1905,8 +2048,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 144,
     "day": 16,
@@ -1919,8 +2063,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 145,
     "day": 16,
@@ -1928,8 +2073,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 146,
     "day": 17,
@@ -1945,8 +2091,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 147,
     "day": 17,
@@ -1954,8 +2101,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 148,
     "day": 17,
@@ -1968,8 +2116,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 149,
     "day": 17,
@@ -1982,8 +2131,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 150,
     "day": 17,
@@ -1996,8 +2146,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 151,
     "day": 17,
@@ -2010,8 +2161,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 152,
     "day": 17,
@@ -2024,8 +2176,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 153,
     "day": 17,
@@ -2033,8 +2186,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 154,
     "day": 18,
@@ -2050,8 +2204,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 155,
     "day": 18,
@@ -2059,8 +2214,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 156,
     "day": 18,
@@ -2073,8 +2229,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 157,
     "day": 18,
@@ -2087,8 +2244,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 158,
     "day": 18,
@@ -2101,8 +2259,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 159,
     "day": 18,
@@ -2115,8 +2274,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 160,
     "day": 18,
@@ -2129,8 +2289,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 161,
     "day": 18,
@@ -2138,8 +2299,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 162,
     "day": 19,
@@ -2155,8 +2317,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 163,
     "day": 19,
@@ -2164,8 +2327,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 164,
     "day": 19,
@@ -2178,8 +2342,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 165,
     "day": 19,
@@ -2192,8 +2357,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 166,
     "day": 19,
@@ -2206,8 +2372,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 167,
     "day": 19,
@@ -2220,8 +2387,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 168,
     "day": 19,
@@ -2234,8 +2402,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 169,
     "day": 19,
@@ -2243,8 +2412,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 170,
     "day": 20,
@@ -2260,8 +2430,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 171,
     "day": 20,
@@ -2269,8 +2440,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 172,
     "day": 20,
@@ -2283,8 +2455,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 173,
     "day": 20,
@@ -2297,8 +2470,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 174,
     "day": 20,
@@ -2311,8 +2485,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 175,
     "day": 20,
@@ -2325,8 +2500,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 175,
     "day": 20,
@@ -2339,8 +2515,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 176,
     "day": 20,
@@ -2348,8 +2525,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 177,
     "day": 21,
@@ -2365,8 +2543,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 178,
     "day": 21,
@@ -2374,8 +2553,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 179,
     "day": 21,
@@ -2388,8 +2568,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 180,
     "day": 21,
@@ -2402,8 +2583,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 181,
     "day": 21,
@@ -2416,8 +2598,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 182,
     "day": 21,
@@ -2430,8 +2613,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 183,
     "day": 21,
@@ -2444,8 +2628,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 184,
     "day": 21,
@@ -2453,8 +2638,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 185,
     "day": 22,
@@ -2470,8 +2656,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 186,
     "day": 22,
@@ -2479,8 +2666,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 187,
     "day": 22,
@@ -2493,8 +2681,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 188,
     "day": 22,
@@ -2507,8 +2696,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 189,
     "day": 22,
@@ -2521,8 +2711,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 190,
     "day": 22,
@@ -2535,8 +2726,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 191,
     "day": 22,
@@ -2549,8 +2741,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 192,
     "day": 22,
@@ -2558,8 +2751,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 193,
     "day": 23,
@@ -2575,8 +2769,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 194,
     "day": 23,
@@ -2584,8 +2779,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 195,
     "day": 23,
@@ -2598,8 +2794,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 196,
     "day": 23,
@@ -2612,8 +2809,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 197,
     "day": 23,
@@ -2626,8 +2824,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 198,
     "day": 23,
@@ -2640,8 +2839,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 199,
     "day": 23,
@@ -2654,8 +2854,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 200,
     "day": 23,
@@ -2663,8 +2864,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 201,
     "day": 24,
@@ -2680,8 +2882,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 202,
     "day": 24,
@@ -2689,8 +2892,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 203,
     "day": 24,
@@ -2703,8 +2907,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 204,
     "day": 24,
@@ -2717,8 +2922,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 205,
     "day": 24,
@@ -2731,8 +2937,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 206,
     "day": 24,
@@ -2745,8 +2952,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 207,
     "day": 24,
@@ -2759,8 +2967,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 208,
     "day": 24,
@@ -2768,8 +2977,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 209,
     "day": 25,
@@ -2785,8 +2995,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 210,
     "day": 25,
@@ -2794,8 +3005,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 211,
     "day": 25,
@@ -2808,8 +3020,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 212,
     "day": 25,
@@ -2822,8 +3035,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 213,
     "day": 25,
@@ -2836,8 +3050,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 214,
     "day": 25,
@@ -2850,8 +3065,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 215,
     "day": 25,
@@ -2864,8 +3080,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 216,
     "day": 25,
@@ -2873,8 +3090,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 217,
     "day": 26,
@@ -2890,8 +3108,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 218,
     "day": 26,
@@ -2899,8 +3118,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 219,
     "day": 26,
@@ -2913,8 +3133,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 220,
     "day": 26,
@@ -2927,8 +3148,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 221,
     "day": 26,
@@ -2941,8 +3163,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 222,
     "day": 26,
@@ -2955,8 +3178,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 223,
     "day": 26,
@@ -2969,8 +3193,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 224,
     "day": 26,
@@ -2978,8 +3203,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 225,
     "day": 27,
@@ -2995,8 +3221,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 226,
     "day": 27,
@@ -3004,8 +3231,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 227,
     "day": 27,
@@ -3018,8 +3246,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 228,
     "day": 27,
@@ -3032,8 +3261,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 229,
     "day": 27,
@@ -3046,8 +3276,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 230,
     "day": 27,
@@ -3060,8 +3291,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 231,
     "day": 27,
@@ -3074,8 +3306,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 232,
     "day": 27,
@@ -3083,8 +3316,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 233,
     "day": 28,
@@ -3100,8 +3334,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 234,
     "day": 28,
@@ -3109,8 +3344,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 235,
     "day": 28,
@@ -3123,8 +3359,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 236,
     "day": 28,
@@ -3137,8 +3374,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 237,
     "day": 28,
@@ -3151,8 +3389,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 238,
     "day": 28,
@@ -3165,8 +3404,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 239,
     "day": 28,
@@ -3179,8 +3419,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 240,
     "day": 28,
@@ -3188,8 +3429,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 241,
     "day": 29,
@@ -3205,8 +3447,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 242,
     "day": 29,
@@ -3214,8 +3457,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 243,
     "day": 29,
@@ -3228,8 +3472,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 244,
     "day": 29,
@@ -3242,8 +3487,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 245,
     "day": 29,
@@ -3256,8 +3502,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 246,
     "day": 29,
@@ -3270,8 +3517,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 247,
     "day": 29,
@@ -3284,8 +3532,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 248,
     "day": 29,
@@ -3293,8 +3542,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 249,
     "day": 30,
@@ -3310,8 +3560,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 250,
     "day": 30,
@@ -3319,8 +3570,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 251,
     "day": 30,
@@ -3333,8 +3585,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 252,
     "day": 30,
@@ -3347,8 +3600,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 253,
     "day": 30,
@@ -3361,8 +3615,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 254,
     "day": 30,
@@ -3375,8 +3630,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 255,
     "day": 30,
@@ -3389,8 +3645,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 256,
     "day": 30,
@@ -3398,8 +3655,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 257,
     "day": 31,
@@ -3415,8 +3673,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 258,
     "day": 31,
@@ -3424,8 +3683,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 259,
     "day": 31,
@@ -3438,8 +3698,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 260,
     "day": 31,
@@ -3452,8 +3713,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 261,
     "day": 31,
@@ -3466,8 +3728,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 262,
     "day": 31,
@@ -3480,8 +3743,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 263,
     "day": 31,
@@ -3494,8 +3758,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 264,
     "day": 31,
@@ -3503,8 +3768,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 265,
     "day": 32,
@@ -3520,8 +3786,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 266,
     "day": 32,
@@ -3529,8 +3796,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 267,
     "day": 32,
@@ -3543,8 +3811,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 268,
     "day": 32,
@@ -3557,8 +3826,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 269,
     "day": 32,
@@ -3571,8 +3841,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 270,
     "day": 32,
@@ -3585,8 +3856,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 271,
     "day": 32,
@@ -3599,8 +3871,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 272,
     "day": 32,
@@ -3608,8 +3881,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 273,
     "day": 33,
@@ -3625,8 +3899,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 274,
     "day": 33,
@@ -3634,8 +3909,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 275,
     "day": 33,
@@ -3648,8 +3924,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 276,
     "day": 33,
@@ -3662,8 +3939,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 277,
     "day": 33,
@@ -3676,8 +3954,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 278,
     "day": 33,
@@ -3690,8 +3969,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 279,
     "day": 33,
@@ -3704,8 +3984,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 280,
     "day": 33,
@@ -3713,8 +3994,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 281,
     "day": 34,
@@ -3730,8 +4012,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 282,
     "day": 34,
@@ -3739,8 +4022,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 283,
     "day": 34,
@@ -3753,8 +4037,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 284,
     "day": 34,
@@ -3767,8 +4052,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 285,
     "day": 34,
@@ -3781,8 +4067,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 286,
     "day": 34,
@@ -3795,8 +4082,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 287,
     "day": 34,
@@ -3809,8 +4097,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 288,
     "day": 34,
@@ -3818,8 +4107,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 289,
     "day": 35,
@@ -3835,8 +4125,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 290,
     "day": 35,
@@ -3844,8 +4135,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 291,
     "day": 35,
@@ -3858,8 +4150,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 292,
     "day": 35,
@@ -3872,8 +4165,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 293,
     "day": 35,
@@ -3886,8 +4180,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 294,
     "day": 35,
@@ -3900,8 +4195,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 295,
     "day": 35,
@@ -3914,8 +4210,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 296,
     "day": 35,
@@ -3923,8 +4220,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 297,
     "day": 36,
@@ -3940,8 +4238,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 298,
     "day": 36,
@@ -3949,8 +4248,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 399,
     "day": 36,
@@ -3963,8 +4263,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 400,
     "day": 36,
@@ -3977,8 +4278,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 401,
     "day": 36,
@@ -3991,8 +4293,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 402,
     "day": 36,
@@ -4005,8 +4308,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 403,
     "day": 36,
@@ -4019,8 +4323,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 404,
     "day": 36,
@@ -4028,8 +4333,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 405,
     "day": 37,
@@ -4045,8 +4351,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 406,
     "day": 37,
@@ -4054,8 +4361,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 407,
     "day": 37,
@@ -4068,8 +4376,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 408,
     "day": 37,
@@ -4082,8 +4391,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 409,
     "day": 37,
@@ -4096,8 +4406,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 410,
     "day": 37,
@@ -4110,8 +4421,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 411,
     "day": 37,
@@ -4124,8 +4436,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 412,
     "day": 37,
@@ -4133,8 +4446,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 413,
     "day": 38,
@@ -4150,8 +4464,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 414,
     "day": 38,
@@ -4159,8 +4474,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 415,
     "day": 38,
@@ -4173,8 +4489,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 416,
     "day": 38,
@@ -4187,8 +4504,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 417,
     "day": 38,
@@ -4201,8 +4519,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 418,
     "day": 38,
@@ -4215,8 +4534,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 419,
     "day": 38,
@@ -4229,8 +4549,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 420,
     "day": 38,
@@ -4238,8 +4559,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 421,
     "day": 39,
@@ -4255,8 +4577,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 422,
     "day": 39,
@@ -4264,8 +4587,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 423,
     "day": 39,
@@ -4278,8 +4602,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 424,
     "day": 39,
@@ -4292,8 +4617,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 425,
     "day": 39,
@@ -4306,8 +4632,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 426,
     "day": 39,
@@ -4320,8 +4647,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 427,
     "day": 39,
@@ -4334,8 +4662,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 428,
     "day": 39,
@@ -4343,8 +4672,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 429,
     "day": 40,
@@ -4360,8 +4690,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 430,
     "day": 40,
@@ -4369,8 +4700,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 431,
     "day": 40,
@@ -4383,8 +4715,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 432,
     "day": 40,
@@ -4397,8 +4730,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 433,
     "day": 40,
@@ -4411,8 +4745,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 434,
     "day": 40,
@@ -4425,8 +4760,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 435,
     "day": 40,
@@ -4439,8 +4775,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 436,
     "day": 40,
@@ -4448,8 +4785,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 437,
     "day": 41,
@@ -4465,8 +4803,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 438,
     "day": 41,
@@ -4474,8 +4813,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 439,
     "day": 41,
@@ -4488,8 +4828,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 440,
     "day": 41,
@@ -4502,8 +4843,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 441,
     "day": 41,
@@ -4516,8 +4858,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 442,
     "day": 41,
@@ -4530,8 +4873,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 443,
     "day": 41,
@@ -4544,8 +4888,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 444,
     "day": 41,
@@ -4553,8 +4898,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 445,
     "day": 42,
@@ -4570,8 +4916,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 446,
     "day": 42,
@@ -4579,8 +4926,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 447,
     "day": 42,
@@ -4593,8 +4941,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 448,
     "day": 42,
@@ -4607,8 +4956,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 449,
     "day": 42,
@@ -4621,8 +4971,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 450,
     "day": 42,
@@ -4635,8 +4986,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 451,
     "day": 42,
@@ -4649,8 +5001,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 452,
     "day": 42,
@@ -4658,8 +5011,9 @@
     "question": "Gratuliere! Du hast nun 85% der Umfrage abgeschlossen! Wir werden jetzt ein Monat Pause machen und dann werden wir dir dieselben Fragen wie bisher nochmal eine Woche lang stellen. Wenn du Fragen hast, schick uns einfach eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at. Ich hoffe wir chatten in einem Monat wieder! Lisa",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 453,
     "day": 71,
@@ -4675,8 +5029,9 @@
     "question": "Hallo! Schön, wieder mit dir zu chatten! Wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 454,
     "day": 71,
@@ -4684,8 +5039,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 455,
     "day": 71,
@@ -4698,8 +5054,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 456,
     "day": 71,
@@ -4712,8 +5069,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 457,
     "day": 71,
@@ -4726,8 +5084,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 458,
     "day": 71,
@@ -4740,8 +5099,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 459,
     "day": 71,
@@ -4754,8 +5114,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 460,
     "day": 71,
@@ -4763,8 +5124,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 461,
     "day": 72,
@@ -4780,8 +5142,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 462,
     "day": 72,
@@ -4789,8 +5152,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 463,
     "day": 72,
@@ -4803,8 +5167,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 464,
     "day": 72,
@@ -4817,8 +5182,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 465,
     "day": 72,
@@ -4831,8 +5197,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 466,
     "day": 72,
@@ -4845,8 +5212,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 467,
     "day": 72,
@@ -4859,8 +5227,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 468,
     "day": 72,
@@ -4868,8 +5237,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 469,
     "day": 73,
@@ -4885,8 +5255,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 470,
     "day": 73,
@@ -4894,8 +5265,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 471,
     "day": 73,
@@ -4908,8 +5280,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 472,
     "day": 73,
@@ -4922,8 +5295,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 473,
     "day": 73,
@@ -4936,8 +5310,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 474,
     "day": 73,
@@ -4950,8 +5325,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 475,
     "day": 73,
@@ -4964,8 +5340,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 476,
     "day": 73,
@@ -4973,8 +5350,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 477,
     "day": 74,
@@ -4990,8 +5368,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 478,
     "day": 74,
@@ -4999,8 +5378,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 479,
     "day": 74,
@@ -5013,8 +5393,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 480,
     "day": 74,
@@ -5027,8 +5408,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 481,
     "day": 74,
@@ -5041,8 +5423,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 482,
     "day": 75,
@@ -5055,8 +5438,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 483,
     "day": 75,
@@ -5069,8 +5453,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 484,
     "day": 75,
@@ -5078,8 +5463,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 485,
     "day": 76,
@@ -5095,8 +5481,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 486,
     "day": 76,
@@ -5104,8 +5491,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 487,
     "day": 76,
@@ -5118,8 +5506,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 488,
     "day": 76,
@@ -5132,8 +5521,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 489,
     "day": 76,
@@ -5146,8 +5536,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 490,
     "day": 76,
@@ -5160,8 +5551,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 491,
     "day": 76,
@@ -5174,8 +5566,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 492,
     "day": 76,
@@ -5183,8 +5576,9 @@
     "question": "Danke, das war's für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 493,
     "day": 77,
@@ -5200,8 +5594,9 @@
     "question": "Hallo, wie geht es dir momentan? Bitte beachte: Du kannst auch auf die leeren Boxen klicken.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 494,
     "day": 77,
@@ -5209,8 +5604,9 @@
     "question": "Ungefähr wie lange bist du heute schon gegangen (oder gelaufen)? Bitte gib Stunden und Minuten im Format hh:mm an.",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 495,
     "day": 77,
@@ -5223,8 +5619,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 496,
     "day": 77,
@@ -5237,8 +5634,9 @@
     "conditions": [
       "ja"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 497,
     "day": 77,
@@ -5251,8 +5649,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 498,
     "day": 77,
@@ -5265,8 +5664,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 499,
     "day": 77,
@@ -5279,8 +5679,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 500,
     "day": 77,
@@ -5297,8 +5698,9 @@
     "question": "So, da dies der letzte Tag unserer Studie ist, folgen nun noch ein paar Fragen. Falls du Pokémon GO gespielt hast, wie oft gehst du gemeinsam mit Freunden spielen?",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 501,
     "day": 77,
@@ -5315,8 +5717,9 @@
     "question": "Wie oft lernst du durch das Spiel neue Leute kennen?",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 502,
     "day": 77,
@@ -5333,8 +5736,9 @@
     "question": "Wie sehr treffen die folgenden Aussagen auf dich zu? Ich spiele Pokémon GO gerne mit meinen Freunden",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 503,
     "day": 77,
@@ -5351,8 +5755,9 @@
     "question": "Mir gefällt, dass man Pokémon GO draußen an der frischen Luft spielt",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 504,
     "day": 77,
@@ -5369,8 +5774,9 @@
     "question": "Mir gefällt, dass man sich beim Spielen bewegt",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 505,
     "day": 77,
@@ -5387,8 +5793,9 @@
     "question": "Mir gefällt, dass man beim Spielen oft kleine Belohnungen bekommt",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 506,
     "day": 77,
@@ -5405,8 +5812,9 @@
     "question": "Mir gefällt, dass man im Spiel einem Team angehört",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 507,
     "day": 77,
@@ -5423,8 +5831,9 @@
     "question": "Mir gefällt, dass man Pokémon, Punkte und Gegenstände sammelt",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 508,
     "day": 77,
@@ -5441,8 +5850,9 @@
     "question": "Mir gefällt, dass man um Arenen kämpfen kann",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 509,
     "day": 77,
@@ -5460,8 +5870,9 @@
     "conditions": [
       "Ich sage euch das ungefähre Datum"
     ],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 510,
     "day": 77,
@@ -5474,8 +5885,9 @@
       ]
     ],
     "conditions": [],
-    "commands": []
-  },
+    "commands": [],
+"commands": []
+},
   {
     "id": 511,
     "day": 77,
@@ -5483,6 +5895,7 @@
     "question": "Das war's! Vielen Dank für deine Teilnahme, du hast einen wichtigen Beitrag zur Erforschung vom Einfluss von Apps auf physische Aktivität geleistet. Wenn du an der Verlosung des 150€ Amazon-Gutscheines teilnehmen möchtest, sende bitte eine E-Mail mit dem Betreff \"Pokemon Win\" an pokemon@uni-graz.at. Wenn du gerne ein persönliches Feedback über deine physische Aktivität und Stimmung der letzten Wochen haben möchtest, schicke uns bitte hier in den Chat deine E-Mail Adresse, damit wir dich deinen Daten zuordnen können. Wenn du außerdem mehr Infos zur Studie haben möchtest, kannst du an die Adresse goals@gmx.at eine E-Mail mit dem Betreff Pokemon Info schicken. Vielen herzlichen Dank und bis bald! Lisa",
     "conditions_required": [],
     "conditions": [],
-    "commands": []
-  }
+    "commands": [],
+"commands": []
+}
 ]

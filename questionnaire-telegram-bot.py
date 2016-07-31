@@ -2,6 +2,8 @@ from telegram import Bot, Update, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 from survey.keyboard_presets import smiley_scale_5
+from survey.keyboard_presets import languages
+
 from survey.participant import DataSet
 from survey.participant import initialize_participants
 from survey.questions import question_handler
@@ -11,14 +13,12 @@ data_set = None
 
 
 def start(bot: Bot, update: Update):
-    reply_markup = ReplyKeyboardMarkup(smiley_scale_5)
-    bot.send_message(chat_id=update.message.chat_id, text="Test", reply_markup=reply_markup)
-
     global data_set
     if update.message.chat_id not in data_set.participants:
+        reply_markup = ReplyKeyboardMarkup(languages)
+        bot.send_message(chat_id=update.message.chat_id, text="Please choose a language:", reply_markup=reply_markup)
         participant = Participant(update.message.chat_id)
         data_set.participants[update.message.chat_id] = participant
-    # Message for /start
 
 
 def stop(bot: Bot, update: Update):
