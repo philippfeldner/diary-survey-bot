@@ -218,4 +218,13 @@ countries_rk = [["Afghanistan"],
 
 smiley_scale_5 = [[Emoji.TIRED_FACE], [Emoji.PERSON_FROWNING]]
 
-languages = ["Deutsch", "English", "Espagnol", "Francais"]
+languages = [["Deutsch"], ["English"], ["Espagnol"], ["Francais"]]
+
+
+CUSTOM_KEYBOARDS = dict()
+CUSTOM_KEYBOARDS['KEY_1'] = languages
+CUSTOM_KEYBOARDS['KEY_2'] = countries_rk
+
+
+def get_preset_by_choice(choice):
+    return CUSTOM_KEYBOARDS[choice]

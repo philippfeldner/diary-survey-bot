@@ -5,6 +5,7 @@ from telegram.ext import Job, JobQueue
 
 from survey.data_set import DataSet
 from survey.participant import Participant
+from survey.keyboard_presets import CUSTOM_KEYBOARDS
 
 LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 
@@ -31,11 +32,19 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             q_set = user_map.return_question_set_by_language(user.language_)
             question_id = user.increase_question_id()
             q_current = q_set[question_id]
+            user.set_day(1)
         # Case if the user was actually asked a question.
         elif user.q_idle_:
             q_set = user_map.return_question_set_by_language(user.language_)
             # Get the matching question for the users answer.
             q_prev = q_set[user.question_id_]
+            if not valid_answer(q_prev, update.message):
+                message = q_prev['question']
+                reply_markup = get_keyboard(q_prev['choice'])
+                bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
+                user.q_idle_ = True
+                return
+
             store_answer(user.chat_id_, update.message, q_prev)
 
             question_id = user.increase_question_id()
@@ -75,12 +84,14 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
     # No more questions for today
     if user.day_complete_:
+        user.set_day(q_current['day'])
         return
 
     message = q_current['question']
     reply_markup = get_keyboard(q_current['choice'])
     bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
     user.q_idle_ = True
+    return
 
 
 def store_answer(chat_id, message, question):
@@ -126,5 +137,21 @@ def queue_next(bot: Bot, job: Job):
 def get_keyboard(choice):
     #Todo
     return 0
+
+
+def valid_answer(question, message):
+    commands = question['commands']
+    if 'PLACEHOLDER' not in commands or question['choice'] == []:
+        return True
+
+    try:
+        choice = CUSTOM_KEYBOARDS[question['choice'][0]]
+    except KeyError:
+        choice = question['choice']
+
+    if message in 'choice':
+        return True
+    else:
+        return False
 
 

@@ -11,7 +11,7 @@ class Participant:
     language_ = ''
     gender_ = ''
     country_ = ''
-    day_ = 0
+    day_ = 1
     time_t_ = ''
     time_offset_ = 0xFFFF
     conditions_ = []
@@ -86,8 +86,8 @@ class Participant:
             print(error)
         return
 
-    def increase_day_t(self):
-        self.day_ += 1
+    def set_day(self, day):
+        self.day_ = day
         try:
             db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET day_t=? WHERE ID=?", (self.day_, self.chat_id_))
@@ -166,6 +166,7 @@ class Participant:
         return 0
 
     def requirements(self, condition):
+        return True
         if condition == [] or condition in self.conditions_:
             return True
         else:
