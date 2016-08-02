@@ -7,6 +7,7 @@ from survey.data_set import DataSet
 from survey.participant import Participant
 from survey.keyboard_presets import CUSTOM_KEYBOARDS
 
+
 LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 
 
@@ -42,7 +43,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 message = q_prev['question']
                 reply_markup = get_keyboard(q_prev['choice'])
                 bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
-                user.q_idle_ = True
+                user.set_q_idle(True)
                 return
 
             store_answer(user.chat_id_, update.message, q_prev)
@@ -55,7 +56,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 # Todo: Send message and stuff
 
             q_current = q_set[question_id]
-            user.q_idle_ = False
+            user.set_q_idle(False)
         else:
             # Todo: Is this enough?
             return
@@ -78,19 +79,21 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     # if there is no auto_queue enabled and the user has answered all questions
     # for the day a job for the next day gets scheduled.
     if not user.auto_queue_ and user.day_complete_:
-        job = Job(queue_next, context=[user, question_id, q_set, job_queue])
+        user.set_day(q_current['day'])
+        job = Job(queue_next, 5, repeat=False, context=[user, question_id, q_set, job_queue])
         job_queue.put(job)
         return
 
     # No more questions for today
     if user.day_complete_:
         user.set_day(q_current['day'])
+        print(q_current['day'])
         return
 
     message = q_current['question']
     reply_markup = get_keyboard(q_current['choice'])
     bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
-    user.q_idle_ = True
+    user.set_q_idle(True)
     return
 
 
@@ -100,10 +103,12 @@ def store_answer(chat_id, message, question):
 
 
 def queue_next(bot: Bot, job: Job):
+    print('new job')
     user = job.context[0]
     question_id = job.context[1]
     q_set = job.context[2]
     job_queue = job.context[3]
+    user.day_complete_ = False
 
     if not user.active_:
         return
@@ -112,6 +117,7 @@ def queue_next(bot: Bot, job: Job):
         q_text = q_set[question_id]["question"]
         q_keyboard = get_keyboard(q_set[question_id]["choice"])
         bot.send_message(user.chat_id_, q_text, reply_markup=q_keyboard)
+        user.set_q_idle(True)
 
     if not user.auto_queue_ or not user.day_complete_:
         # Todo maybe do stuff here
@@ -129,7 +135,7 @@ def queue_next(bot: Bot, job: Job):
     due = calc_delta_t(user.time_t_, day_offset)
 
     # Add new job and to queue. The function basically calls itself recursively after x seconds.
-    new_job = Job(queue_next, due)
+    new_job = Job(queue_next, 60, repeat=False, context=[user, question_id, q_set, job_queue])
     job_queue.put(new_job)
     return
 

@@ -1,7 +1,6 @@
 from telegram import Bot, Update, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-from survey.keyboard_presets import smiley_scale_5
 from survey.keyboard_presets import languages
 
 from survey.participant import DataSet

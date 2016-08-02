@@ -28,9 +28,9 @@ class Participant:
             try:
                 db = sqlite3.connect('survey/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
-                           "country, gender, language, question_id, time_offset, day)"
-                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 0xFFFF, -1))
+                           "country, gender, language, question_id, time_offset, day, q_idle, active)"
+                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 0xFFFF, -1, 0, 1))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
@@ -90,7 +90,7 @@ class Participant:
         self.day_ = day
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET day_t=? WHERE ID=?", (self.day_, self.chat_id_))
+            db.execute("UPDATE participants SET day=? WHERE ID=?", (self.day_, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
@@ -149,6 +149,28 @@ class Participant:
             print(error)
         return self.question_id_
 
+    def set_q_idle(self, state):
+        self.q_idle_ = state
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET q_idle=? WHERE ID=?", (self.q_idle_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.day_
+
+    def set_active(self, state):
+        self.active_ = state
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET active=? WHERE ID=?", (self.active_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.day_
+
     def delete_participant(self):
         try:
             db = sqlite3.connect('survey/participants.db')
@@ -194,9 +216,11 @@ def initialize_participants(job_queue: JobQueue):
             user.country_ = row[3]
             user.gender_ = row[4]
             user.language_ = row[5]
-            user.init_state_ = row[6]
+            user.question_id_ = row[6]
             user.time_offset_ = row[7]
             user.day_ = row[8]
+            user.q_idle_ = row[9]
+            user.active_ = row[10]
             user_map.participants[row[0]] = user
             # if user.time_t_ == '':
             #    return  # TODO

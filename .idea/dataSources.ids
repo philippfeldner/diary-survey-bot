@@ -14,6 +14,8 @@
       <column name="question_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="time_offset" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="day" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="q_idle" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
     </table>
   </data-source>
 </component>
