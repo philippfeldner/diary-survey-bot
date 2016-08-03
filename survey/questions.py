@@ -46,7 +46,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
-            store_answer(user.chat_id_, update.message, q_prev)
+            store_answer(user, update.message.text, q_prev)
             question_id = user.increase_question_id()
 
             # Check if user has completed the whole survey
@@ -64,7 +64,8 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         return
 
     # Find next question for the user.
-    while not user.requirements(q_current['conditions']):
+    print(q_current['conditions_required'])
+    while not user.check_requirements(q_current['conditions_required']):
         question_id = user.increase_question_id()
         q_current = q_set[question_id]
 
@@ -93,8 +94,11 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     return
 
 
-def store_answer(chat_id, message, question):
-    # Todo: Check if condition is to be set; Check if a "main" attribute is to be stored.
+def store_answer(user, message, question):
+    condition = [message, question['id']]
+    if message in question['conditions']:
+        user.add_conditions(condition)
+    # Todo: CSV stuff
     return
 
 
@@ -112,7 +116,7 @@ def queue_next(bot: Bot, job: Job):
         return
 
     # Find next question that the user should get.
-    while not user.requirements(q_set[question_id]["conditions"]):  # Todo look into
+    while not user.check_requirements(q_set[question_id]["conditions_required"]):
         question_id += 1
 
     # User did not fulfill any questions for the day so we reschedule.
@@ -167,7 +171,6 @@ def valid_answer(question, message):
     commands = question['commands']
     if 'FORCE_KB_REPLY' not in commands or question['choice'] == []:
         return True
-
     try:
         choice = CUSTOM_KEYBOARDS[question['choice'][0]]
     except KeyError:

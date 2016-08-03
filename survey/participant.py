@@ -122,15 +122,10 @@ class Participant:
     def add_conditions(self, conditions):
         if conditions == []:
             return
-        self.conditions_ += conditions
+        self.conditions_ += [conditions]
         try:
             db = sqlite3.connect('survey/participants.db')
-            cursor = db.cursor()
-            cursor.execute("SELECT conditions FROM participants WHERE ID=?", self.chat_id_)
-            fetch = cursor.fetchone()  # type: list
-            cond_blob = fetch[0]  # type: pickle
-            cond_old = pickle.loads(cond_blob)
-            cond = pickle.dumps(cond_old + conditions)
+            cond = pickle.dumps(self.conditions_)
             db.execute("UPDATE participants SET conditions=? WHERE ID=?", (cond, self.chat_id_))
             db.commit()
             db.close()
@@ -187,12 +182,15 @@ class Participant:
             print(error)
         return 0
 
-    def requirements(self, condition):
-        return True
-        if condition == [] or condition in self.conditions_:
+    def check_requirements(self, condition):
+        if condition == []:
             return True
-        else:
-            return False
+
+        for element in condition:
+            if element not in self.conditions_:
+                return False
+        return True
+
 
     def parse_commands(self, commands, message):
         return True
