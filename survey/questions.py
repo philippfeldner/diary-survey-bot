@@ -22,9 +22,9 @@ def calc_delta_t(time, days):
 
 
 def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: JobQueue):
-    # Get the user from the dict and its question_set (by language)
 
     try:
+        # Get the user from the dict and its question_set (by language)
         user = user_map.participants[update.message.chat_id]  # type: Participant
 
         # Case for very first question.
@@ -34,7 +34,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             question_id = user.increase_question_id()
             q_current = q_set[question_id]
             user.set_day(1)
-        # Case if the user was actually asked a question.
+        # Case if the user was asked a question.
         elif user.q_idle_:
             q_set = user_map.return_question_set_by_language(user.language_)
             # Get the matching question for the users answer.
@@ -45,9 +45,8 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
                 user.set_q_idle(True)
                 return
-
+            # Storing the answer and moving on the next question
             store_answer(user.chat_id_, update.message, q_prev)
-
             question_id = user.increase_question_id()
 
             # Check if user has completed the whole survey
@@ -58,25 +57,22 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             q_current = q_set[question_id]
             user.set_q_idle(False)
         else:
-            # Todo: Is this enough?
+            # User has send something without being asked a question.
             return
-    except KeyError:
-        # Todo handle exception
+    except KeyError as error:
+        print(error)
         return
 
-    # find next question for the user
+    # Find next question for the user.
     while not user.requirements(q_current['conditions']):
         question_id = user.increase_question_id()
         q_current = q_set[question_id]
 
-    if not user.parse_commands(q_current['commands'], update.message):
-        # Todo more features maybe?
-        return
-
+    # Check if the new question is meant for another day.
     if q_current['day'] != user.day_:
         user.day_complete_ = True
 
-    # if there is no auto_queue enabled and the user has answered all questions
+    # If there is no auto_queue enabled and the user has answered all questions
     # for the day a job for the next day gets scheduled.
     if not user.auto_queue_ and user.day_complete_:
         user.set_day(q_current['day'])
@@ -87,12 +83,12 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     # No more questions for today
     if user.day_complete_:
         user.set_day(q_current['day'])
-        print(q_current['day'])
         return
 
+    # Sending the new question
     message = q_current['question']
-    reply_markup = get_keyboard(q_current['choice'])
-    bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
+    q_keyboard = get_keyboard(q_current['choice'])
+    bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
     user.set_q_idle(True)
     return
 
@@ -109,24 +105,42 @@ def queue_next(bot: Bot, job: Job):
     q_set = job.context[2]
     job_queue = job.context[3]
     user.day_complete_ = False
+    day = user.day_
 
+    # Check if the user is currently active
     if not user.active_:
         return
 
-    if question_id is not None and user.requirements(q_set[question_id]["conditions"]):  # Todo look into
-        q_text = q_set[question_id]["question"]
-        q_keyboard = get_keyboard(q_set[question_id]["choice"])
-        bot.send_message(user.chat_id_, q_text, reply_markup=q_keyboard)
-        user.set_q_idle(True)
+    # Find next question that the user should get.
+    while not user.requirements(q_set[question_id]["conditions"]):  # Todo look into
+        question_id += 1
 
+    # User did not fulfill any questions for the day so we reschedule.
+    if q_set[question_id]["day"] != day:
+        # Set the new day.
+        user.day_ = q_set[question_id]["day"]
+
+        # Calculate seconds until question is due.
+        day_offset = q_set[question_id] - day
+        due = calc_delta_t(user.time_t_, day_offset)
+
+        # Add new job and to queue. The function basically calls itself recursively after x seconds.
+        new_job = Job(queue_next, 60, repeat=False, context=[user, question_id, q_set, job_queue])
+        job_queue.put(new_job)
+
+    # Sending the question
+    q_text = q_set[question_id]["question"]
+    q_keyboard = get_keyboard(q_set[question_id]["choice"])
+    bot.send_message(user.chat_id_, q_text, reply_markup=q_keyboard)
+    user.set_q_idle(True)
+
+    # Check if there is a reason to queue again.
     if not user.auto_queue_ or not user.day_complete_:
-        # Todo maybe do stuff here
         return
 
-    day = user.day_
     question_id = user.question_id_
 
-    # Find next question that is not ment for the current day
+    # Find next question that is not meant for the current day
     while q_set[question_id]['day'] == day:
         question_id += 1
 
@@ -141,13 +155,17 @@ def queue_next(bot: Bot, job: Job):
 
 
 def get_keyboard(choice):
-    #Todo
-    return 0
+    if choice == []:
+        return ReplyKeyboardHide()
+    elif choice[0] == 'KEY_1':
+        return ReplyKeyboardMarkup(CUSTOM_KEYBOARDS['KEY_1'])
+    else:
+        return ReplyKeyboardMarkup(choice)
 
 
 def valid_answer(question, message):
     commands = question['commands']
-    if 'PLACEHOLDER' not in commands or question['choice'] == []:
+    if 'FORCE_KB_REPLY' not in commands or question['choice'] == []:
         return True
 
     try:
@@ -155,7 +173,7 @@ def valid_answer(question, message):
     except KeyError:
         choice = question['choice']
 
-    if message in 'choice':
+    if message in choice:
         return True
     else:
         return False

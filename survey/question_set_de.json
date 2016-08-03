@@ -3,8 +3,8 @@
     "id": 0,
     "day": 1,
     "choice": [
-      "Ja, starten wir",
-      "Nein, ich möchte doch nicht mitmachen"
+      ["Ja, starten wir"],
+      ["Nein, ich möchte doch nicht mitmachen"]
     ],
     "question": "Hallo und danke fürs Mitmachen bei unserer Studie! Für die Möglichkeit, einen 150€ Amazon-Gutschein zu gewinnen und ein persönliches Feedback zu deiner körperlichen Aktivität und Stimmung zu bekommen, beantworte bitte in den nächsten sechs Wochen und etwas später nochmal eine Woche lang jeden Abend ein paar kurze Fragen. Wir werden dich hauptsächlich zu deiner körperlichen Aktivität und deiner Verwendung (oder Nicht-Verwendung) von Pokémon GO befragen. Insgesamt wirst du - verteilt auf die kommenden Wochen - weniger als eine Stunde mit unserem Chatbot auf Telegram schreiben und du kannst uns jederzeit eine E-Mail schreiben, wenn du zusätzliche Unterstützung brauchst. Bitte beachte, dass deine Teilnahme freiwillig ist und dass du jederzeit abbrechen kannst indem du uns eine Nachricht mit dem Inhalt \"/stop\" im Telegram chat sendest. Wir versprechen dir außerdem, deine persönliche Information nicht an Dritte weiterzugeben. Wir werden deine Daten nur für wissenschaftliche Zwecke verwenden und falls wir sie publizieren, so wird das nur in aggregierter Form geschehen. Das heißt, dass wir uns nur anschauen, was in der Gruppe passiert und nicht, was eine Einzelperson antwortet. Die einzige Ausnahme hiervon wird sein, wenn du am Ende der Studie angibst, dass du gerne ein persönliches Feedback zu deiner körperlichen Aktivität und Stimmung während der Studie haben möchtest. - Dann werden wir eine Grafik mit ausschließlich deinen eigenen Daten vorbereiten und dir (aber niemandem sonst) schicken. Um mitzumachen, musst du mindestens 18 Jahre alt sein. Wenn du noch Fragen hast, schicke uns doch bitte eine E-Mail mit dem Betreff Pokemon an goals@gmx.at. Bereit zum Starten?",
     "conditions_required": [],
@@ -20,8 +20,8 @@
     "question": "Vielen Dank für deine Teilnahme! Wenn du möchtest würden wir uns über eine Nachricht freuen, warum du nicht mehr weitermachen willst. Falls du es dir anders überlegst, kannst du jederzeit wieder teilnehmen, indem du uns eine Nachricht mit start schickst.",
     "conditions_required": [
       [
-        "Nein, ich möchte doch nicht mitmachen",
-        0
+        ["Nein, ich möchte doch nicht mitmachen"],
+        [0]
       ]
     ],
     "conditions": [],
@@ -31,9 +31,9 @@
     "id": 2,
     "day": 1,
     "choice": [
-      "Ich hätte gerne weitere Informationen über die Schrittzähl-App",
-      "Ich habe schon eine Schrittzähl-App und möchte diese verwenden",
-      "Nein danke, ich mache die Studie lieber ohne die Schrittzähl-App"
+      ["Ich hätte gerne weitere Informationen über die Schrittzähl-App"],
+      ["Ich habe schon eine Schrittzähl-App und möchte diese verwenden"],
+      ["Nein danke, ich mache die Studie lieber ohne die Schrittzähl-App"]
     ],
     "question": "Bevor es losgeht: Wir interessieren und sehr für deine tägliche körperliche Aktivität. Wenn du gerne die doppelte Gewinnchance hättest, dann installiere bitte eine Schrittzähl-App und schreibe uns jeden Abend die von der App ermittelte Zeit die du zu Fuß unterwegs warst.",
     "conditions_required": [],
@@ -46,8 +46,8 @@
     "id": 3,
     "day": 1,
     "choice": [
-      "Erledigt und weiter",
-      "Nein, ich habe meine Meinung geändert und will doch keinen Schrittzähler verwenden"
+      ["Erledigt und weiter"],
+      ["Nein, ich habe meine Meinung geändert und will doch keinen Schrittzähler verwenden"]
     ],
     "question": "Danke, dass du dich dafür entschieden hast, eine Schrittzähl-App zu installieren. Wir empfehlen dir die App Schrittzähler - Accupedo, die du im Google Play Store / App store herunterladen kannst. Du kannst natürlich auch eine andere App verwenden, wenn diese dir besser gefällt.",
     "conditions_required": [
@@ -87,7 +87,7 @@
     "id": 6,
     "day": 1,
     "choice": [
-      "Weiter"
+      ["Weiter"]
     ],
     "question": "Danke für dein Interesse! Wir werden dir nun gleich ein paar Fragen stellen. Keine Angst, du bleibst trotzdem anonym.",
     "conditions_required": [],
@@ -98,8 +98,8 @@
     "id": 7,
     "day": 1,
     "choice": [
-      "männlich",
-      "weiblich"
+      ["männlich"],
+      ["weiblich"]
     ],
     "question": "Geschlecht",
     "conditions_required": [],
@@ -130,8 +130,8 @@
     "id": 10,
     "day": 1,
     "choice": [
-      "Stadt",
-      "Land"
+      ["Stadt"],
+      ["Land"]
     ],
     "question": "Wohnst du in der Stadt oder auf dem Land?",
     "conditions_required": [],
@@ -160,8 +160,8 @@
     "id": 13,
     "day": 1,
     "choice": [
-      "ja",
-      "nein"
+      ["ja"],
+      ["nein"]
     ],
     "question": "Treibst du regelmäßig Sport?",
     "conditions_required": [],
