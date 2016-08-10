@@ -11,11 +11,12 @@
       <column name="country" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="gender" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="language" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="question_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="question" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="time_offset" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="day" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="q_idle" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="active" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="q_idle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="block" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
     </table>
   </data-source>
 </component>

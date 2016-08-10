@@ -28,7 +28,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         user = user_map.participants[update.message.chat_id]  # type: Participant
 
         # Case for very first question.
-        if user.question_id_ == -1:
+        if user.question_ == -1:
             user.set_language(update.message)
             q_set = user_map.return_question_set_by_language(user.language_)
             question_id = user.increase_question_id()
@@ -38,7 +38,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         elif user.q_idle_:
             q_set = user_map.return_question_set_by_language(user.language_)
             # Get the matching question for the users answer.
-            q_prev = q_set[user.question_id_]
+            q_prev = q_set[user.question_]
             if not valid_answer(q_prev, update.message):
                 message = q_prev['question']
                 reply_markup = get_keyboard(q_prev['choice'])
@@ -50,7 +50,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             question_id = user.increase_question_id()
 
             # Check if user has completed the whole survey
-            if user.question_id_ == len(q_set):
+            if user.question_ == len(q_set):
                 user.finished()
                 # Todo: Send message and stuff
 

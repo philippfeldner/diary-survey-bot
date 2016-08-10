@@ -218,7 +218,7 @@ countries_rk = [["Afghanistan"],
 
 smiley_scale_5 = [[Emoji.TIRED_FACE], [Emoji.PERSON_FROWNING]]
 
-languages = [["Deutsch"], ["English"], ["Espagnol"], ["Francais"]]
+languages = [["Deutsch"], ["English"], ["Español"], ["Français"]]
 
 
 CUSTOM_KEYBOARDS = dict()

@@ -12,10 +12,11 @@ class Participant:
     gender_ = ''
     country_ = ''
     day_ = 1
+    block_ = -1
+    question_ = -1
     time_t_ = ''
     time_offset_ = 0xFFFF
     conditions_ = []
-    question_id_ = -1
 
     auto_queue_ = False
     day_complete_ = False
@@ -28,9 +29,9 @@ class Participant:
             try:
                 db = sqlite3.connect('survey/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
-                           "country, gender, language, question_id, time_offset, day, q_idle, active)"
-                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 0xFFFF, -1, 0, 1))
+                           "country, gender, language, question, time_offset, day, block, q_idle, active)"
+                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                           (chat_id, pickle.dumps([]), '', '', '', '', -1, -1, 0xFFFF, -1, 0, 1))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
@@ -47,9 +48,9 @@ class Participant:
             lang = 'de'
         elif language == ('English' or 'en'):
             lang = 'en'
-        elif language == ('Espagnol' or 'es'):
+        elif language == ('Español' or 'es'):
             lang = 'es'
-        elif language == ('Francais' or 'fr'):
+        elif language == ('Français' or 'fr'):
             lang = 'fr'
         else:
             lang = settings.default_language
@@ -134,15 +135,15 @@ class Participant:
         return
 
     def increase_question_id(self):
-        self.question_id_ += 1
+        self.question_ += 1
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET question_id=? WHERE ID=?", (self.question_id_, self.chat_id_))
+            db.execute("UPDATE participants SET question_id=? WHERE ID=?", (self.question_, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
             print(error)
-        return self.question_id_
+        return self.question_
 
     def set_q_idle(self, state):
         self.q_idle_ = state
@@ -214,11 +215,12 @@ def initialize_participants(job_queue: JobQueue):
             user.country_ = row[3]
             user.gender_ = row[4]
             user.language_ = row[5]
-            user.question_id_ = row[6]
+            user.question_ = row[6]
             user.time_offset_ = row[7]
             user.day_ = row[8]
             user.q_idle_ = row[9]
             user.active_ = row[10]
+            user.block_ = row[11]
             user_map.participants[row[0]] = user
             # if user.time_t_ == '':
             #    return  # TODO
