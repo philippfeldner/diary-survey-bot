@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9d5a5b4-9edf-4a3d-b9ca-9cd59760119e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/participants.db" afterPath="$PROJECT_DIR$/survey/participants.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/data_set.py" afterPath="$PROJECT_DIR$/survey/data_set.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/keyboard_presets.py" afterPath="$PROJECT_DIR$/survey/keyboard_presets.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/participant.py" afterPath="$PROJECT_DIR$/survey/participant.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/question_set_de.json" afterPath="$PROJECT_DIR$/survey/question_set_de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/questions.py" afterPath="$PROJECT_DIR$/survey/questions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.json" afterPath="$PROJECT_DIR$/test.json" />
     </list>
     <ignored path="questionnaire-telegram-bot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,16 +56,25 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
               <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-              <folding />
+              <folding>
+                <marker date="1470859784203" expanded="true" signature="283:1592" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="296:519" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="358:519" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="619:842" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="681:842" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="943:1166" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="1005:1166" placeholder="..." />
+                <marker date="1470859784203" expanded="true" signature="1329:1490" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="questions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/questions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
-              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="882">
+              <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -85,6 +87,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question_set_de.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/survey/question_set_de.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="53372" column="0" selection-start-line="53372" selection-start-column="0" selection-end-line="53372" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +130,8 @@
       <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="130">
+              <caret line="53323" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="53372" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,11 +200,11 @@
         <option value="$PROJECT_DIR$/json_fixer.py" />
         <option value="$PROJECT_DIR$/admin/settings.py" />
         <option value="$PROJECT_DIR$/survey/questions.py" />
-        <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/survey/question_set_de.json" />
         <option value="$PROJECT_DIR$/survey/participant.py" />
         <option value="$PROJECT_DIR$/survey/keyboard_presets.py" />
         <option value="$PROJECT_DIR$/survey/data_set.py" />
+        <option value="$PROJECT_DIR$/test.json" />
+        <option value="$PROJECT_DIR$/survey/question_set_de.json" />
       </list>
     </option>
   </component>
@@ -855,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/survey/question_set_de.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5184" column="20" selection-start-line="5184" selection-start-column="20" selection-end-line="5184" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.4/dist-packages/telegram/ext/jobqueue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="843">
@@ -875,14 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="220" column="48" selection-start-line="220" selection-start-column="48" selection-end-line="220" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -932,17 +928,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-          <folding />
+          <folding>
+            <marker date="1470859784203" expanded="true" signature="283:1592" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="296:519" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="358:519" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="619:842" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="681:842" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="943:1166" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="1005:1166" placeholder="..." />
+            <marker date="1470859784203" expanded="true" signature="1329:1490" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/survey/questions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        <state relative-caret-position="882">
+          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="53323" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="53372" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/question_set_de.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="53372" column="0" selection-start-line="53372" selection-start-column="0" selection-end-line="53372" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
