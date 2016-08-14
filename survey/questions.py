@@ -22,7 +22,6 @@ def calc_delta_t(time, days):
 
 
 def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: JobQueue):
-
     try:
         # Get the user from the dict and its question_set (by language)
         user = user_map.participants[update.message.chat_id]  # type: Participant
@@ -30,15 +29,23 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         # Case for very first question.
         if user.question_ == -1:
             user.set_language(update.message)
+            user.set_block(0)
             q_set = user_map.return_question_set_by_language(user.language_)
-            question_id = user.increase_question_id()
-            q_current = q_set[question_id]
-            user.set_day(1)
-        # Case if the user was asked a question.
+            current_block = q_set[0]["blocks"][user.block_]
+            current_day = q_set[0]["day"]
+            user.set_day(current_day)
+            d_prev = current_day
+            b_prev = 0
+            q_prev = -1
         elif user.q_idle_:
             q_set = user_map.return_question_set_by_language(user.language_)
             # Get the matching question for the users answer.
-            q_prev = q_set[user.question_]
+
+            offset = user.day_index(user_map)
+            d_prev = q_set[offset]
+            b_prev = d_prev["block"][user.block_]
+            q_prev = b_prev["questions"][user.question_]
+
             if not valid_answer(q_prev, update.message):
                 message = q_prev['question']
                 reply_markup = get_keyboard(q_prev['choice'])
@@ -46,15 +53,10 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
-            store_answer(user, update.message.text, q_prev)
-            question_id = user.increase_question_id()
+            store_answer(user, update.message.text, q_prev)  # Todo more info
+            if user.check_finished():
+                return
 
-            # Check if user has completed the whole survey
-            if user.question_ == len(q_set):
-                user.finished()
-                # Todo: Send message and stuff
-
-            q_current = q_set[question_id]
             user.set_q_idle(False)
         else:
             # User has send something without being asked a question.
@@ -62,35 +64,14 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     except KeyError as error:
         print(error)
         return
+    # ##################################################
 
     # Find next question for the user.
-    print(q_current['conditions_required'])
-    while not user.check_requirements(q_current['conditions_required']):
-        question_id = user.increase_question_id()
-        q_current = q_set[question_id]
+    question = find_next_question(user, user_map, q_set)
 
-    # Check if the new question is meant for another day.
-    if q_current['day'] != user.day_:
-        user.day_complete_ = True
+    # ##################################################
 
-    # If there is no auto_queue enabled and the user has answered all questions
-    # for the day a job for the next day gets scheduled.
-    if not user.auto_queue_ and user.day_complete_:
-        user.set_day(q_current['day'])
-        job = Job(queue_next, 5, repeat=False, context=[user, question_id, q_set, job_queue])
-        job_queue.put(job)
-        return
 
-    # No more questions for today
-    if user.day_complete_:
-        user.set_day(q_current['day'])
-        return
-
-    # Sending the new question
-    message = q_current['question']
-    q_keyboard = get_keyboard(q_current['choice'])
-    bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
-    user.set_q_idle(True)
     return
 
 
@@ -156,6 +137,20 @@ def queue_next(bot: Bot, job: Job):
     new_job = Job(queue_next, 60, repeat=False, context=[user, question_id, q_set, job_queue])
     job_queue.put(new_job)
     return
+
+
+def find_next_question(user, user_map, q_set):
+    try:
+        offset = user.day_index(user_map)
+        q_day = q_set[offset]
+        q_block = q_day["blocks"][user.block_]
+        question = q_block[user.question_ + 1]
+        while user.check_requirements(question):
+            question = q_block[user.question_ + 1]
+
+        return question
+    except IndexError:
+        return None
 
 
 def get_keyboard(choice):

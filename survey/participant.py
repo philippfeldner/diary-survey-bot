@@ -134,11 +134,22 @@ class Participant:
             print(error)
         return
 
-    def increase_question_id(self):
-        self.question_ += 1
+    def set_block(self, block):
+        self.block_ = block
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET question_id=? WHERE ID=?", (self.question_, self.chat_id_))
+            db.execute("UPDATE participants SET block=? WHERE ID=?", (self.block_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.block_
+
+    def set_question(self, question):
+        self.question_ = question
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET question=? WHERE ID=?", (self.question_, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
@@ -167,6 +178,19 @@ class Participant:
             print(error)
         return self.day_
 
+    def day_index(self, user_map):
+        # language
+        if self.language_ == 'de':
+            return user_map.map_de[self.day_]
+        elif self.language_ == 'en':
+            return user_map.map_en[self.day_]
+        elif self.language_ == 'fr':
+            return user_map.map_fr[self.day_]
+        elif self.language_ == 'es':
+            return user_map.map_es[self.day_]
+        else:
+            return False
+
     def delete_participant(self):
         try:
             db = sqlite3.connect('survey/participants.db')
@@ -191,7 +215,6 @@ class Participant:
             if element not in self.conditions_:
                 return False
         return True
-
 
     def parse_commands(self, commands, message):
         return True
