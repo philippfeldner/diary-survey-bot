@@ -1,4 +1,5 @@
 from datetime import datetime
+from hashlib import sha256
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
 from telegram.ext import Job, JobQueue
@@ -41,14 +42,14 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             q_set = user_map.return_question_set_by_language(user.language_)
             # Get the matching question for the users answer.
 
-            offset = user.day_index(user_map)
-            d_prev = q_set[offset]
+            pointer = user.pointer_
+            d_prev = q_set[pointer]
             b_prev = d_prev["block"][user.block_]
             q_prev = b_prev["questions"][user.question_]
 
             if not valid_answer(q_prev, update.message):
-                message = q_prev['question']
-                reply_markup = get_keyboard(q_prev['choice'])
+                message = q_prev["text"]
+                reply_markup = get_keyboard(q_prev["choice"])
                 bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
                 user.set_q_idle(True)
                 return
@@ -64,14 +65,9 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     except KeyError as error:
         print(error)
         return
-    # ##################################################
 
-    # Find next question for the user.
-    question = find_next_question(user, user_map, q_set)
-
-    # ##################################################
-
-
+    question, time = find_next_question(user, q_set)
+    queue_next()
     return
 
 
@@ -139,18 +135,44 @@ def queue_next(bot: Bot, job: Job):
     return
 
 
-def find_next_question(user, user_map, q_set):
+def find_next_question(user, q_set):
     try:
-        offset = user.day_index(user_map)
-        q_day = q_set[offset]
+        q_day = q_set[user.pointer_]
         q_block = q_day["blocks"][user.block_]
-        question = q_block[user.question_ + 1]
+        question = q_block[user.increase_question()]
         while user.check_requirements(question):
-            question = q_block[user.question_ + 1]
-
-        return question
+            question = q_block[user.increase_question()]
+        return question, 0
     except IndexError:
-        return None
+        try:
+            q_day = q_set[user.pointer_]
+            q_block = q_day["blocks"][user.increase_block()]
+            question = q_block[user.set_question(0)]
+            try:
+                while user.check_requirements(question):
+                    question = q_block[user.increase_question()]
+            except IndexError:
+                user.increase_block()
+                user.set_question(0)
+                question = find_next_question(user, q_set)
+            return question  # Todo: Time!
+        except IndexError:
+            try:
+                q_day = q_set[user.increase_pointer()]
+                q_block = q_day["blocks"][user.set_block(0)]
+                question = q_block[user.set_question(0)]
+                try:
+                    while user.check_requirements(question):
+                        question = q_block[user.increase_question()]
+                except IndexError:
+                    user.increase_pointer()
+                    user.set_block(0)
+                    user.set_question(0)
+                    question = find_next_question(user, q_set)
+                return question  # Todo: Time!
+            except IndexError:
+                return
+
 
 
 def get_keyboard(choice):

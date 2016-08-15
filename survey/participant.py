@@ -14,6 +14,7 @@ class Participant:
     day_ = 1
     block_ = -1
     question_ = -1
+    pointer_ = 0
     time_t_ = ''
     time_offset_ = 0xFFFF
     conditions_ = []
@@ -29,8 +30,8 @@ class Participant:
             try:
                 db = sqlite3.connect('survey/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
-                           "country, gender, language, question, time_offset, day, block, q_idle, active)"
-                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                           "country, gender, language, question, time_offset, day, block, q_idle, active, pointer)"
+                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                            (chat_id, pickle.dumps([]), '', '', '', '', -1, -1, 0xFFFF, -1, 0, 1))
                 db.commit()
                 db.close()
@@ -145,6 +146,17 @@ class Participant:
             print(error)
         return self.block_
 
+    def increase_block(self, block):
+        self.block_ += 1
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET block=? WHERE ID=?", (self.block_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.block_
+
     def set_question(self, question):
         self.question_ = question
         try:
@@ -155,6 +167,28 @@ class Participant:
         except sqlite3.Error as error:
             print(error)
         return self.question_
+
+    def increase_question(self):
+        self.question_ += 1
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET question=? WHERE ID=?", (self.question_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.question_
+
+    def increase_pointer(self):
+        self.pointer_ += 1
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET pointer=? WHERE ID=?", (self.pointer_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.pointer_
 
     def set_q_idle(self, state):
         self.q_idle_ = state
@@ -177,19 +211,6 @@ class Participant:
         except sqlite3.Error as error:
             print(error)
         return self.day_
-
-    def day_index(self, user_map):
-        # language
-        if self.language_ == 'de':
-            return user_map.map_de[self.day_]
-        elif self.language_ == 'en':
-            return user_map.map_en[self.day_]
-        elif self.language_ == 'fr':
-            return user_map.map_fr[self.day_]
-        elif self.language_ == 'es':
-            return user_map.map_es[self.day_]
-        else:
-            return False
 
     def delete_participant(self):
         try:
@@ -244,6 +265,7 @@ def initialize_participants(job_queue: JobQueue):
             user.q_idle_ = row[9]
             user.active_ = row[10]
             user.block_ = row[11]
+            user.pointer_ = row[12]
             user_map.participants[row[0]] = user
             # if user.time_t_ == '':
             #    return  # TODO

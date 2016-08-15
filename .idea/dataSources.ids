@@ -17,6 +17,7 @@
       <column name="q_idle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="active" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="block" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="pointer" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
     </table>
   </data-source>
 </component>
