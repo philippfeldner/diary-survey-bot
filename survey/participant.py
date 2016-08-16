@@ -18,6 +18,7 @@ class Participant:
     time_t_ = ''
     time_offset_ = 0xFFFF
     conditions_ = []
+    next_block = None
 
     auto_queue_ = False
     day_complete_ = False
@@ -146,7 +147,7 @@ class Participant:
             print(error)
         return self.block_
 
-    def increase_block(self, block):
+    def increase_block(self):
         self.block_ += 1
         try:
             db = sqlite3.connect('survey/participants.db')
@@ -228,6 +229,19 @@ class Participant:
             print(error)
         return 0
 
+    def set_next_block(self, q_set):
+        try:
+            block = q_set[self.pointer_]["blocks"][self.block_ + 1]
+            self.next_block = [self.pointer_, self.block_ + 1, block]
+            return q_set[self.pointer_]["day"]
+        except IndexError:
+            try:
+                block = q_set[self.pointer_ + 1]["blocks"][0]
+                self.next_block = [self.pointer_ + 1, 0, block]
+                return q_set[self.pointer_ + 1]["day"]
+            except IndexError:
+                self.next_block = None
+
     def check_requirements(self, condition):
         if condition == []:
             return True
@@ -271,6 +285,24 @@ def initialize_participants(job_queue: JobQueue):
             #    return  # TODO
             # else:
             #    job_queue  # TODO
+
+            if user.language_ != '':
+                q_set = user_map.return_question_set_by_language(user.language_)
+                try:
+                    block = q_set[user.pointer_]["blocks"][user.block_ + 1]
+                    user.next_block = [user.pointer_, user.block_ + 1, block]
+                except IndexError:
+                    try:
+                        block = q_set[user.pointer_ + 1]["blocks"][0]
+                        user.next_block = [user.pointer_ + 1, 0, block]
+                    except IndexError:
+                        user.set_question(0)
+                        return None
+            else:
+                user.next_block = None
+
+
+
     except sqlite3.Error as error:
         print(error)
     return user_map
