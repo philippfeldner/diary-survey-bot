@@ -20,8 +20,10 @@ class Participant:
     conditions_ = []
     next_block = None
 
+    job = None
+    q_set_ = None
     auto_queue_ = False
-    day_complete_ = False
+    block_complete_ = False
     q_idle_ = False
     active_ = True
 
@@ -229,7 +231,8 @@ class Participant:
             print(error)
         return 0
 
-    def set_next_block(self, q_set):
+    def set_next_block(self):
+        q_set = self.q_set_
         try:
             block = q_set[self.pointer_]["blocks"][self.block_ + 1]
             self.next_block = [self.pointer_, self.block_ + 1, block]
@@ -288,6 +291,7 @@ def initialize_participants(job_queue: JobQueue):
 
             if user.language_ != '':
                 q_set = user_map.return_question_set_by_language(user.language_)
+                user.q_set_ = q_set
                 try:
                     block = q_set[user.pointer_]["blocks"][user.block_ + 1]
                     user.next_block = [user.pointer_, user.block_ + 1, block]
@@ -300,8 +304,6 @@ def initialize_participants(job_queue: JobQueue):
                         return None
             else:
                 user.next_block = None
-
-
 
     except sqlite3.Error as error:
         print(error)

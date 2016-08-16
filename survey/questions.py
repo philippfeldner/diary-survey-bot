@@ -1,5 +1,4 @@
 from datetime import datetime
-from hashlib import sha256
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
 from telegram.ext import Job, JobQueue
@@ -32,14 +31,14 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             user.set_language(update.message)
             user.set_block(0)
             q_set = user_map.return_question_set_by_language(user.language_)
-            current_block = q_set[0]["blocks"][user.block_]
+            user.q_set_ = q_set
             current_day = q_set[0]["day"]
             user.set_day(current_day)
-            d_prev = current_day
-            b_prev = 0
-            q_prev = -1
+            user.set_question(0)
+            user.set_block(0)
+            user.increase_pointer()
         elif user.q_idle_:
-            q_set = user_map.return_question_set_by_language(user.language_)
+            q_set = user.q_set_
             # Get the matching question for the users answer.
 
             pointer = user.pointer_
@@ -54,7 +53,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
-            store_answer(user, update.message.text, q_prev)  # Todo more info
+            store_answer(user, update.message.text, q_prev, b_prev)  # Todo more info
             if user.check_finished():
                 return
 
@@ -66,21 +65,26 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         print(error)
         return
 
-    question, time = find_next_question(user, q_set)
+    question, time = find_next_question(user)
     if time == 0:
         message = question["text"]
         q_keyboard = get_keyboard(question["choice"])
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        user.increase_question()
         user.set_q_idle(True)
-    elif not user.auto_queue_:
-        queue_next()  # Todo
     else:
-        return
+        user.block_complete_ = True
+        user.set_next_block()
+        pointer = user.next_block[0]
+        offset = q_set[pointer]["day"] - user.day_
+
+        queue_next()  # Todo
 
 
 def store_answer(user, message, question):
-    condition = [message, question['id']]
-    if message in question['conditions']:
+    # Todo test
+    condition = question["condition"]
+    if message in question["condition"]:
         user.add_conditions(condition)
     # Todo: CSV stuff
     return
@@ -89,10 +93,9 @@ def store_answer(user, message, question):
 def queue_next(bot: Bot, job: Job):
     print('new job')
     user = job.context[0]  # type: Participant
-    q_set = job.context[2]
-    job_queue = job.context[3]
-    user.day_complete_ = False
-    day = user.day_
+    job_queue = job.context[1]
+    user.block_complete_ = False
+    q_set = user.q_set_
 
     # Check if the user is currently active
     if not user.active_:
@@ -101,14 +104,15 @@ def queue_next(bot: Bot, job: Job):
     try:
         # Find next execution block
         element = user.next_block[2]
-        question = 0
+        user.set_question(0)
         # Find next question that the user should get.
-        while not user.check_requirements(element["questions"][question]):
-            question += 1
+        while not user.check_requirements(element["questions"][user.question_]):
+            user.increase_question()
     except IndexError:
         # User did not fulfill any questions for the day so we reschedule.
         # Set the new day.
-        user.day_ = user.set_next_block(q_set)
+        day = user.set_next_block()
+        user.set_day(day)
 
         # Calculate seconds until question is due.
         day_offset = q_set[question_id] - day
@@ -123,7 +127,7 @@ def queue_next(bot: Bot, job: Job):
     pointer = element[0]
     block = element[1]
 
-    question = q_set[pointer]["blocks"][block]["questions"][question]
+    question = q_set[pointer]["blocks"][block]["questions"][user.question_]
 
     q_text = question["text"]
     q_keyboard = get_keyboard(question["choice"])
@@ -131,24 +135,23 @@ def queue_next(bot: Bot, job: Job):
     user.set_q_idle(True)
 
     # Check if there is a reason to queue again.
-    if not user.auto_queue_ or not user.day_complete_:
+    if not user.auto_queue_ or not user.block_complete_:
         return
 
-    user.question_ = question
-
-    day = user.set_next_block(q_set)
+    day = user.set_next_block()
 
     # Calculate seconds until question is due.
     day_offset = q_set[question_id] - day
     due = calc_delta_t(user.time_t_, day_offset)
 
     # Add new job and to queue. The function basically calls itself recursively after x seconds.
-    new_job = Job(queue_next, 60, repeat=False, context=[user, pointer, block, q_set, job_queue])
+    new_job = Job(queue_next, 60, repeat=False, context=[user, job_queue])
     job_queue.put(new_job)
     return
 
 
-def find_next_question(user, q_set):
+def find_next_question(user):
+    q_set = user.q_set_
     try:
         q_day = q_set[user.pointer_]
         q_block = q_day["blocks"][user.block_]
@@ -167,7 +170,7 @@ def find_next_question(user, q_set):
             except IndexError:
                 user.increase_block()
                 user.set_question(0)
-                question = find_next_question(user, q_set)
+                question = find_next_question(user)
             return question  # Todo: Time!
         except IndexError:
             try:
@@ -181,7 +184,7 @@ def find_next_question(user, q_set):
                     user.increase_pointer()
                     user.set_block(0)
                     user.set_question(0)
-                    question = find_next_question(user, q_set)
+                    question = find_next_question(user)
                 return question  # Todo: Time!
             except IndexError:
                 return
