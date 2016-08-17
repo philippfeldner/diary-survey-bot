@@ -1,4 +1,5 @@
 from datetime import datetime
+from admin.settings import schedule_points
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
 from telegram.ext import Job, JobQueue
@@ -7,18 +8,55 @@ from survey.data_set import DataSet
 from survey.participant import Participant
 from survey.keyboard_presets import CUSTOM_KEYBOARDS
 
+import random
+
 
 LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 
 
 def calc_delta_t(time, days):
-    hh = time[2:]
-    mm = time[:2]
+    hh = time[:2]
+    mm = time[3:]
     # Todo: Check correctness
     current = datetime.now()
     future = datetime(current.year, current.month, current.day + days, int(hh), int(mm))
     seconds = future - current
     return seconds.seconds
+
+
+def calc_block_time(time_t):
+    try:
+        interval = schedule_points[time_t]
+    except KeyError:
+        return 0
+
+    hh_start = interval[0][:2]
+    hh_end = interval[1][:2]
+    mm_begin = interval[0][3:]
+    mm_end = interval[1][3:]
+
+    if hh_start < hh_end:
+        value_hh = random.randint(hh_start, hh_end)
+        if value_hh == hh_start:
+            value_mm = random.randint(mm_begin + 10, 59) # Todo: Catch more special cases later
+        elif value_hh == hh_end:
+            value_mm = random.randint(0, mm_end)
+        else:
+            value_mm = random.randint(0, 59)
+
+    elif hh_start == hh_end:
+        value_hh = hh_start
+        value_mm = random.randint(mm_begin + 10, mm_end - 10)
+    else:
+        value_hh = random.choice[random.randint(hh_start, 23), random.randint(0, hh_end)]
+        if value_hh == hh_start:
+            value_mm = random.randint(mm_begin + 10, 59)  # Todo: Catch more special cases later
+        elif value_hh == hh_end:
+            value_mm = random.randint(0, mm_end)
+        else:
+            value_mm = random.randint(0, 59)
+
+    return str(value_hh) + ':' + str(value_mm)
 
 
 def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: JobQueue):
@@ -76,7 +114,9 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         user.block_complete_ = True
         user.set_next_block()
         pointer = user.next_block[0]
-        offset = q_set[pointer]["day"] - user.day_
+
+        day_offset = element["day"] - next_day
+        time_t = calc_block_time(element["time"])
 
         queue_next()  # Todo
 
@@ -111,12 +151,13 @@ def queue_next(bot: Bot, job: Job):
     except IndexError:
         # User did not fulfill any questions for the day so we reschedule.
         # Set the new day.
-        day = user.set_next_block()
-        user.set_day(day)
+        next_day = user.set_next_block()
+        element = user.next_block[2]
 
         # Calculate seconds until question is due.
-        day_offset = q_set[question_id] - day
-        due = calc_delta_t(user.time_t_, day_offset)
+        day_offset = element["day"] - next_day
+        time_t = calc_block_time(element["time"])
+        due = calc_delta_t(time_t, day_offset)
         # TODO
         # Add new job and to queue. The function basically calls itself recursively after x seconds.
         new_job = Job(queue_next, 60, repeat=False, context=[user, question_id, q_set, job_queue])
@@ -138,11 +179,13 @@ def queue_next(bot: Bot, job: Job):
     if not user.auto_queue_ or not user.block_complete_:
         return
 
-    day = user.set_next_block()
-
     # Calculate seconds until question is due.
-    day_offset = q_set[question_id] - day
-    due = calc_delta_t(user.time_t_, day_offset)
+
+    next_day = user.set_next_block()
+    element = user.next_block[2]
+    day_offset = element["day"] - next_day
+    time_t = calc_block_time(element["time"])
+    due = calc_delta_t(time_t, day_offset)
 
     # Add new job and to queue. The function basically calls itself recursively after x seconds.
     new_job = Job(queue_next, 60, repeat=False, context=[user, job_queue])
