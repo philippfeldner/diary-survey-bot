@@ -17,11 +17,15 @@ LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 def calc_delta_t(time, days):
     hh = time[:2]
     mm = time[3:]
-    # Todo: Check correctness
     current = datetime.now()
-    future = datetime(current.year, current.month, current.day + days, int(hh), int(mm))
+    future = datetime(current.year, current.month, current.day, int(hh), int(mm))
     seconds = future - current
-    return seconds.seconds
+    if days > 0 and seconds.seconds < 86400:
+        return seconds.seconds + 86400 + ((days - 1) * 86400)
+    elif days > 0 and seconds.seconds > 86400:
+        return seconds.seconds + ((days - 1) * 86400)
+    else:
+        return seconds.seconds
 
 
 def calc_block_time(time_t):
@@ -30,15 +34,15 @@ def calc_block_time(time_t):
     except KeyError:
         return 0
 
-    hh_start = interval[0][:2]
-    hh_end = interval[1][:2]
-    mm_begin = interval[0][3:]
-    mm_end = interval[1][3:]
+    hh_start = int(interval[0][:2])
+    hh_end = int(interval[1][:2])
+    mm_begin = int(interval[0][3:])
+    mm_end = int(interval[1][3:])
 
     if hh_start < hh_end:
         value_hh = random.randint(hh_start, hh_end)
         if value_hh == hh_start:
-            value_mm = random.randint(mm_begin + 10, 59) # Todo: Catch more special cases later
+            value_mm = random.randint(mm_begin + 10, 59)
         elif value_hh == hh_end:
             value_mm = random.randint(0, mm_end)
         else:
@@ -50,13 +54,13 @@ def calc_block_time(time_t):
     else:
         value_hh = random.choice[random.randint(hh_start, 23), random.randint(0, hh_end)]
         if value_hh == hh_start:
-            value_mm = random.randint(mm_begin + 10, 59)  # Todo: Catch more special cases later
+            value_mm = random.randint(mm_begin + 10, 59)
         elif value_hh == hh_end:
             value_mm = random.randint(0, mm_end)
         else:
             value_mm = random.randint(0, 59)
 
-    return str(value_hh) + ':' + str(value_mm)
+    return str(value_hh).zfill(2) + ':' + str(value_mm).zfill(2)
 
 
 def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: JobQueue):
@@ -91,6 +95,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
+
             store_answer(user, update.message.text, q_prev, b_prev)  # Todo more info
             if user.check_finished():
                 return
@@ -112,13 +117,14 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         user.set_q_idle(True)
     else:
         user.block_complete_ = True
-        user.set_next_block()
-        pointer = user.next_block[0]
-
-        day_offset = element["day"] - next_day
+        next_day = user.set_next_block()
+        element = user.next_block[2]
+        day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
+        due = calc_delta_t(time_t, day_offset)
 
-        queue_next()  # Todo
+        new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+        job_queue.put(new_job)
 
 
 def store_answer(user, message, question):
@@ -136,15 +142,16 @@ def queue_next(bot: Bot, job: Job):
     job_queue = job.context[1]
     user.block_complete_ = False
     q_set = user.q_set_
+    user.question_ = 0
+    user.pointer_ = user.next_block[0]
+    user.block_ = user.next_block[1]
+    element = user.next_block[2]
 
     # Check if the user is currently active
     if not user.active_:
         return
 
     try:
-        # Find next execution block
-        element = user.next_block[2]
-        user.set_question(0)
         # Find next question that the user should get.
         while not user.check_requirements(element["questions"][user.question_]):
             user.increase_question()
@@ -153,22 +160,17 @@ def queue_next(bot: Bot, job: Job):
         # Set the new day.
         next_day = user.set_next_block()
         element = user.next_block[2]
-
-        # Calculate seconds until question is due.
-        day_offset = element["day"] - next_day
+        day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
         due = calc_delta_t(time_t, day_offset)
-        # TODO
+
         # Add new job and to queue. The function basically calls itself recursively after x seconds.
-        new_job = Job(queue_next, 60, repeat=False, context=[user, question_id, q_set, job_queue])
+        new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
         job_queue.put(new_job)
         return
 
     # Sending the question
-    pointer = element[0]
-    block = element[1]
-
-    question = q_set[pointer]["blocks"][block]["questions"][user.question_]
+    question = q_set[user.pointer_]["blocks"][user.block_]["questions"][user.question_]
 
     q_text = question["text"]
     q_keyboard = get_keyboard(question["choice"])
@@ -180,15 +182,13 @@ def queue_next(bot: Bot, job: Job):
         return
 
     # Calculate seconds until question is due.
-
     next_day = user.set_next_block()
     element = user.next_block[2]
-    day_offset = element["day"] - next_day
+    day_offset = next_day - user.day_
     time_t = calc_block_time(element["time"])
     due = calc_delta_t(time_t, day_offset)
 
-    # Add new job and to queue. The function basically calls itself recursively after x seconds.
-    new_job = Job(queue_next, 60, repeat=False, context=[user, job_queue])
+    new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
     job_queue.put(new_job)
     return
 
@@ -214,7 +214,7 @@ def find_next_question(user):
                 user.increase_block()
                 user.set_question(0)
                 question = find_next_question(user)
-            return question  # Todo: Time!
+            return question, offset
         except IndexError:
             try:
                 q_day = q_set[user.increase_pointer()]
@@ -228,7 +228,7 @@ def find_next_question(user):
                     user.set_block(0)
                     user.set_question(0)
                     question = find_next_question(user)
-                return question  # Todo: Time!
+                return question, offset
             except IndexError:
                 return
 
