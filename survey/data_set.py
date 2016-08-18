@@ -1,6 +1,7 @@
 import json
 from admin.settings import default_language
 
+
 class DataSet:
     participants = {}
     q_set_de_ = None

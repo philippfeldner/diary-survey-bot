@@ -3,8 +3,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 from survey.keyboard_presets import languages
 
-from survey.participant import DataSet
-from survey.participant import initialize_participants
+from survey.data_set import DataSet
+from survey.questions import initialize_participants
 from survey.questions import question_handler
 from survey.participant import Participant
 

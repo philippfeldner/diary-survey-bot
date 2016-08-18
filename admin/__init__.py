@@ -1,2 +1,2 @@
-from . import control, settings
-__all__ = [control, settings]
+from . import settings
+__all__ = [settings]

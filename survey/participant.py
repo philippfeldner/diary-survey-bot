@@ -1,8 +1,6 @@
 import pickle
 import sqlite3
 import time
-from telegram.ext import JobQueue
-from survey.data_set import DataSet
 from admin import settings
 
 
@@ -11,7 +9,7 @@ class Participant:
     language_ = ''
     gender_ = ''
     country_ = ''
-    day_ = 1
+    day_ = 0
     block_ = -1
     question_ = -1
     pointer_ = 0
@@ -26,6 +24,7 @@ class Participant:
     block_complete_ = False
     q_idle_ = False
     active_ = True
+    last_ = False
 
     def __init__(self, chat_id=None, init=True):
         self.chat_id_ = chat_id
@@ -33,9 +32,9 @@ class Participant:
             try:
                 db = sqlite3.connect('survey/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
-                           "country, gender, language, question, time_offset, day, block, q_idle, active, pointer)"
+                           "country, gender, language, question, day, block, time_offset, q_idle, active, pointer)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, pickle.dumps([]), '', '', '', '', -1, -1, 0xFFFF, -1, 0, 1))
+                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 1, -1, 0xFFFF, 0, 1, 0))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
@@ -125,7 +124,7 @@ class Participant:
         return
 
     def add_conditions(self, conditions):
-        if conditions == []:
+        if conditions is []:
             return
         self.conditions_ += [conditions]
         try:
@@ -181,6 +180,17 @@ class Participant:
         except sqlite3.Error as error:
             print(error)
         return self.question_
+
+    def set_pointer(self, pointer):
+        self.pointer_ = pointer
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET pointer=? WHERE ID=?", (self.pointer_, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return self.pointer_
 
     def increase_pointer(self):
         self.pointer_ += 1
@@ -246,73 +256,13 @@ class Participant:
                 self.next_block = None
 
     def check_requirements(self, condition):
-        if condition == []:
+        if condition is []:
             return True
-
         for element in condition:
             if element not in self.conditions_:
                 return False
         return True
 
-    def parse_commands(self, commands, message):
-        return True
-
-    def finished(self):
-        return
-
-
-def initialize_participants(job_queue: JobQueue):
-    user_map = DataSet()
-    try:
-        db = sqlite3.connect('survey/participants.db')
-        cursor = db.cursor()
-        cursor.execute("SELECT * FROM participants ORDER BY (ID)")
-        participants = cursor.fetchall()
-        # print(participants)
-        for row in participants:
-            user = Participant(row[0], init=False)
-            user.conditions_ = pickle.loads(row[1])
-            user.time_t_ = row[2]
-            user.country_ = row[3]
-            user.gender_ = row[4]
-            user.language_ = row[5]
-            user.question_ = row[6]
-            user.time_offset_ = row[7]
-            user.day_ = row[8]
-            user.q_idle_ = row[9]
-            user.active_ = row[10]
-            user.block_ = row[11]
-            user.pointer_ = row[12]
-            user_map.participants[row[0]] = user
-            # if user.time_t_ == '':
-            #    return  # TODO
-            # else:
-            #    job_queue  # TODO
-
-            if user.language_ != '':
-                q_set = user_map.return_question_set_by_language(user.language_)
-                user.q_set_ = q_set
-                try:
-                    block = q_set[user.pointer_]["blocks"][user.block_ + 1]
-                    user.next_block = [user.pointer_, user.block_ + 1, block]
-                except IndexError:
-                    try:
-                        block = q_set[user.pointer_ + 1]["blocks"][0]
-                        user.next_block = [user.pointer_ + 1, 0, block]
-                    except IndexError:
-                        user.set_question(0)
-                        return None
-            else:
-                user.next_block = None
-
-    except sqlite3.Error as error:
-        print(error)
-    return user_map
-
-
-def clean_database():
-    return
-    # Todo
 
 
 

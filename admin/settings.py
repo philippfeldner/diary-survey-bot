@@ -26,6 +26,6 @@ default_offset = 0
 
 schedule_points = dict()
 schedule_points["RANDOM_1"] = ["08:00", "12:00"]
-schedule_points["RANDOM_2"] = ["", ""]
-schedule_points["RANDOM_3"] = ["", ""]
+schedule_points["RANDOM_2"] = ["13:00", "15:00"]
+schedule_points["RANDOM_3"] = ["16:00", "20:00"]
 

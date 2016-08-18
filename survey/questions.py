@@ -1,3 +1,5 @@
+import sqlite3
+import pickle
 from datetime import datetime
 from admin.settings import schedule_points
 
@@ -9,7 +11,6 @@ from survey.participant import Participant
 from survey.keyboard_presets import CUSTOM_KEYBOARDS
 
 import random
-
 
 LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 
@@ -70,15 +71,15 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
         # Case for very first question.
         if user.question_ == -1:
+            user.set_active(True)
             user.set_language(update.message)
             user.set_block(0)
             q_set = user_map.return_question_set_by_language(user.language_)
             user.q_set_ = q_set
-            current_day = q_set[0]["day"]
+            current_day = q_set[0]["blocks"][0]["day"]
             user.set_day(current_day)
             user.set_question(0)
             user.set_block(0)
-            user.increase_pointer()
         elif user.q_idle_:
             q_set = user.q_set_
             # Get the matching question for the users answer.
@@ -96,9 +97,8 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 return
             # Storing the answer and moving on the next question
 
-            store_answer(user, update.message.text, q_prev, b_prev)  # Todo more info
-            if user.check_finished():
-                return
+            store_answer(user, update.message.text, q_prev)
+            # Todo check last question
 
             user.set_q_idle(False)
         else:
@@ -108,8 +108,8 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         print(error)
         return
 
-    question, time = find_next_question(user)
-    if time == 0:
+    question = find_next_question(user)
+    if question is not None:
         message = question["text"]
         q_keyboard = get_keyboard(question["choice"])
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
@@ -128,7 +128,6 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
 
 def store_answer(user, message, question):
-    # Todo test
     condition = question["condition"]
     if message in question["condition"]:
         user.add_conditions(condition)
@@ -141,10 +140,9 @@ def queue_next(bot: Bot, job: Job):
     user = job.context[0]  # type: Participant
     job_queue = job.context[1]
     user.block_complete_ = False
-    q_set = user.q_set_
-    user.question_ = 0
-    user.pointer_ = user.next_block[0]
-    user.block_ = user.next_block[1]
+    user.set_question(0)
+    user.set_pointer(user.next_block[0])
+    user.set_block(user.next_block[1])
     element = user.next_block[2]
 
     # Check if the user is currently active
@@ -159,6 +157,9 @@ def queue_next(bot: Bot, job: Job):
         # User did not fulfill any questions for the day so we reschedule.
         # Set the new day.
         next_day = user.set_next_block()
+        if user.next_block is None:
+            return finished(user, job_queue)
+
         element = user.next_block[2]
         day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
@@ -170,7 +171,7 @@ def queue_next(bot: Bot, job: Job):
         return
 
     # Sending the question
-    question = q_set[user.pointer_]["blocks"][user.block_]["questions"][user.question_]
+    question = element["questions"][user.question_]
 
     q_text = question["text"]
     q_keyboard = get_keyboard(question["choice"])
@@ -183,6 +184,8 @@ def queue_next(bot: Bot, job: Job):
 
     # Calculate seconds until question is due.
     next_day = user.set_next_block()
+    if user.next_block is None:
+        return finished(user, job_queue)
     element = user.next_block[2]
     day_offset = next_day - user.day_
     time_t = calc_block_time(element["time"])
@@ -201,40 +204,13 @@ def find_next_question(user):
         question = q_block[user.increase_question()]
         while user.check_requirements(question):
             question = q_block[user.increase_question()]
-        return question, 0
+        return question
     except IndexError:
-        try:
-            q_day = q_set[user.pointer_]
-            q_block = q_day["blocks"][user.increase_block()]
-            question = q_block[user.set_question(0)]
-            try:
-                while user.check_requirements(question):
-                    question = q_block[user.increase_question()]
-            except IndexError:
-                user.increase_block()
-                user.set_question(0)
-                question = find_next_question(user)
-            return question, offset
-        except IndexError:
-            try:
-                q_day = q_set[user.increase_pointer()]
-                q_block = q_day["blocks"][user.set_block(0)]
-                question = q_block[user.set_question(0)]
-                try:
-                    while user.check_requirements(question):
-                        question = q_block[user.increase_question()]
-                except IndexError:
-                    user.increase_pointer()
-                    user.set_block(0)
-                    user.set_question(0)
-                    question = find_next_question(user)
-                return question, offset
-            except IndexError:
-                return
+        return None
 
 
 def get_keyboard(choice):
-    if choice == []:
+    if choice is []:
         return ReplyKeyboardHide()
     elif choice[0] == 'KEY_1':
         return ReplyKeyboardMarkup(CUSTOM_KEYBOARDS['KEY_1'])
@@ -255,5 +231,64 @@ def valid_answer(question, message):
         return True
     else:
         return False
+
+
+def finished(user, job_queue):
+    user.last_ = True
+    new_job = Job(finalize, 86400, repeat=False, context=user)
+    job_queue.put(new_job)
+    return
+
+
+def finalize(bot: Bot, job: Job):
+    user = job.context
+    user.set_active = False
+    # Todo File saving, maybe a final message
+    return
+
+
+def initialize_participants(job_queue: JobQueue):
+    user_map = DataSet()
+    try:
+        db = sqlite3.connect('survey/participants.db')
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM participants ORDER BY (ID)")
+        participants = cursor.fetchall()
+        # print(participants)
+        for row in participants:
+            user = Participant(row[0], init=False)
+            user.conditions_ = pickle.loads(row[1])
+            user.time_t_ = row[2]
+            user.country_ = row[3]
+            user.gender_ = row[4]
+            user.language_ = row[5]
+            user.question_ = row[6]
+            user.time_offset_ = row[7]
+            user.day_ = row[8]
+            user.q_idle_ = row[9]
+            user.active_ = row[10]
+            user.block_ = row[11]
+            user.pointer_ = row[12]
+            user_map.participants[row[0]] = user
+
+            if user.language_ != '':
+                q_set = user_map.return_question_set_by_language(user.language_)
+                user.q_set_ = q_set
+                user.set_next_block()
+                next_day = user.set_next_block()
+                element = user.next_block[2]
+                day_offset = next_day - user.day_
+                time_t = calc_block_time(element["time"])
+                due = calc_delta_t(time_t, day_offset)
+
+                new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+                job_queue.put(new_job)
+            else:
+                user.next_block = None
+                if user.active_ and user.pointer_ > -1:
+                    finished(user, job_queue)
+    except sqlite3.Error as error:
+        print(error)
+    return user_map
 
 
