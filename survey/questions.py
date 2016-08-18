@@ -76,9 +76,8 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             user.set_block(0)
             q_set = user_map.return_question_set_by_language(user.language_)
             user.q_set_ = q_set
-            current_day = q_set[0]["blocks"][0]["day"]
+            current_day = q_set[0]["day"]
             user.set_day(current_day)
-            user.set_question(0)
             user.set_block(0)
         elif user.q_idle_:
             q_set = user.q_set_
@@ -86,7 +85,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
             pointer = user.pointer_
             d_prev = q_set[pointer]
-            b_prev = d_prev["block"][user.block_]
+            b_prev = d_prev["blocks"][user.block_]
             q_prev = b_prev["questions"][user.question_]
 
             if not valid_answer(q_prev, update.message):
@@ -201,7 +200,7 @@ def find_next_question(user):
     try:
         q_day = q_set[user.pointer_]
         q_block = q_day["blocks"][user.block_]
-        question = q_block[user.increase_question()]
+        question = q_block["questions"][user.increase_question()]
         while user.check_requirements(question):
             question = q_block[user.increase_question()]
         return question
