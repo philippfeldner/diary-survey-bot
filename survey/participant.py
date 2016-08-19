@@ -124,9 +124,9 @@ class Participant:
         return
 
     def add_conditions(self, conditions):
-        if conditions is []:
+        if conditions == []:
             return
-        self.conditions_ += [conditions]
+        self.conditions_ += conditions
         try:
             db = sqlite3.connect('survey/participants.db')
             cond = pickle.dumps(self.conditions_)
@@ -256,7 +256,7 @@ class Participant:
                 self.next_block = None
 
     def check_requirements(self, condition):
-        if condition is []:
+        if condition == []:
             return True
         for element in condition:
             if element not in self.conditions_:

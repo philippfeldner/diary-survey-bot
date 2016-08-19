@@ -85,13 +85,11 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
             pointer = user.pointer_
             d_prev = q_set[pointer]
+
             b_prev = d_prev["blocks"][user.block_]
             q_prev = b_prev["questions"][user.question_]
 
-            if not valid_answer(q_prev, update.message):
-                message = q_prev["text"]
-                reply_markup = get_keyboard(q_prev["choice"])
-                bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=reply_markup)
+            if not valid_answer(q_prev, update.message.text):
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
@@ -112,7 +110,6 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         message = question["text"]
         q_keyboard = get_keyboard(question["choice"])
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
-        user.increase_question()
         user.set_q_idle(True)
     else:
         user.block_complete_ = True
@@ -128,7 +125,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
 def store_answer(user, message, question):
     condition = question["condition"]
-    if message in question["condition"]:
+    if [message] in condition:
         user.add_conditions(condition)
     # Todo: CSV stuff
     return
@@ -209,24 +206,26 @@ def find_next_question(user):
 
 
 def get_keyboard(choice):
-    if choice is []:
+    if choice == []:
         return ReplyKeyboardHide()
-    elif choice[0] == 'KEY_1':
-        return ReplyKeyboardMarkup(CUSTOM_KEYBOARDS['KEY_1'])
-    else:
-        return ReplyKeyboardMarkup(choice)
+    try:
+        keyboard = ReplyKeyboardMarkup(CUSTOM_KEYBOARDS[choice[0][0]])
+    except KeyError:
+        keyboard = ReplyKeyboardMarkup(choice)
+
+    return keyboard
 
 
 def valid_answer(question, message):
     commands = question['commands']
-    if 'FORCE_KB_REPLY' not in commands or question['choice'] == []:
+    if ['FORCE_KB_REPLY'] not in commands or question['choice'] == []:
         return True
     try:
-        choice = CUSTOM_KEYBOARDS[question['choice'][0]]
+        choice = CUSTOM_KEYBOARDS[question['choice'][0][0]]
     except KeyError:
         choice = question['choice']
 
-    if message in choice:
+    if [message] in choice:
         return True
     else:
         return False

@@ -224,7 +224,7 @@ languages = [["Deutsch"], ["English"], ["Español"], ["Français"]]
 CUSTOM_KEYBOARDS = dict()
 CUSTOM_KEYBOARDS['KB_EMOJI_SCALE_5'] = languages
 CUSTOM_KEYBOARDS['KB_COUNTRY'] = countries_rk
-CUSTOM_KEYBOARDS['KB_TZ_OFFSET'] = 0 # Todo
+CUSTOM_KEYBOARDS['KB_TZ_OFFSET'] = [["CET"], ["GMT"]]  # Todo
 
 
 def get_preset_by_choice(choice):
