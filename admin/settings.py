@@ -20,9 +20,9 @@
 
 
 admins = ['0x0', '0x0']
+DEBUG = True
 
 default_language = 'de'
-default_offset = 0
 
 schedule_points = dict()
 schedule_points["RANDOM_1"] = ["08:00", "12:00"]

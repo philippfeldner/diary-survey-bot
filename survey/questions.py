@@ -1,7 +1,12 @@
 import sqlite3
 import pickle
+
 from datetime import datetime
+from pytz import timezone
+
+
 from admin.settings import schedule_points
+from admin.debug import debug
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
 from telegram.ext import Job, JobQueue
@@ -15,9 +20,13 @@ import random
 LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 
 
-def calc_delta_t(time, days):
+# Calculates seconds until a certain hh:mm
+# event. Used for the job_queue mainly.
+# Timezones are already handled # Todo
+def calc_delta_t(time, days, time_zone=None):
     hh = time[:2]
     mm = time[3:]
+
     current = datetime.now()
     future = datetime(current.year, current.month, current.day, int(hh), int(mm))
     seconds = future - current
@@ -29,6 +38,9 @@ def calc_delta_t(time, days):
         return seconds.seconds
 
 
+# Generates a random time offset
+# for the next block that shall be scheduled.
+# The intervals are defined in admin/settings.py
 def calc_block_time(time_t):
     try:
         interval = schedule_points[time_t]
@@ -64,6 +76,9 @@ def calc_block_time(time_t):
     return str(value_hh).zfill(2) + ':' + str(value_mm).zfill(2)
 
 
+# This function does the main handling of
+# user questions and answers.
+# This is function is registered in the Dispatcher.
 def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: JobQueue):
     try:
         # Get the user from the dict and its question_set (by language)
@@ -96,7 +111,6 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
             store_answer(user, update.message.text, q_prev)
             # Todo check last question
-
             user.set_q_idle(False)
         else:
             # User has send something without being asked a question.
@@ -123,14 +137,20 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         job_queue.put(new_job)
 
 
+# This function is getting used to generate
+# the CSV files and store values.
+# Also the conditions, DB values get set here. # TODO
 def store_answer(user, message, question):
     condition = question["condition"]
-    if [message] in condition:
+    if condition != [] and message in condition[0]:
         user.add_conditions(condition)
     # Todo: CSV stuff
     return
 
 
+# This function is called by the job_queue
+# and starts all the blocks after the set time.
+# It also calls itself recursively to assure progressing.
 def queue_next(bot: Bot, job: Job):
     print('new job')
     user = job.context[0]  # type: Participant
@@ -192,19 +212,26 @@ def queue_next(bot: Bot, job: Job):
     return
 
 
+# This function returns the next
+# question meant for the user.
+# If the block is complete None is returned.
 def find_next_question(user):
     q_set = user.q_set_
     try:
         q_day = q_set[user.pointer_]
         q_block = q_day["blocks"][user.block_]
-        question = q_block["questions"][user.increase_question()]
-        while user.check_requirements(question):
-            question = q_block[user.increase_question()]
-        return question
+        question = q_block["questions"]
+        user.increase_question()
+        while not user.check_requirements(question[user.question_]):
+            user.increase_question()
+        return question[user.question_]
     except IndexError:
         return None
 
 
+# This function returns the ReplyKeyboard for the user.
+# Either the ones from the json file are used or
+# more complex ones are generated in survey/keyboard_presets.py
 def get_keyboard(choice):
     if choice == []:
         return ReplyKeyboardHide()
@@ -216,6 +243,9 @@ def get_keyboard(choice):
     return keyboard
 
 
+# If the command FORCE_KB_REPLY is set in json the
+# answer is checked if it is really a choice
+# from the ReplyKeyboard.
 def valid_answer(question, message):
     commands = question['commands']
     if ['FORCE_KB_REPLY'] not in commands or question['choice'] == []:
@@ -231,6 +261,9 @@ def valid_answer(question, message):
         return False
 
 
+# This functions handles the very last question.
+# It allows the user to finish its question within
+# 24 hours. Afterwards finalize() is called.
 def finished(user, job_queue):
     user.last_ = True
     new_job = Job(finalize, 86400, repeat=False, context=user)
@@ -238,6 +271,9 @@ def finished(user, job_queue):
     return
 
 
+# If the user reaches this function he has successfully
+# completed the survey. The clean up is done here
+# and the he gets set to passive.
 def finalize(bot: Bot, job: Job):
     user = job.context
     user.set_active = False
@@ -245,6 +281,9 @@ def finalize(bot: Bot, job: Job):
     return
 
 
+# This function gets called at program start to load in
+# all users from the DB. This function ensures that random
+# crashes of the program are not an issue and no data loss occurs.
 def initialize_participants(job_queue: JobQueue):
     user_map = DataSet()
     try:
@@ -279,6 +318,7 @@ def initialize_participants(job_queue: JobQueue):
                 time_t = calc_block_time(element["time"])
                 due = calc_delta_t(time_t, day_offset)
 
+                debug()
                 new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
                 job_queue.put(new_job)
             else:

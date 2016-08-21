@@ -255,7 +255,8 @@ class Participant:
             except IndexError:
                 self.next_block = None
 
-    def check_requirements(self, condition):
+    def check_requirements(self, question):
+        condition = question["condition_required"]
         if condition == []:
             return True
         for element in condition:
