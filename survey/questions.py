@@ -105,7 +105,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             b_prev = d_prev["blocks"][user.block_]
             q_prev = b_prev["questions"][user.question_]
 
-            if not valid_answer(q_prev, update.message.text):
+            if not valid_answer(q_prev, update.message.text, user):
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
@@ -123,7 +123,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     question = find_next_question(user)
     if question is not None:
         message = question["text"]
-        q_keyboard = get_keyboard(question["choice"])
+        q_keyboard = get_keyboard(question["choice"], user)
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
         user.set_q_idle(True)
     else:
@@ -202,7 +202,7 @@ def queue_next(bot: Bot, job: Job):
     question = element["questions"][user.question_]
 
     q_text = question["text"]
-    q_keyboard = get_keyboard(question["choice"])
+    q_keyboard = get_keyboard(question["choice"], user)
     bot.send_message(user.chat_id_, q_text, reply_markup=q_keyboard)
     user.set_q_idle(True)
 
@@ -244,7 +244,7 @@ def find_next_question(user):
 # This function returns the ReplyKeyboard for the user.
 # Either the ones from the json file are used or
 # more complex ones are generated in survey/keyboard_presets.py
-def get_keyboard(choice):
+def get_keyboard(choice, user):
     if choice == []:
         return ReplyKeyboardHide()
 
@@ -263,10 +263,14 @@ def get_keyboard(choice):
 # If the command FORCE_KB_REPLY is set in json the
 # answer is checked if it is really a choice
 # from the ReplyKeyboard.
-def valid_answer(question, message):
+def valid_answer(question, message, user):
     commands = question['commands']
     if ['FORCE_KB_REPLY'] not in commands or question['choice'] == []:
         return True
+
+    if question['choice'][0][0] == 'KB_TZ_OFFSET':
+        return ReplyKeyboardMarkup(kbps.generate_timezone_kb(user.country_))
+
     try:
         choice = CUSTOM_KEYBOARDS[question['choice'][0][0]]
     except KeyError:

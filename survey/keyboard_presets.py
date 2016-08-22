@@ -209,12 +209,14 @@ emoji_scale_5 = [[Emoji.TIRED_FACE], [Emoji.PERSON_FROWNING]]
 # country of the users location
 # has.
 def generate_timezone_kb(country):
+    if country == '':
+        country = 'Russia'
     timezones_rk = []
     for element in countries:
         if element['name'] == country:
             for zone in element['timezones']:
                 timezones_rk.append([zone])
-        break
+            break
     return timezones_rk
 
 
