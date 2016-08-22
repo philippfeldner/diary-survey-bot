@@ -14,7 +14,7 @@ class Participant:
     question_ = -1
     pointer_ = 0
     time_t_ = ''
-    time_offset_ = 0xFFFF
+    tz_ = 0xFFFF
     conditions_ = []
     next_block = None
 
@@ -32,7 +32,7 @@ class Participant:
             try:
                 db = sqlite3.connect('survey/participants.db')
                 db.execute("INSERT INTO participants (ID, conditions, time_t,"
-                           "country, gender, language, question, day, block, time_offset, q_idle, active, pointer)"
+                           "country, gender, language, question, day, block, tz, q_idle, active, pointer)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                            (chat_id, pickle.dumps([]), '', '', '', '', -1, 1, -1, 0xFFFF, 0, 1, 0))
                 db.commit()
@@ -56,7 +56,7 @@ class Participant:
         elif language == ('Français' or 'fr'):
             lang = 'fr'
         else:
-            lang = settings.default_language
+            lang = settings.DEFAULT_LANGUAGE
 
         self.language_ = lang
         try:
@@ -112,11 +112,11 @@ class Participant:
             print(error)
         return
 
-    def set_time_offset(self, offset):
-        self.time_offset_ = offset
+    def set_tz(self, offset):
+        self.tz_ = offset
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET time_offset=? WHERE ID=?", (offset, self.chat_id_))
+            db.execute("UPDATE participants SET tz=? WHERE ID=?", (offset, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:

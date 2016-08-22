@@ -5,7 +5,7 @@ from datetime import datetime
 from pytz import timezone
 
 
-from admin.settings import schedule_points
+from admin.settings import SCHEDULE_INTERVALS
 from admin.debug import debug
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
@@ -14,6 +14,7 @@ from telegram.ext import Job, JobQueue
 from survey.data_set import DataSet
 from survey.participant import Participant
 from survey.keyboard_presets import CUSTOM_KEYBOARDS
+import survey.keyboard_presets as kbps
 
 import random
 
@@ -43,9 +44,9 @@ def calc_delta_t(time, days, time_zone=None):
 # The intervals are defined in admin/settings.py
 def calc_block_time(time_t):
     try:
-        interval = schedule_points[time_t]
+        interval = SCHEDULE_INTERVALS[time_t]
     except KeyError:
-        return 0
+        return 0  # Todo
 
     hh_start = int(interval[0][:2])
     hh_end = int(interval[1][:2])
@@ -87,7 +88,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         # Case for very first question.
         if user.question_ == -1:
             user.set_active(True)
-            user.set_language(update.message)
+            user.set_language(update.message.text)
             user.set_block(0)
             q_set = user_map.return_question_set_by_language(user.language_)
             user.q_set_ = q_set
@@ -139,8 +140,18 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
 # This function is getting used to generate
 # the CSV files and store values.
-# Also the conditions, DB values get set here. # TODO
+# Also the conditions, DB values get set here.
 def store_answer(user, message, question):
+    commands = question['commands']
+    for [element] in commands:
+        # -- DB TRIGGER for storing important user data -- #
+        if element == "COUNTRY":
+            user.set_country(message)
+        elif element == "TZ_OFFSET":
+            user.set_tz(message)
+        elif element == "GENDER":
+            user.set_gender(message)
+
     condition = question["condition"]
     if condition != [] and message in condition[0]:
         user.add_conditions(condition)
@@ -152,9 +163,10 @@ def store_answer(user, message, question):
 # and starts all the blocks after the set time.
 # It also calls itself recursively to assure progressing.
 def queue_next(bot: Bot, job: Job):
-    print('new job')
     user = job.context[0]  # type: Participant
     job_queue = job.context[1]
+    if not user.active_:
+        return
     user.block_complete_ = False
     user.set_question(0)
     user.set_pointer(user.next_block[0])
@@ -235,6 +247,11 @@ def find_next_question(user):
 def get_keyboard(choice):
     if choice == []:
         return ReplyKeyboardHide()
+
+    # -------- Place to register dynamic keyboards -------- #
+    if choice[0][0] == 'KB_TZ_OFFSET':
+        return ReplyKeyboardMarkup(kbps.generate_timezone_kb(user.country_))
+
     try:
         keyboard = ReplyKeyboardMarkup(CUSTOM_KEYBOARDS[choice[0][0]])
     except KeyError:
@@ -300,7 +317,7 @@ def initialize_participants(job_queue: JobQueue):
             user.gender_ = row[4]
             user.language_ = row[5]
             user.question_ = row[6]
-            user.time_offset_ = row[7]
+            user.tz_ = row[7]
             user.day_ = row[8]
             user.q_idle_ = row[9]
             user.active_ = row[10]
@@ -311,16 +328,16 @@ def initialize_participants(job_queue: JobQueue):
             if user.language_ != '':
                 q_set = user_map.return_question_set_by_language(user.language_)
                 user.q_set_ = q_set
-                user.set_next_block()
-                next_day = user.set_next_block()
-                element = user.next_block[2]
-                day_offset = next_day - user.day_
-                time_t = calc_block_time(element["time"])
-                due = calc_delta_t(time_t, day_offset)
+                if user.question_ != -1:
+                    user.set_next_block()
+                    next_day = user.set_next_block()
+                    element = user.next_block[2] # Todo
+                    day_offset = next_day - user.day_
+                    time_t = calc_block_time(element["time"])
+                    due = calc_delta_t(time_t, day_offset)
 
-                debug()
-                new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
-                job_queue.put(new_job)
+                    new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+                    job_queue.put(new_job)
             else:
                 user.next_block = None
                 if user.active_ and user.pointer_ > -1:

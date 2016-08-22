@@ -18,14 +18,26 @@
 # KB_COUNTRY        : Country keyboard
 # KB_TZ_OFFSET      : For retrieving the Timezone Offset
 
+# List of chat_ids that are admins
+ADMINS = ['0x0', '0x0']
 
-admins = ['0x0', '0x0']
+# Debug mode on/off
 DEBUG = True
 
-default_language = 'de'
+# Default language if something goes wrong.
+DEFAULT_LANGUAGE = 'de'
 
-schedule_points = dict()
-schedule_points["RANDOM_1"] = ["08:00", "12:00"]
-schedule_points["RANDOM_2"] = ["13:00", "15:00"]
-schedule_points["RANDOM_3"] = ["16:00", "20:00"]
+# Scheduling intervals for question blocks.
+SCHEDULE_INTERVALS = {
+                        "RANDOM_1": ["08:00", "12:00"],
+                        "RANDOM_2": ["13:00", "15:00"],
+                        "RANDOM_3": ["16:00", "20:00"]
+                     }
+
+DB_TRIGGER = {
+
+             }
+
+
+
 

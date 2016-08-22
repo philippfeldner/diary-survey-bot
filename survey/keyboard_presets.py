@@ -1,5 +1,7 @@
 from telegram import Emoji
 
+# -------- Place to define dicts and lists for keyboards -------- #
+
 countries = [
     {'timezones': ['Europe/Andorra'], 'code': 'AD', 'continent': 'Europe', 'name': 'Andorra'},
     {'timezones': ['Asia/Kabul'], 'code': 'AF', 'continent': 'Asia', 'name': 'Afghanistan'},
@@ -154,6 +156,8 @@ countries = [
     {'timezones': ['Africa/Dar_es_Salaam'], 'code': 'TZ', 'continent': 'Africa', 'name': 'Tanzania'},
     {'timezones': ['Europe/Kiev', 'Europe/Uzhgorod', 'Europe/Zaporozhye', 'Europe/Simferopol'], 'code': 'UA', 'continent': 'Europe', 'name': 'Ukraine'},
     {'timezones': ['Africa/Kampala'], 'code': 'UG', 'continent': 'Africa', 'name': 'Uganda'},
+    {'timezones': ['Asia/Dubai'], 'code': 'AE', 'continent': 'Asia', 'name': 'United Arab Emirates'},
+    {'timezones': ['Europe/London'], 'code': 'GB', 'continent': 'Europe', 'name': 'United Kingdom'},
     {'timezones': ['America/New_York', 'America/Detroit', 'America/Kentucky/Louisville', 'America/Kentucky/Monticello', 'America/Indiana/Indianapolis', 'America/Indiana/Marengo', 'America/Indiana/Knox', 'America/Indiana/Vevay', 'America/Chicago', 'America/Indiana/Vincennes', 'America/Indiana/Petersburg', 'America/Menominee', 'America/North_Dakota/Center', 'America/North_Dakota/New_Salem', 'America/Denver', 'America/Boise', 'America/Shiprock', 'America/Phoenix', 'America/Los_Angeles', 'America/Anchorage', 'America/Juneau', 'America/Yakutat', 'America/Nome', 'America/Adak', 'Pacific/Honolulu'], 'code': 'US', 'continent': 'North America', 'name': 'United States'},
     {'timezones': ['America/Montevideo'], 'code': 'UY', 'continent': 'South America', 'name': 'Uruguay'},
     {'timezones': ['Asia/Samarkand', 'Asia/Tashkent'], 'code': 'UZ', 'continent': 'Asia', 'name': 'Uzbekistan'},
@@ -192,18 +196,31 @@ countries = [
     {'timezones': ['Asia/Colombo'], 'code': 'LK', 'continent': 'Asia', 'name': 'Sri Lanka'},
     {'timezones': ['Africa/Mbabane'], 'code': 'SZ', 'continent': 'Africa', 'name': 'Swaziland'},
     {'timezones': ['Europe/Zurich'], 'code': 'CH', 'continent': 'Europe', 'name': 'Switzerland'},
-    {'timezones': ['Asia/Dubai'], 'code': 'AE', 'continent': 'Asia', 'name': 'United Arab Emirates'},
-    {'timezones': ['Europe/London'], 'code': 'GB', 'continent': 'Europe', 'name': 'United Kingdom'},
 ]
 
-
+# -------- Place to define static keyboards -------- #
 languages = [["Deutsch"], ["English"], ["Español"], ["Français"]]
+emoji_scale_5 = [[Emoji.TIRED_FACE], [Emoji.PERSON_FROWNING]]
 
 
-def get_preset_by_choice(choice):
-    return CUSTOM_KEYBOARDS[choice]
+# -------- Place to register functions for dynamic keyboards -------- #
+
+# Generates the timezones that the
+# country of the users location
+# has.
+def generate_timezone_kb(country):
+    timezones_rk = []
+    for element in countries:
+        if element['name'] == country:
+            for zone in element['timezones']:
+                timezones_rk.append([zone])
+        break
+    return timezones_rk
 
 
+# Generates a keyboard of
+# (nearly) all countries
+# of the world.
 def generate_country_kb():
     countries_rk = []
     for element in countries:
@@ -211,11 +228,17 @@ def generate_country_kb():
     return countries_rk
 
 
-smiley_scale_5 = [[Emoji.TIRED_FACE], [Emoji.PERSON_FROWNING]]
+# -------- Place to register static keyboards -------- #
+CUSTOM_KEYBOARDS = {
+    'KB_EMOJI_SCALE_5': emoji_scale_5,
+    'KB_COUNTRY': generate_country_kb(),
+    'KB_LANGUAGES': languages
+}
 
-CUSTOM_KEYBOARDS = dict()
-CUSTOM_KEYBOARDS['KB_EMOJI_SCALE_5'] = languages
-CUSTOM_KEYBOARDS['KB_COUNTRY'] = generate_country_kb()
-CUSTOM_KEYBOARDS['KB_TZ_OFFSET'] = [["Europe/Vienna"]]  # Todo
+
+
+
+
+
 
 

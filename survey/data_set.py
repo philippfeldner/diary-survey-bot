@@ -1,5 +1,5 @@
 import json
-from admin.settings import default_language
+from admin.settings import DEFAULT_LANGUAGE
 
 
 class DataSet:
@@ -49,4 +49,4 @@ class DataSet:
         elif lang == 'fr' and self.q_set_fr_ is not None:
             return self.q_set_fr_
         else:
-            return self.return_question_set_by_language(default_language)
+            return self.return_question_set_by_language(DEFAULT_LANGUAGE)
