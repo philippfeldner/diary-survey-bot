@@ -18,7 +18,7 @@
             "commands": []
           },
           {
-            "text": "The questions will mainly be about your physical activity and your use (or non-use) of Pokémon GO. All in all, you will be chatting with our chatbot for less than an hour and you can always e-mail us if you need additional support.",
+            "text": "The questions will mainly be about your physical activity and your use (or non-use) of Pokémon GO. All in all, you will be chatting with our chatbot for less than two hours and you can always e-mail us if you need additional support (pokemon@uni-graz.at).",
             "choice": [
               [
                 "Continue"
@@ -29,7 +29,7 @@
             "commands": []
           },
           {
-            "text": "Please know that your participation is voluntary and that you can decide to stop anytime by just sending us a message that says \"stop\" in the Telegram chat. We also promise not to pass your personal information to others. We will only use your data for scientific purposes and if we use them in a publication, this will only be in aggregated form. This means that we only look at what happens in the whole group and not at what a single person answers.",
+            "text": "Please know that your participation is voluntary and that you can decide to stop anytime by just sending us a message that says \"/stop\" in the Telegram chat. We also promise not to pass your personal information to others. We will only use your data for scientific purposes and if we use them in a publication, this will only be in aggregated form. This means that we only look at what happens in the whole group and not at what a single person answers.",
             "choice": [
               [
                 "Continue"
@@ -72,7 +72,7 @@
                           ]]
           },
           {
-            "text": "Thank you for your participation! If you want to, we would appreciate a message why you don't feel like continuing the study. Anyway, if you change your mind, you can resume by sending us a message with the word \"start\".",
+            "text": "Thank you for your participation! If you want to, we would appreciate a message why you don't feel like continuing the study. Anyway, if you change your mind, you can resume by sending us a message with the word \"/start\".",
             "choice": [],
             "condition_required": [
               [
@@ -126,24 +126,6 @@
             ]
           },
           {
-            "text": "During the coming weeks, we will ask you a few short questions three times each day. To make sure this will be between 8am and 10pm, we ask you to give us your time zone.\nWhat is your current time zone?",
-            "choice": [
-              [
-                "KB_TZ_OFFSET"
-              ]
-            ],
-            "condition_required": [],
-            "condition": [],
-            "commands": [
-              [
-                "TZ_OFFSET"
-              ],
-              [
-                "FORCE_KB_REPLY"
-              ]
-            ]
-          },
-          {
             "text": "Thank you! Right now, we will start by sending you a couple of questions.\nNo worries, you will remain anonymous.\n\nGender",
             "choice": [
               [
@@ -181,7 +163,7 @@
             ]
           },
           {
-            "text": "Which country are you from?",
+            "text": "During the coming weeks, we will ask you a few short questions three times each day. To make sure this will be between 8am and 10pm, we ask you to tell us your country of residence and time zone.\nIn which country do you live??",
             "choice": [
               [
                 "KB_COUNTRY"
@@ -198,6 +180,72 @@
               ]
             ]
           },
+          {
+            "text": "What is your current time zone?",
+            "choice": [
+              [
+                "KB_TZ_OFFSET"
+              ]
+            ],
+            "condition_required": [],
+            "condition": [],
+            "commands": [
+              [
+                "TZ_OFFSET"
+              ],
+              [
+                "FORCE_KB_REPLY"
+              ]
+            ]
+          },
+          {
+            "text": "Were you born in the country you currently live in?",
+            "choice": [              [
+                            "yes"
+                          ],
+                          [
+                            "no"
+                          ]
+            ],
+            "condition_required": [],
+            "condition": [              [
+                            "no",
+                            "#BORN_ELSEWHERE"
+                          ]],
+            "commands": [
+            ]
+          },
+
+          {
+            "text": "Which country are you from?",
+            "choice": [
+              [
+                "KB_COUNTRY"
+              ]
+            ],
+            "condition_required": [[
+                            "no",
+                            "#BORN_ELSEWHERE"
+                          ]],
+            "condition": [],
+            "commands": [
+              [
+                "FORCE_KB_REPLY"
+              ]
+            ]
+          },
+
+
+
+
+
+
+
+
+
+
+
+
           {
             "text": "What is your first language?",
             "choice": [
@@ -272,7 +320,7 @@
           {
             "text": "Have you heard of the app Pokémon GO?",
             "choice": [
-              ["yes"],
+              ["yes, but I don't play"],
               ["no"],
               ["I play it"],
               ["I have already played it, but do not play it anymore"]
@@ -1168,7 +1216,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -1493,7 +1541,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -1818,7 +1866,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -2245,7 +2293,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -2570,7 +2618,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -2895,7 +2943,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -3322,7 +3370,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -3647,7 +3695,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -3972,7 +4020,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -4399,7 +4447,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -4724,7 +4772,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -5049,7 +5097,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -5476,7 +5524,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -5801,7 +5849,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -6126,7 +6174,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -6553,7 +6601,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -6878,7 +6926,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -7203,7 +7251,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -7630,7 +7678,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -7955,7 +8003,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -8280,7 +8328,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -8707,7 +8755,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -9032,7 +9080,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -9357,7 +9405,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -9784,7 +9832,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -10109,7 +10157,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -10434,7 +10482,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -10861,7 +10909,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -11186,7 +11234,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -11511,7 +11559,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -11938,7 +11986,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -12263,7 +12311,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -12588,7 +12636,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -13015,7 +13063,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -13340,7 +13388,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -13665,7 +13713,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -14092,7 +14140,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -14417,7 +14465,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -14742,7 +14790,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -15169,7 +15217,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -15494,7 +15542,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -15819,7 +15867,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -16246,7 +16294,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -16571,7 +16619,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -16896,7 +16944,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -17323,7 +17371,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -17648,7 +17696,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -17973,7 +18021,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -18400,7 +18448,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -18725,7 +18773,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -19050,7 +19098,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -19477,7 +19525,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -19802,7 +19850,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -20127,7 +20175,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -20554,7 +20602,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -20879,7 +20927,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -21204,7 +21252,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -21631,7 +21679,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -21956,7 +22004,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -22281,7 +22329,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -22708,7 +22756,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -23033,7 +23081,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -23358,7 +23406,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -23785,7 +23833,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -24110,7 +24158,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -24435,7 +24483,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -24862,7 +24910,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -25187,7 +25235,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -25512,7 +25560,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -25939,7 +25987,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -26264,7 +26312,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -26589,7 +26637,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -27016,7 +27064,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -27341,7 +27389,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -27666,7 +27714,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -28093,7 +28141,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -28418,7 +28466,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -28743,7 +28791,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -29170,7 +29218,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -29495,7 +29543,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -29820,7 +29868,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -30247,7 +30295,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -30572,7 +30620,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -30897,7 +30945,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -31324,7 +31372,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -31649,7 +31697,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -31974,7 +32022,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -32401,7 +32449,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -32726,7 +32774,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -33051,7 +33099,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -33478,7 +33526,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -33803,7 +33851,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -34128,7 +34176,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -34555,7 +34603,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -34880,7 +34928,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -35205,7 +35253,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -35632,7 +35680,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -35957,7 +36005,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -36282,7 +36330,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -36709,7 +36757,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -37034,7 +37082,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -37359,7 +37407,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -37786,7 +37834,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -38111,7 +38159,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -38436,7 +38484,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -38863,7 +38911,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -39188,7 +39236,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -39513,7 +39561,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -39940,7 +39988,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -40265,7 +40313,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -40590,7 +40638,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -41017,7 +41065,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -41342,7 +41390,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -41667,7 +41715,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -42094,7 +42142,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -42419,7 +42467,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -42744,7 +42792,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -43171,7 +43219,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -43496,7 +43544,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -43821,7 +43869,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -44248,7 +44296,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -44573,7 +44621,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -44898,7 +44946,7 @@
             ]
           },
           {
-            "text": "How long did you play?\nPlease state the time in minutes.",
+            "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
             "choice": [],
             "condition_required": [
               [
@@ -45628,7 +45676,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -45953,7 +46001,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -46278,7 +46326,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -46705,7 +46753,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -47030,7 +47078,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -47355,7 +47403,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -47782,7 +47830,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -48107,7 +48155,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -48432,7 +48480,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -48859,7 +48907,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -49184,7 +49232,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -49509,7 +49557,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -49936,7 +49984,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -50261,7 +50309,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -50586,7 +50634,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -51013,7 +51061,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -51338,7 +51386,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -51663,7 +51711,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -52090,7 +52138,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -52415,7 +52463,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [
@@ -52740,7 +52788,7 @@
           ]
         },
         {
-          "text": "How long did you play?\nPlease state the time in minutes.",
+          "text": "How long did you play within the last hour?\nPlease state the time in minutes.",
           "choice": [],
           "condition_required": [
             [

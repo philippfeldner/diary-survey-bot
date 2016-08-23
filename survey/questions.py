@@ -6,6 +6,7 @@ from pytz import timezone
 
 
 from admin.settings import SCHEDULE_INTERVALS
+from admin.settings import QUICK_TEST
 from admin.debug import debug
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
@@ -23,20 +24,25 @@ LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
 
 # Calculates seconds until a certain hh:mm
 # event. Used for the job_queue mainly.
-# Timezones are already handled # Todo
-def calc_delta_t(time, days, time_zone=None):
+# Timezones are already handled.
+def calc_delta_t(time, days, zone=None):
+    # If the admin setting QUICK_TEST the block scheduling ist 60s
+    if QUICK_TEST is not False:
+        return QUICK_TEST
     hh = time[:2]
     mm = time[3:]
 
-    current = datetime.now()
-    future = datetime(current.year, current.month, current.day, int(hh), int(mm))
-    seconds = future - current
-    if days > 0 and seconds.seconds < 86400:
-        return seconds.seconds + 86400 + ((days - 1) * 86400)
-    elif days > 0 and seconds.seconds > 86400:
-        return seconds.seconds + ((days - 1) * 86400)
+    # Todo: Maybe catch timezone exception
+    if zone is not None:
+        current = datetime.now(timezone(zone))
     else:
-        return seconds.seconds
+        current = datetime.now()
+    future = datetime(current.year, current.month, current.day, int(hh), int(mm))
+    offset = future - current
+    if offset.days == 0:
+        return offset.seconds + 86400 + ((days - 1) * 86400)
+    else:
+        return offset.seconds + ((days - 1) * 86400)
 
 
 # Generates a random time offset
@@ -134,6 +140,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         time_t = calc_block_time(element["time"])
         due = calc_delta_t(time_t, day_offset)
 
+        debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
         new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
         job_queue.put(new_job)
 
@@ -173,6 +180,11 @@ def queue_next(bot: Bot, job: Job):
     user.set_block(user.next_block[1])
     element = user.next_block[2]
 
+    if ['MANDATORY'] in element['settings']:
+        user.auto_queue_ = False
+    else:
+        user.auto_queue_ = True
+
     # Check if the user is currently active
     if not user.active_:
         return
@@ -194,6 +206,7 @@ def queue_next(bot: Bot, job: Job):
         due = calc_delta_t(time_t, day_offset)
 
         # Add new job and to queue. The function basically calls itself recursively after x seconds.
+        debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
         new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
         job_queue.put(new_job)
         return
@@ -207,7 +220,7 @@ def queue_next(bot: Bot, job: Job):
     user.set_q_idle(True)
 
     # Check if there is a reason to queue again.
-    if not user.auto_queue_ or not user.block_complete_:
+    if not user.auto_queue_ or user.block_complete_:
         return
 
     # Calculate seconds until question is due.
@@ -219,6 +232,7 @@ def queue_next(bot: Bot, job: Job):
     time_t = calc_block_time(element["time"])
     due = calc_delta_t(time_t, day_offset)
 
+    debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
     new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
     job_queue.put(new_job)
     return
@@ -332,14 +346,15 @@ def initialize_participants(job_queue: JobQueue):
             if user.language_ != '':
                 q_set = user_map.return_question_set_by_language(user.language_)
                 user.q_set_ = q_set
-                if user.question_ != -1:
+                if user.pointer_ > 0:
                     user.set_next_block()
                     next_day = user.set_next_block()
-                    element = user.next_block[2] # Todo
+                    element = user.next_block[2]  # Todo: Check if None!
                     day_offset = next_day - user.day_
                     time_t = calc_block_time(element["time"])
                     due = calc_delta_t(time_t, day_offset)
 
+                    debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
                     new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
                     job_queue.put(new_job)
             else:

@@ -18,7 +18,6 @@ class Participant:
     conditions_ = []
     next_block = None
 
-    job = None
     q_set_ = None
     auto_queue_ = False
     block_complete_ = False

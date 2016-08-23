@@ -24,6 +24,10 @@ ADMINS = ['0x0', '0x0']
 # Debug mode on/off
 DEBUG = True
 
+# For testing purposes. Sets all block scheduling to x seconds.
+# To deactivate set it to False (0)
+QUICK_TEST = 20
+
 # Default language if something goes wrong.
 DEFAULT_LANGUAGE = 'de'
 
@@ -34,9 +38,6 @@ SCHEDULE_INTERVALS = {
                         "RANDOM_3": ["16:00", "20:00"]
                      }
 
-DB_TRIGGER = {
-
-             }
 
 
 
