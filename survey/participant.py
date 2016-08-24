@@ -13,8 +13,8 @@ class Participant:
     block_ = -1
     question_ = -1
     pointer_ = 0
-    age_ = ''
-    tz_ = 0xFFFF
+    age_ = -1
+    timezone_ = ''
     conditions_ = []
     next_block = None
 
@@ -30,10 +30,10 @@ class Participant:
         if init:
             try:
                 db = sqlite3.connect('survey/participants.db')
-                db.execute("INSERT INTO participants (ID, conditions, age,"
-                           "country, gender, language, question, day, block, tz, q_idle, active, pointer)"
+                db.execute("INSERT INTO participants (ID, conditions, timezone,"
+                           "country, gender, language, question, day, block, age, q_idle, active, pointer)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 1, -1, 0xFFFF, 0, 1, 0))
+                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 1, -1, -1, 0, 1, 0))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
@@ -104,26 +104,26 @@ class Participant:
         self.age_ = age
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET age=? WHERE ID=?", (self.age_, self.chat_id_))
+            db.execute("UPDATE participants SET timezone=? WHERE ID=?", (self.age_, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
             print(error)
-        return
+        return self.age_
 
-    def set_tz(self, offset):
-        self.tz_ = offset
+    def set_timezone(self, timezone):
+        self.timezone_ = timezone
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET tz=? WHERE ID=?", (offset, self.chat_id_))
+            db.execute("UPDATE participants SET timezone=? WHERE ID=?", (timezone, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
             print(error)
-        return
+        return self.timezone_
 
     def add_conditions(self, conditions):
-        if conditions == []:
+        if conditions == []:  # Todo: Check!
             return
         self.conditions_ += conditions
         try:

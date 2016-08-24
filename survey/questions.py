@@ -151,7 +151,7 @@ def store_answer(user, message, question, job_queue):
     for [element] in commands:
         # -- DB TRIGGER for storing important user data -- #
         if element == "TIMEZONE":
-            user.set_tz(message)
+            user.set_timezone(message)
         elif element == "COUNTRY":
             user.set_country(message)
         elif element == "GENDER":
@@ -180,8 +180,15 @@ def store_answer(user, message, question, job_queue):
             except KeyError:
                 message = 'Error: Unknown Emoji'
 
+    if user.timezone_ == '':
+        timestamp = datetime.now().isoformat()
+    else:
+        # Todo: Maybe catch tz exception
+        timestamp = datetime.now(timezone(user.timezone_)).isoformat()
+
     with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+') as user_file:
-        columns = [str(user.day_), str(user.block_), str(user.question_), question['text'], message]
+        columns = [user.language_, user.gender_, user.age_, user.country_, user.timezone_, user.day_, user.block_,
+                   timestamp, user.question_,  question['text'], message]
         writer = csv.writer(user_file)
         writer.writerow(columns)
 
@@ -359,7 +366,7 @@ def initialize_participants(job_queue: JobQueue):
             user.gender_ = row[4]
             user.language_ = row[5]
             user.question_ = row[6]
-            user.tz_ = row[7]
+            user.timezone_ = row[7]
             user.day_ = row[8]
             user.q_idle_ = row[9]
             user.active_ = row[10]

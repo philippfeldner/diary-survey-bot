@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9d5a5b4-9edf-4a3d-b9ca-9cd59760119e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generate_keyboard.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/participants.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/participants.db" afterPath="$PROJECT_DIR$/survey/participants.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/settings.py" afterPath="$PROJECT_DIR$/admin/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.txt" afterPath="$PROJECT_DIR$/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/keyboard_presets.py" afterPath="$PROJECT_DIR$/survey/keyboard_presets.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/participant.py" afterPath="$PROJECT_DIR$/survey/participant.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/question_set_de.json" afterPath="$PROJECT_DIR$/survey/question_set_de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/question_set_en.json" afterPath="$PROJECT_DIR$/survey/question_set_en.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/question_set_es.json" afterPath="$PROJECT_DIR$/survey/question_set_es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/question_set_fr.json" afterPath="$PROJECT_DIR$/survey/question_set_fr.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey/questions.py" afterPath="$PROJECT_DIR$/survey/questions.py" />
     </list>
     <ignored path="questionnaire-telegram-bot.iws" />
@@ -35,7 +25,7 @@
     <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$questionnaire_telegram_bot.coverage" NAME="questionnaire-telegram-bot Coverage Results" MODIFIED="1470264199700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$test.coverage" NAME="test Coverage Results" MODIFIED="1469996109987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/diary-survey-bot$test.coverage" NAME="test Coverage Results" MODIFIED="1471519925069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/diary-survey-bot$questionnaire_telegram_bot.coverage" NAME="questionnaire-telegram-bot Coverage Results" MODIFIED="1472072159118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/diary-survey-bot$questionnaire_telegram_bot.coverage" NAME="questionnaire-telegram-bot Coverage Results" MODIFIED="1472073397997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$questions.coverage" NAME="questions Coverage Results" MODIFIED="1470234504254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/survey" />
     <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$generate_keyboard.coverage" NAME="generate_keyboard Coverage Results" MODIFIED="1469645934679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/questionnaire-telegram-bot$json_fixer.coverage" NAME="json_fixer Coverage Results" MODIFIED="1470234039342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -49,6 +39,20 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Sqlite (Xerial) - participants.db" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="participants" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -56,25 +60,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="questions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="questions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/questions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="290" column="82" selection-start-line="290" selection-start-column="82" selection-end-line="290" selection-end-column="82" />
+            <state relative-caret-position="914">
+              <caret line="194" column="10" selection-start-line="194" selection-start-column="10" selection-end-line="194" selection-end-column="10" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1472072244051" expanded="true" signature="11923:11963" placeholder="SELECT * FRO... participants" />
+                <marker date="1472073397935" expanded="true" signature="12216:12256" placeholder="SELECT * FRO... participants" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="diary-survey-bot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diary-survey-bot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -82,7 +76,7 @@
       <file leaf-file-name="keyboard_presets.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/keyboard_presets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="900">
               <caret line="50" column="52" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="52" />
               <folding />
             </state>
@@ -109,32 +103,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="participant.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="participant.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/survey/participant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="122">
+              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1472070033835" expanded="true" signature="634:676" placeholder="INSERT INTO participants... " />
-                <marker date="1472070033835" expanded="true" signature="634:680" placeholder="INSERT INTO participants... " />
-                <marker date="1472070033835" expanded="true" signature="634:863" placeholder="INSERT INTO participants... " />
-                <marker date="1472070033835" expanded="true" signature="1898:1943" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="2256:2299" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="2618:2662" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="2966:3006" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="3322:3362" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="3672:3711" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="4141:4188" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="4497:4539" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="4862:4904" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="5244:5289" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="5624:5669" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="6011:6055" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="6386:6430" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="6764:6807" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="7136:7179" placeholder="UPDATE parti... " />
-                <marker date="1472070033835" expanded="true" signature="7480:7515" placeholder="DELETE FROM " />
+                <marker date="1472074488827" expanded="true" signature="636:678" placeholder="INSERT INTO participants... " />
+                <marker date="1472074488827" expanded="true" signature="636:687" placeholder="INSERT INTO participants... " />
+                <marker date="1472074488827" expanded="true" signature="636:871" placeholder="INSERT INTO participants... " />
+                <marker date="1472074488827" expanded="true" signature="1902:1947" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="2260:2303" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="2622:2666" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="2970:3010" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="3326:3371" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="3707:3752" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="4215:4262" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="4571:4613" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="4936:4978" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="5318:5363" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="5698:5743" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="6085:6129" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="6460:6504" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="6838:6881" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="7210:7253" placeholder="UPDATE parti... " />
+                <marker date="1472074488827" expanded="true" signature="7554:7589" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -143,7 +137,7 @@
       <file leaf-file-name="question_set_es.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/question_set_es.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="3636">
               <caret line="202" column="28" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
               <folding />
             </state>
@@ -153,7 +147,7 @@
       <file leaf-file-name="question_set_fr.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/question_set_fr.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="3474">
               <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
               <folding />
             </state>
@@ -163,7 +157,7 @@
       <file leaf-file-name="question_set_de.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/question_set_de.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="3528">
               <caret line="196" column="28" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="28" />
               <folding />
             </state>
@@ -173,7 +167,7 @@
       <file leaf-file-name="question_set_en.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey/question_set_en.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1103">
+            <state relative-caret-position="3474">
               <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
               <folding />
             </state>
@@ -228,7 +222,6 @@
         <option value="$PROJECT_DIR$/admin/debug.py" />
         <option value="$PROJECT_DIR$/survey/data_incomplete/19965814.csv" />
         <option value="$PROJECT_DIR$/survey/keyboard_presets.py" />
-        <option value="$PROJECT_DIR$/survey/participant.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/test.json" />
         <option value="$PROJECT_DIR$/admin/settings.py" />
@@ -237,6 +230,7 @@
         <option value="$PROJECT_DIR$/survey/question_set_de.json" />
         <option value="$PROJECT_DIR$/survey/question_set_en.json" />
         <option value="$PROJECT_DIR$/survey/questions.py" />
+        <option value="$PROJECT_DIR$/survey/participant.py" />
       </list>
     </option>
   </component>
@@ -277,8 +271,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -671,17 +665,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="30" width="1922" height="1051" extended-state="6" />
+    <frame x="-1" y="30" width="1922" height="1051" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13471779" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27582535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19713657" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263506" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32563257" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19955899" sideWeight="0.4632196" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19911991" sideWeight="0.4632196" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -717,11 +711,6 @@
           <url>file://$PROJECT_DIR$/survey/participant.py</url>
           <line>256</line>
           <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/survey/questions.py</url>
-          <line>182</line>
-          <option name="timeStamp" value="83" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -830,14 +819,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/f2601687/64ff056b-6398-4dd3-bdab-681fcd4d27c0/participants">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -935,49 +924,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/survey/data_incomplete/19965814.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247971765/time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_keyboard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.json" />
+    <entry file="file://$PROJECT_DIR$/generate_keyboard.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/diary-survey-bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
+        <state relative-caret-position="864">
           <caret line="56" column="20" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="20" />
           <folding />
         </state>
@@ -991,6 +956,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/survey/question_set_es.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3636">
+          <caret line="202" column="28" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/question_set_fr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3474">
+          <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/question_set_de.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3528">
+          <caret line="196" column="28" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/question_set_en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3474">
+          <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/keyboard_presets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="52" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -999,82 +1004,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/survey/question_set_es.json">
+    <entry file="file://$PROJECT_DIR$/survey/data_incomplete/19965814.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="202" column="28" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/survey/question_set_fr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/survey/question_set_de.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="196" column="28" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/survey/question_set_en.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1103">
-          <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/survey/participant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1472070033835" expanded="true" signature="634:676" placeholder="INSERT INTO participants... " />
-            <marker date="1472070033835" expanded="true" signature="634:680" placeholder="INSERT INTO participants... " />
-            <marker date="1472070033835" expanded="true" signature="634:863" placeholder="INSERT INTO participants... " />
-            <marker date="1472070033835" expanded="true" signature="1898:1943" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="2256:2299" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="2618:2662" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="2966:3006" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="3322:3362" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="3672:3711" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="4141:4188" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="4497:4539" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="4862:4904" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="5244:5289" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="5624:5669" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="6011:6055" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="6386:6430" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="6764:6807" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="7136:7179" placeholder="UPDATE parti... " />
-            <marker date="1472070033835" expanded="true" signature="7480:7515" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/survey/keyboard_presets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="52" />
+        <state relative-caret-position="234">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/survey/questions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="290" column="82" selection-start-line="290" selection-start-column="82" selection-end-line="290" selection-end-column="82" />
+        <state relative-caret-position="914">
+          <caret line="194" column="10" selection-start-line="194" selection-start-column="10" selection-end-line="194" selection-end-column="10" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1472072244051" expanded="true" signature="11923:11963" placeholder="SELECT * FRO... participants" />
+            <marker date="1472073397935" expanded="true" signature="12216:12256" placeholder="SELECT * FRO... participants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey/participant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1472074488827" expanded="true" signature="636:678" placeholder="INSERT INTO participants... " />
+            <marker date="1472074488827" expanded="true" signature="636:687" placeholder="INSERT INTO participants... " />
+            <marker date="1472074488827" expanded="true" signature="636:871" placeholder="INSERT INTO participants... " />
+            <marker date="1472074488827" expanded="true" signature="1902:1947" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="2260:2303" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="2622:2666" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="2970:3010" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="3326:3371" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="3707:3752" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="4215:4262" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="4571:4613" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="4936:4978" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="5318:5363" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="5698:5743" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="6085:6129" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="6460:6504" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="6838:6881" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="7210:7253" placeholder="UPDATE parti... " />
+            <marker date="1472074488827" expanded="true" signature="7554:7589" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>

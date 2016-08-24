@@ -7,12 +7,12 @@
     <table name="participants" schema="" catalog="" type="TABLE">
       <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="conditions" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="age" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="timezone" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="country" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="gender" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="language" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="question" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="tz" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="age" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="day" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="q_idle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="active" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
