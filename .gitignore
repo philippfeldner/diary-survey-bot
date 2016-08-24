@@ -1,5 +1,2 @@
-survey/data_incomplete/*.csv
-survey/data_complete/*.csv
-survey/*.json
-
+*.csv
 

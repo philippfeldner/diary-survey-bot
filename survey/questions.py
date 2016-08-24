@@ -124,6 +124,9 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         print(error)
         return
 
+    if not user.active_:
+        return
+    # Todo: Copy to /start
     question = find_next_question(user)
     if question is not None:
         message = question["text"]
@@ -158,6 +161,8 @@ def store_answer(user, message, question, job_queue):
             user.set_gender(message)
         elif element == "AGE":
             user.set_age(message)
+        elif element == "STOP":
+            True # Todo
         elif element == "Q_ON":
             next_day = user.set_next_block()
             element = user.next_block[2]
