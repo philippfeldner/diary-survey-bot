@@ -3,23 +3,21 @@ import pickle
 
 from datetime import datetime
 from pytz import timezone
-
+import random
+import csv
 
 from admin.settings import SCHEDULE_INTERVALS
 from admin.settings import QUICK_TEST
 from admin.debug import debug
 
-from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
+from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide, Emoji
 from telegram.ext import Job, JobQueue
 
 from survey.data_set import DataSet
 from survey.participant import Participant
 from survey.keyboard_presets import CUSTOM_KEYBOARDS
-import survey.keyboard_presets as kbps
-
-import random
-
-LANGUAGE, COUNTRY, GENDER, TIME_T, TIME_OFFSET = range(5)
+from survey.keyboard_presets import TRANSLATE_EMOJI
+import survey.keyboard_presets as kb_presets
 
 
 # Calculates seconds until a certain hh:mm
@@ -116,7 +114,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 return
             # Storing the answer and moving on the next question
 
-            store_answer(user, update.message.text, q_prev)
+            store_answer(user, update.message.text, q_prev, job_queue)
             # Todo check last question
             user.set_q_idle(False)
         else:
@@ -148,21 +146,45 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 # This function is getting used to generate
 # the CSV files and store values.
 # Also the conditions, DB values get set here.
-def store_answer(user, message, question):
+def store_answer(user, message, question, job_queue):
     commands = question['commands']
     for [element] in commands:
         # -- DB TRIGGER for storing important user data -- #
-        if element == "COUNTRY":
-            user.set_country(message)
-        elif element == "TZ_OFFSET":
+        if element == "TIMEZONE":
             user.set_tz(message)
+        elif element == "COUNTRY":
+            user.set_country(message)
         elif element == "GENDER":
             user.set_gender(message)
+        elif element == "AGE":
+            user.set_age(message)
+        elif element == "Q_ON":
+            next_day = user.set_next_block()
+            element = user.next_block[2]
+            day_offset = next_day - user.day_
+            time_t = calc_block_time(element["time"])
+            due = calc_delta_t(time_t, day_offset)
+
+            debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
+            new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+            job_queue.put(new_job)
 
     condition = question["condition"]
     if condition != [] and message in condition[0]:
         user.add_conditions(condition)
-    # Todo: CSV stuff
+
+    if type(message) is not str:
+        if type(message) is Emoji:
+            try:
+                message = TRANSLATE_EMOJI[message]
+            except KeyError:
+                message = 'Error: Unknown Emoji'
+
+    with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+') as user_file:
+        columns = [str(user.day_), str(user.block_), str(user.question_), question['text'], message]
+        writer = csv.writer(user_file)
+        writer.writerow(columns)
+
     return
 
 
@@ -179,6 +201,8 @@ def queue_next(bot: Bot, job: Job):
     user.set_pointer(user.next_block[0])
     user.set_block(user.next_block[1])
     element = user.next_block[2]
+
+    user.set_day(user.q_set_[user.pointer_]['day'])
 
     if ['MANDATORY'] in element['settings']:
         user.auto_queue_ = False
@@ -263,8 +287,8 @@ def get_keyboard(choice, user):
         return ReplyKeyboardHide()
 
     # -------- Place to register dynamic keyboards -------- #
-    if choice[0][0] == 'KB_TZ_OFFSET':
-        return ReplyKeyboardMarkup(kbps.generate_timezone_kb(user.country_))
+    if choice[0][0] == 'KB_TIMEZONE':
+        return ReplyKeyboardMarkup(kb_presets.generate_timezone_kb(user.country_))
 
     try:
         keyboard = ReplyKeyboardMarkup(CUSTOM_KEYBOARDS[choice[0][0]])
@@ -282,8 +306,8 @@ def valid_answer(question, message, user):
     if ['FORCE_KB_REPLY'] not in commands or question['choice'] == []:
         return True
 
-    if question['choice'][0][0] == 'KB_TZ_OFFSET':
-        return ReplyKeyboardMarkup(kbps.generate_timezone_kb(user.country_))
+    if question['choice'][0][0] == 'KB_TIMEZONE':
+        return ReplyKeyboardMarkup(kb_presets.generate_timezone_kb(user.country_))
 
     try:
         choice = CUSTOM_KEYBOARDS[question['choice'][0][0]]
@@ -330,7 +354,7 @@ def initialize_participants(job_queue: JobQueue):
         for row in participants:
             user = Participant(row[0], init=False)
             user.conditions_ = pickle.loads(row[1])
-            user.time_t_ = row[2]
+            user.age_ = row[2]
             user.country_ = row[3]
             user.gender_ = row[4]
             user.language_ = row[5]

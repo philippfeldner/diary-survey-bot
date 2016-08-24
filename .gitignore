@@ -1,4 +1,5 @@
-in_progress/*.txt
-completed/*.txt
-participant/*.db
-questions/*.json
+survey/data_incomplete/*.csv
+survey/data_complete/*.csv
+survey/*.json
+
+

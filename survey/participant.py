@@ -13,7 +13,7 @@ class Participant:
     block_ = -1
     question_ = -1
     pointer_ = 0
-    time_t_ = ''
+    age_ = ''
     tz_ = 0xFFFF
     conditions_ = []
     next_block = None
@@ -30,7 +30,7 @@ class Participant:
         if init:
             try:
                 db = sqlite3.connect('survey/participants.db')
-                db.execute("INSERT INTO participants (ID, conditions, time_t,"
+                db.execute("INSERT INTO participants (ID, conditions, age,"
                            "country, gender, language, question, day, block, tz, q_idle, active, pointer)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                            (chat_id, pickle.dumps([]), '', '', '', '', -1, 1, -1, 0xFFFF, 0, 1, 0))
@@ -100,11 +100,11 @@ class Participant:
             print(error)
         return self.day_
 
-    def set_time_t(self, time_t):
-        self.time_t_ = time
+    def set_age(self, age):
+        self.age_ = age
         try:
             db = sqlite3.connect('survey/participants.db')
-            db.execute("UPDATE participants SET time_t=? WHERE ID=?", (time_t, self.chat_id_))
+            db.execute("UPDATE participants SET age=? WHERE ID=?", (self.age_, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:

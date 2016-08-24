@@ -4,7 +4,7 @@
     "blocks": [
       {
         "time": "START",
-        "settings": [],
+        "settings": [["MANDATORY"]],
         "questions": [
           {
             "text": "Hey there and thanks for participating! For your chance to win a 150€ Amazon voucher and – if you wish – to get your personal physical activity and mood overview, we ask you to answer some questions via the app Telegram each evening for the coming six weeks, with a follow-up week one month after the main part of the study.",
@@ -184,14 +184,14 @@
             "text": "What is your current time zone?",
             "choice": [
               [
-                "KB_TZ_OFFSET"
+                "KB_TIMEZONE"
               ]
             ],
             "condition_required": [],
             "condition": [],
             "commands": [
               [
-                "TZ_OFFSET"
+                "TIMEZONE"
               ],
               [
                 "FORCE_KB_REPLY"
@@ -914,7 +914,7 @@
             "choice": [],
             "condition_required": [],
             "condition": [],
-            "commands": []
+            "commands": [["Q_ON"]]
           }
         ]
       }

@@ -184,14 +184,14 @@
             "text": "Dans quelle zone horaire te situes-tu ?",
             "choice": [
               [
-                "KB_TZ_OFFSET"
+                "KB_TIMEZONE"
               ]
             ],
             "condition_required": [],
             "condition": [],
             "commands": [
               [
-                "TZ_OFFSET"
+                "TIMEZONE"
               ],
               [
                 "FORCE_KB_REPLY"

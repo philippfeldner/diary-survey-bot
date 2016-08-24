@@ -4,7 +4,7 @@
     "blocks": [
       {
         "time": "START",
-        "settings": [],
+        "settings": [["MANDATORY"]],
         "questions": [
           {
             "text": "Hallo und danke fürs Mitmachen bei unserer Studie! Für die Möglichkeit, einen 150€ Amazon-Gutschein zu gewinnen und ein persönliches Feedback zu deiner körperlichen Aktivität und Stimmung zu bekommen, beantworte bitte in den nächsten sechs Wochen und etwas später nochmal eine Woche lang jeden Tag dreimal ein paar kurze Fragen.",
@@ -194,14 +194,14 @@
             "text": "In welcher Zeitzone bist du gerade?",
             "choice": [
               [
-                "KB_TZ_OFFSET"
+                "KB_TIMEZONE"
               ]
             ],
             "condition_required": [],
             "condition": [],
             "commands": [
               [
-                "TZ_OFFSET"
+                "TIMEZONE"
               ],
               [
                 "FORCE_KB_REPLY"
@@ -932,7 +932,7 @@
             "choice": [],
             "condition_required": [],
             "condition": [],
-            "commands": []
+            "commands": [["Q_ON"]]
           }
         ]
       }
