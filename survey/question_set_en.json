@@ -380,7 +380,7 @@
             "commands": []
           },
           {
-            "text": "We are studying how Pokémon GO affects your daily acitivity levels and your well-being. Therefore, we would like to get to know you better.\n\nDuring the past week...\nI was bothered by things that usually don't bother me.",
+            "text": "We are studying how Pokémon GO affects your daily acitivity levels and your well-being. Therefore, we would like to get to know you better. Please tell us how you have been those last weeks.\n\nDuring the past week...\n... I was bothered by things that usually don't bother me.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -400,7 +400,7 @@
             "commands": []
           },
           {
-            "text": "I felt that I could not shake off the blues even with help from my family or friends.",
+            "text": "... I felt that I could not shake off the blues even with help from my family or friends.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -420,7 +420,7 @@
             "commands": []
           },
           {
-            "text": "I had trouble keeping my mind on what I was doing.",
+            "text": "... I had trouble keeping my mind on what I was doing.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -440,7 +440,7 @@
             "commands": []
           },
           {
-            "text": "I felt depressed.",
+            "text": "... I felt depressed.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -460,7 +460,7 @@
             "commands": []
           },
           {
-            "text": "I felt that everything I did was an effort.",
+            "text": "... I felt that everything I did was an effort.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -480,7 +480,7 @@
             "commands": []
           },
           {
-            "text": "I thought my life had been a failure.",
+            "text": "... I thought my life had been a failure.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -500,7 +500,7 @@
             "commands": []
           },
           {
-            "text": "I felt fearful.",
+            "text": "... I felt fearful.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -520,7 +520,7 @@
             "commands": []
           },
           {
-            "text": "my sleep was restless.",
+            "text": "... my sleep was restless.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -540,7 +540,7 @@
             "commands": []
           },
           {
-            "text": "I was happy.",
+            "text": "... I was happy.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -560,7 +560,7 @@
             "commands": []
           },
           {
-            "text": "I talked less than usual.",
+            "text": "... I talked less than usual.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -580,7 +580,7 @@
             "commands": []
           },
           {
-            "text": "I felt lonely.",
+            "text": "... I felt lonely.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -600,7 +600,7 @@
             "commands": []
           },
           {
-            "text": "I enjoyed life.",
+            "text": "... I enjoyed life.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -620,7 +620,7 @@
             "commands": []
           },
           {
-            "text": "I felt sad.",
+            "text": "... I felt sad.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -640,7 +640,7 @@
             "commands": []
           },
           {
-            "text": "I felt that people dislike me.",
+            "text": "... I felt that people dislike me.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -660,7 +660,7 @@
             "commands": []
           },
           {
-            "text": "I could not get going.",
+            "text": "... I could not get going.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -680,7 +680,7 @@
             "commands": []
           },
           {
-            "text": "How well do the following statements describe your personality?\n\nI see myself as someone who ...\nis reserved.",
+            "text": "How well do the following statements describe your personality?\n\nI see myself as someone who ...\n... is reserved.",
             "choice": [
               [
                 "disagree strongly"
@@ -703,7 +703,7 @@
             "commands": []
           },
           {
-            "text": "is generally trusting.",
+            "text": "... is generally trusting.",
             "choice": [
               [
                 "disagree strongly"
@@ -726,7 +726,7 @@
             "commands": []
           },
           {
-            "text": "tends to be lazy.",
+            "text": "... tends to be lazy.",
             "choice": [
               [
                 "disagree strongly"
@@ -749,7 +749,7 @@
             "commands": []
           },
           {
-            "text": "is relaxed, handles stress well.",
+            "text": "... is relaxed, handles stress well.",
             "choice": [
               [
                 "disagree strongly"
@@ -772,7 +772,7 @@
             "commands": []
           },
           {
-            "text": "has few artistic interests.",
+            "text": "... has few artistic interests.",
             "choice": [
               [
                 "disagree strongly"
@@ -795,7 +795,7 @@
             "commands": []
           },
           {
-            "text": "is outgoing, sociable.",
+            "text": "... is outgoing, sociable.",
             "choice": [
               [
                 "disagree strongly"
@@ -818,7 +818,7 @@
             "commands": []
           },
           {
-            "text": "tends to find a fault with others.",
+            "text": "... tends to find a fault with others.",
             "choice": [
               [
                 "disagree strongly"
@@ -841,7 +841,7 @@
             "commands": []
           },
           {
-            "text": "does a thorough job.",
+            "text": "... does a thorough job.",
             "choice": [
               [
                 "disagree strongly"
@@ -864,7 +864,7 @@
             "commands": []
           },
           {
-            "text": "gets nervous easily.",
+            "text": "... gets nervous easily.",
             "choice": [
               [
                 "disagree strongly"
@@ -887,7 +887,7 @@
             "commands": []
           },
           {
-            "text": "has an active imagination.",
+            "text": "... has an active imagination.",
             "choice": [
               [
                 "disagree strongly"
@@ -905,16 +905,16 @@
                 "agree strongly"
               ]
             ],
-            "condition_required": [],
-            "condition": [],
-            "commands": []
-          },
-          {
-            "text": "Thanks, that's it for today! Starting tomorrow, we will ask you a few questions every day between 8am and 10pm. Please try to answer as fast as possible.\nIf you have any questions, please send an e-mail with the subject Pokemon to pokemon@uni-graz.at",
-            "choice": [],
             "condition_required": [],
             "condition": [],
             "commands": [["Q_ON"]]
+          },
+          {
+            "text": "Thanks, that's it for today! Starting tomorrow, we will ask you a few questions every day between 8am and 10pm. Please try to answer as fast as possible.\nIf you have any questions, please send an e-mail with the subject Pokemon to pokemon@uni-graz.at.\n\nIf you would like to invite friends to participate in the study, please send them the link to our website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
+            "choice": [],
+            "condition_required": [],
+            "condition": [],
+            "commands": []
           }
         ]
       }
@@ -7372,7 +7372,7 @@
             "commands": []
           },
           {
-            "text": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+            "text": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at.\n\nIf you would like to invite friends to participate in the study, please send them the link to our website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -14911,7 +14911,7 @@
             "commands": []
           },
           {
-            "text": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+            "text": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at.\n\nIf you would like to invite friends to participate in the study, please send them the link to our website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -22450,7 +22450,7 @@
             "commands": []
           },
           {
-            "text": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at",
+            "text": "Thank's, that's it for today, talk to you tomorrow! If you have any questions, feel free to contact us with the subject Pokemon at pokemon@uni-graz.at.\n\nIf you would like to invite friends to participate in the study, please send them the link to our website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -45067,7 +45067,7 @@
             "commands": []
           },
           {
-            "text": "Since this is the last day of the main part of our study, we would like to know how you have been lately.\n\nDuring the past week...\nI was bothered by things that usually don't bother me.",
+            "text": "Since this is the last day of the main part of our study, we would like to know how you have been lately.\n\nDuring the past week...\n... I was bothered by things that usually don't bother me.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45087,7 +45087,7 @@
             "commands": []
           },
           {
-            "text": "I felt that I could not shake off the blues even with help from my family or friends.",
+            "text": "... I felt that I could not shake off the blues even with help from my family or friends.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45107,7 +45107,7 @@
             "commands": []
           },
           {
-            "text": "I had trouble keeping my mind on what I was doing.",
+            "text": "... I had trouble keeping my mind on what I was doing.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45127,7 +45127,7 @@
             "commands": []
           },
           {
-            "text": "I felt depressed.",
+            "text": "... I felt depressed.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45147,7 +45147,7 @@
             "commands": []
           },
           {
-            "text": "I felt that everything I did was an effort.",
+            "text": "... I felt that everything I did was an effort.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45167,7 +45167,7 @@
             "commands": []
           },
           {
-            "text": "I thought my life had been a failure.",
+            "text": "... I thought my life had been a failure.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45187,7 +45187,7 @@
             "commands": []
           },
           {
-            "text": "I felt fearful.",
+            "text": "... I felt fearful.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45207,7 +45207,7 @@
             "commands": []
           },
           {
-            "text": "my sleep was restless.",
+            "text": "... my sleep was restless.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45227,7 +45227,7 @@
             "commands": []
           },
           {
-            "text": "I was happy.",
+            "text": "... I was happy.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45247,7 +45247,7 @@
             "commands": []
           },
           {
-            "text": "I talked less than usual.",
+            "text": "... I talked less than usual.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45267,7 +45267,7 @@
             "commands": []
           },
           {
-            "text": "I felt lonely.",
+            "text": "... I felt lonely.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45287,7 +45287,7 @@
             "commands": []
           },
           {
-            "text": "I enjoyed life.",
+            "text": "... I enjoyed life.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45307,7 +45307,7 @@
             "commands": []
           },
           {
-            "text": "I felt sad.",
+            "text": "... I felt sad.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45327,7 +45327,7 @@
             "commands": []
           },
           {
-            "text": "I felt that people dislike me.",
+            "text": "... I felt that people dislike me.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -45347,7 +45347,7 @@
             "commands": []
           },
           {
-            "text": "I could not get going.",
+            "text": "... I could not get going.",
             "choice": [
               [
                 "rarely of none of the time (less than 1 day)"
@@ -52909,7 +52909,7 @@
           "commands": []
         },
         {
-          "text": "Alright, since this is the very last day of our study, we would like to know how you have felt lately.\n\nDuring the past week...\nI was bothered by things that usually don't bother me.",
+          "text": "Alright, since this is the very last day of our study, we would like to know how you have felt lately.\n\nDuring the past week...\n... I was bothered by things that usually don't bother me.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -52929,7 +52929,7 @@
           "commands": []
         },
         {
-          "text": "I felt that I could not shake off the blues even with help from my family or friends.",
+          "text": "... I felt that I could not shake off the blues even with help from my family or friends.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -52949,7 +52949,7 @@
           "commands": []
         },
         {
-          "text": "I had trouble keeping my mind on what I was doing.",
+          "text": "... I had trouble keeping my mind on what I was doing.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -52969,7 +52969,7 @@
           "commands": []
         },
         {
-          "text": "I felt depressed.",
+          "text": "... I felt depressed.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -52989,7 +52989,7 @@
           "commands": []
         },
         {
-          "text": "I felt that everything I did was an effort.",
+          "text": "... I felt that everything I did was an effort.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53009,7 +53009,7 @@
           "commands": []
         },
         {
-          "text": "I thought my life had been a failure.",
+          "text": "... I thought my life had been a failure.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53029,7 +53029,7 @@
           "commands": []
         },
         {
-          "text": "I felt fearful.",
+          "text": "... I felt fearful.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53049,7 +53049,7 @@
           "commands": []
         },
         {
-          "text": "my sleep was restless.",
+          "text": "... my sleep was restless.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53069,7 +53069,7 @@
           "commands": []
         },
         {
-          "text": "I was happy.",
+          "text": "... I was happy.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53089,7 +53089,7 @@
           "commands": []
         },
         {
-          "text": "I talked less than usual.",
+          "text": "... I talked less than usual.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53109,7 +53109,7 @@
           "commands": []
         },
         {
-          "text": "I felt lonely.",
+          "text": "... I felt lonely.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53129,7 +53129,7 @@
           "commands": []
         },
         {
-          "text": "I enjoyed life.",
+          "text": "... I enjoyed life.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53149,7 +53149,7 @@
           "commands": []
         },
         {
-          "text": "I felt sad.",
+          "text": "... I felt sad.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53169,7 +53169,7 @@
           "commands": []
         },
         {
-          "text": "I felt that people dislike me.",
+          "text": "... I felt that people dislike me.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"
@@ -53189,7 +53189,7 @@
           "commands": []
         },
         {
-          "text": "I could not get going.",
+          "text": "... I could not get going.",
           "choice": [
             [
               "rarely of none of the time (less than 1 day)"

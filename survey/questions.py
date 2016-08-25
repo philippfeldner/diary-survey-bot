@@ -133,7 +133,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         q_keyboard = get_keyboard(question["choice"], user)
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
         user.set_q_idle(True)
-    else:
+    elif user.job_ is None:
         user.block_complete_ = True
         next_day = user.set_next_block()
         element = user.next_block[2]
@@ -143,6 +143,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
         debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
         new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+        user.job_ = new_job
         job_queue.put(new_job)
 
 
@@ -162,8 +163,9 @@ def store_answer(user, message, question, job_queue):
         elif element == "AGE":
             user.set_age(message)
         elif element == "STOP":
-            True # Todo
+            True  # Todo
         elif element == "Q_ON":
+            user.auto_queue_ = True
             next_day = user.set_next_block()
             element = user.next_block[2]
             day_offset = next_day - user.day_
@@ -172,18 +174,15 @@ def store_answer(user, message, question, job_queue):
 
             debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
             new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+            user.job_ = new_job
             job_queue.put(new_job)
 
     condition = question["condition"]
     if condition != [] and message in condition[0]:
         user.add_conditions(condition)
 
-    if type(message) is not str:
-        if type(message) is Emoji:
-            try:
-                message = TRANSLATE_EMOJI[message]
-            except KeyError:
-                message = 'Error: Unknown Emoji'
+    if message in TRANSLATE_EMOJI:
+        message = TRANSLATE_EMOJI[message]
 
     if user.timezone_ == '':
         timestamp = datetime.now().isoformat()
@@ -191,10 +190,16 @@ def store_answer(user, message, question, job_queue):
         # Todo: Maybe catch tz exception
         timestamp = datetime.now(timezone(user.timezone_)).isoformat()
 
+    q_text = question['text']
+    q_text.replace('\n', ' ')
+    q_text.replace(';', ',')
+    message.replace('\n', ' ')
+    message.replace(';', ',')
+
     with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+') as user_file:
         columns = [user.language_, user.gender_, user.age_, user.country_, user.timezone_, user.day_, user.block_,
-                   timestamp, user.question_,  question['text'], message]
-        writer = csv.writer(user_file)
+                   timestamp, user.question_,  q_text, message]
+        writer = csv.writer(user_file, delimiter=';')
         writer.writerow(columns)
 
     return
@@ -209,6 +214,7 @@ def queue_next(bot: Bot, job: Job):
     if not user.active_:
         return
     user.block_complete_ = False
+    user.job_ = None
     user.set_question(0)
     user.set_pointer(user.next_block[0])
     user.set_block(user.next_block[1])
@@ -244,6 +250,7 @@ def queue_next(bot: Bot, job: Job):
         # Add new job and to queue. The function basically calls itself recursively after x seconds.
         debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
         new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+        user.job_ = new_job
         job_queue.put(new_job)
         return
 
@@ -256,7 +263,7 @@ def queue_next(bot: Bot, job: Job):
     user.set_q_idle(True)
 
     # Check if there is a reason to queue again.
-    if not user.auto_queue_ or user.block_complete_:
+    if not user.auto_queue_:
         return
 
     # Calculate seconds until question is due.
@@ -349,6 +356,33 @@ def finalize(bot: Bot, job: Job):
     user = job.context
     user.set_active = False
     # Todo File saving, maybe a final message
+    return
+
+
+def continue_survey(user, bot, job_queue):
+    user.active_ = True
+    q_set = user.q_set_
+    q_day = q_set[user.pointer_]
+    q_block = q_day["blocks"][user.block_]
+    question = q_block["questions"][user.question_]
+    if question is not None:
+        message = question["text"]
+        q_keyboard = get_keyboard(question["choice"], user)
+        bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        user.set_q_idle(True)
+
+    if user.job_ is None:
+        user.block_complete_ = True
+        next_day = user.set_next_block()
+        element = user.next_block[2]
+        day_offset = next_day - user.day_
+        time_t = calc_block_time(element["time"])
+        due = calc_delta_t(time_t, day_offset)
+
+        debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
+        new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+        user.job_ = new_job
+        job_queue.put(new_job)
     return
 
 

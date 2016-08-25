@@ -6,24 +6,30 @@ from survey.keyboard_presets import languages
 from survey.data_set import DataSet
 from survey.questions import initialize_participants
 from survey.questions import question_handler
+from survey.questions import continue_survey
 from survey.participant import Participant
 
 data_set = None
 
 
-def start(bot: Bot, update: Update):
+def start(bot: Bot, update: Update, job_queue):
     global data_set
     if update.message.chat_id not in data_set.participants:
         reply_markup = ReplyKeyboardMarkup(languages)
         bot.send_message(chat_id=update.message.chat_id, text="Please choose a language:", reply_markup=reply_markup)
         participant = Participant(update.message.chat_id)
         data_set.participants[update.message.chat_id] = participant
+    else:
+        chat_id = update.message.chat_id
+        user = data_set.participants[update.message.chat_id]
+        continue_survey(user, bot, job_queue)
 
 
 def delete(bot: Bot, update: Update):
     global data_set
     chat_id = update.message.chat_id
     user = data_set.participants[update.message.chat_id]
+    user.active_ = False
     user.delete_participant()
     del data_set.participants[update.message.chat_id]
     # Message for /stop
@@ -54,7 +60,7 @@ def main():
     dp = updater.dispatcher
     global data_set
     data_set = initialize_participants(dp.job_queue)
-    dp.add_handler(CommandHandler('start', start))
+    dp.add_handler(CommandHandler('start', start, pass_job_queue=True))
     dp.add_handler(CommandHandler('delete', delete))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))

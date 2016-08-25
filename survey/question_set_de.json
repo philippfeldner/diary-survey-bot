@@ -398,7 +398,7 @@
             "commands": []
           },
           {
-            "text": "Wir untersuchen, wie sich das Spiel Pokémon GO und tägliche Bewegung auf dein Wohlbefinden auswirken. Daher würden wir dich gerne besser kennenlernen.\n\nWährend der letzten Woche ...\nhaben mich Dinge beunruhigt, die mir sonst nichts ausmachen.",
+            "text": "Wir untersuchen, wie sich das Spiel Pokémon GO und tägliche Bewegung auf dein Wohlbefinden auswirken. Daher würden wir dich gerne besser kennenlernen. Bitte berichte uns, wie es dir während der letzten Woche gegangen ist.\n\nWährend der letzten Woche ...\n... haben mich Dinge beunruhigt, die mir sonst nichts ausmachen.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -418,7 +418,7 @@
             "commands": []
           },
           {
-            "text": "konnte ich meine trübsinnige Laune nicht loswerden, obwohl mich meine Freunde/Familie versuchten, aufzumuntern.",
+            "text": "... konnte ich meine trübsinnige Laune nicht loswerden, obwohl mich meine Freunde/Familie versuchten, aufzumuntern.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -438,7 +438,7 @@
             "commands": []
           },
           {
-            "text": "hatte ich Mühe, mich zu konzentrieren.",
+            "text": "... hatte ich Mühe, mich zu konzentrieren.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -458,7 +458,7 @@
             "commands": []
           },
           {
-            "text": "war ich deprimiert/niedergeschlagen.",
+            "text": "... war ich deprimiert/niedergeschlagen.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -478,7 +478,7 @@
             "commands": []
           },
           {
-            "text": "war alles anstrengend für mich.",
+            "text": "... war alles anstrengend für mich.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -498,7 +498,7 @@
             "commands": []
           },
           {
-            "text": "dachte ich, mein Leben ist ein einziger Fehlschlag.",
+            "text": "... dachte ich, mein Leben ist ein einziger Fehlschlag.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -518,7 +518,7 @@
             "commands": []
           },
           {
-            "text": "hatte ich Angst.",
+            "text": "... hatte ich Angst.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -538,7 +538,7 @@
             "commands": []
           },
           {
-            "text": "habe ich schlecht geschlafen.",
+            "text": "... habe ich schlecht geschlafen.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -558,7 +558,7 @@
             "commands": []
           },
           {
-            "text": "war ich fröhlich gestimmt.",
+            "text": "... war ich fröhlich gestimmt.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -578,7 +578,7 @@
             "commands": []
           },
           {
-            "text": "habe ich weniger als sonst geredet.",
+            "text": "... habe ich weniger als sonst geredet.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -598,7 +598,7 @@
             "commands": []
           },
           {
-            "text": "fühlte ich mich einsam.",
+            "text": "... fühlte ich mich einsam.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -618,7 +618,7 @@
             "commands": []
           },
           {
-            "text": "habe ich das Leben genossen.",
+            "text": "... habe ich das Leben genossen.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -638,7 +638,7 @@
             "commands": []
           },
           {
-            "text": "war ich traurig.",
+            "text": "... war ich traurig.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -658,7 +658,7 @@
             "commands": []
           },
           {
-            "text": "hatte ich das Gefühl, dass mich die Leute nicht leiden können.",
+            "text": "... hatte ich das Gefühl, dass mich die Leute nicht leiden können.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -678,7 +678,7 @@
             "commands": []
           },
           {
-            "text": "konnte ich mich zu nichts aufraffen.",
+            "text": "... konnte ich mich zu nichts aufraffen.",
             "choice": [
               [
                 "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -698,7 +698,7 @@
             "commands": []
           },
           {
-            "text": "Inwiefern treffen die folgenden Aussagen auf dich zu?\nIch bin eher zurückhaltend, reserviert.",
+            "text": "Inwiefern treffen die folgenden Aussagen auf dich zu?\n\nIch bin eher zurückhaltend, reserviert.",
             "choice": [
               [
                 "trifft überhaupt nicht zu"
@@ -925,14 +925,14 @@
             ],
             "condition_required": [],
             "condition": [],
-            "commands": []
+            "commands": [["Q_ON"]]
           },
           {
-            "text": "Danke, das war's für heute! Ab morgen werden wir dir dreimal täglich ein paar Fragen stellen. Das wird zwischen 8:00 Uhr und 22:00 Uhr sein. Bitte versuche, die Fragen so bald wie möglich zu beantworten.\nFalls noch etwas unklar ist, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
+            "text": "Danke, das war's für heute! Ab morgen werden wir dir dreimal täglich ein paar Fragen stellen. Das wird zwischen 8:00 Uhr und 22:00 Uhr sein. Bitte versuche, die Fragen so bald wie möglich zu beantworten.\nFalls noch etwas unklar ist, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/de/sozialpsychologie/das-team/lisa-eckerstorfer-bsc-msc/pokemon-go-studie/",
             "choice": [],
             "condition_required": [],
             "condition": [],
-            "commands": [["Q_ON"]]
+            "commands": []
           }
         ]
       }
@@ -7390,7 +7390,7 @@
           "commands": []
         },
         {
-          "text": "Danke, wir sind fertig für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
+          "text": "Danke, wir sind fertig für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/de/sozialpsychologie/das-team/lisa-eckerstorfer-bsc-msc/pokemon-go-studie/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -14929,7 +14929,7 @@
           "commands": []
         },
         {
-          "text": "Danke, wir sind fertig für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
+          "text": "Danke, wir sind fertig für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/de/sozialpsychologie/das-team/lisa-eckerstorfer-bsc-msc/pokemon-go-studie/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -22468,7 +22468,7 @@
           "commands": []
         },
         {
-          "text": "Danke, wir sind fertig für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.",
+          "text": "Danke, wir sind fertig für heute, bis morgen! Falls du noch Fragen hast, kannst du eine E-Mail mit dem Betreff Pokemon an pokemon@uni-graz.at schicken.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/de/sozialpsychologie/das-team/lisa-eckerstorfer-bsc-msc/pokemon-go-studie/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -45085,7 +45085,7 @@
           "commands": []
         },
         {
-          "text": "So, da dies der letzte Tag des Hauptteiles unserer Studie ist, würden wir gerne wissen, wie es dir in letzter Zeit gegangen ist.\n\nWährend der letzten Woche ...\nhaben mich Dinge beunruhigt, die mir sonst nichts ausmachen.",
+          "text": "So, da dies der letzte Tag des Hauptteiles unserer Studie ist, würden wir gerne wissen, wie es dir in letzter Zeit gegangen ist.\n\nWährend der letzten Woche ...\n... haben mich Dinge beunruhigt, die mir sonst nichts ausmachen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45105,7 +45105,7 @@
           "commands": []
         },
         {
-          "text": "konnte ich meine trübsinnige Laune nicht loswerden, obwohl mich meine Freunde/Familie versuchten, aufzumuntern.",
+          "text": "... konnte ich meine trübsinnige Laune nicht loswerden, obwohl mich meine Freunde/Familie versuchten, aufzumuntern.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45125,7 +45125,7 @@
           "commands": []
         },
         {
-          "text": "hatte ich Mühe, mich zu konzentrieren.",
+          "text": "... hatte ich Mühe, mich zu konzentrieren.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45145,7 +45145,7 @@
           "commands": []
         },
         {
-          "text": "war ich deprimiert/niedergeschlagen.",
+          "text": "... war ich deprimiert/niedergeschlagen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45165,7 +45165,7 @@
           "commands": []
         },
         {
-          "text": "war alles anstrengend für mich.",
+          "text": "... war alles anstrengend für mich.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45185,7 +45185,7 @@
           "commands": []
         },
         {
-          "text": "dachte ich, mein Leben ist ein einziger Fehlschlag.",
+          "text": "... dachte ich, mein Leben ist ein einziger Fehlschlag.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45205,7 +45205,7 @@
           "commands": []
         },
         {
-          "text": "hatte ich Angst.",
+          "text": "... hatte ich Angst.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45225,7 +45225,7 @@
           "commands": []
         },
         {
-          "text": "habe ich schlecht geschlafen.",
+          "text": "... habe ich schlecht geschlafen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45245,7 +45245,7 @@
           "commands": []
         },
         {
-          "text": "war ich fröhlich gestimmt.",
+          "text": "... war ich fröhlich gestimmt.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45265,7 +45265,7 @@
           "commands": []
         },
         {
-          "text": "habe ich weniger als sonst geredet.",
+          "text": "... habe ich weniger als sonst geredet.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45285,7 +45285,7 @@
           "commands": []
         },
         {
-          "text": "fühlte ich mich einsam.",
+          "text": "... fühlte ich mich einsam.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45305,7 +45305,7 @@
           "commands": []
         },
         {
-          "text": "habe ich das Leben genossen.",
+          "text": "... habe ich das Leben genossen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45325,7 +45325,7 @@
           "commands": []
         },
         {
-          "text": "war ich traurig.",
+          "text": "... war ich traurig.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45345,7 +45345,7 @@
           "commands": []
         },
         {
-          "text": "hatte ich das Gefühl, dass mich die Leute nicht leiden können.",
+          "text": "... hatte ich das Gefühl, dass mich die Leute nicht leiden können.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -45365,7 +45365,7 @@
           "commands": []
         },
         {
-          "text": "konnte ich mich zu nichts aufraffen.",
+          "text": "... konnte ich mich zu nichts aufraffen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -52924,7 +52924,7 @@
           "commands": []
         },
         {
-          "text": "So, da dies der letzte Tag unserer Studie ist, würden wir gerne wissen, wie es dir in letzter Zeit gegangen ist.\n\nWährend der letzten Woche ...\nhaben mich Dinge beunruhigt, die mir sonst nichts ausmachen.",
+          "text": "So, da dies der letzte Tag unserer Studie ist, würden wir gerne wissen, wie es dir in letzter Zeit gegangen ist.\n\nWährend der letzten Woche ...\n... haben mich Dinge beunruhigt, die mir sonst nichts ausmachen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -52944,7 +52944,7 @@
           "commands": []
         },
         {
-          "text": "konnte ich meine trübsinnige Laune nicht loswerden, obwohl mich meine Freunde/Familie versuchten, aufzumuntern.",
+          "text": "... konnte ich meine trübsinnige Laune nicht loswerden, obwohl mich meine Freunde/Familie versuchten, aufzumuntern.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -52964,7 +52964,7 @@
           "commands": []
         },
         {
-          "text": "hatte ich Mühe, mich zu konzentrieren.",
+          "text": "... hatte ich Mühe, mich zu konzentrieren.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -52984,7 +52984,7 @@
           "commands": []
         },
         {
-          "text": "war ich deprimiert/niedergeschlagen.",
+          "text": "... war ich deprimiert/niedergeschlagen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53004,7 +53004,7 @@
           "commands": []
         },
         {
-          "text": "war alles anstrengend für mich.",
+          "text": "... war alles anstrengend für mich.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53024,7 +53024,7 @@
           "commands": []
         },
         {
-          "text": "dachte ich, mein Leben ist ein einziger Fehlschlag.",
+          "text": "... dachte ich, mein Leben ist ein einziger Fehlschlag.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53044,7 +53044,7 @@
           "commands": []
         },
         {
-          "text": "hatte ich Angst.",
+          "text": "... hatte ich Angst.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53064,7 +53064,7 @@
           "commands": []
         },
         {
-          "text": "habe ich schlecht geschlafen.",
+          "text": "... habe ich schlecht geschlafen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53084,7 +53084,7 @@
           "commands": []
         },
         {
-          "text": "war ich fröhlich gestimmt.",
+          "text": "... war ich fröhlich gestimmt.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53104,7 +53104,7 @@
           "commands": []
         },
         {
-          "text": "habe ich weniger als sonst geredet.",
+          "text": "... habe ich weniger als sonst geredet.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53124,7 +53124,7 @@
           "commands": []
         },
         {
-          "text": "fühlte ich mich einsam.",
+          "text": "... fühlte ich mich einsam.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53144,7 +53144,7 @@
           "commands": []
         },
         {
-          "text": "habe ich das Leben genossen.",
+          "text": "... habe ich das Leben genossen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53164,7 +53164,7 @@
           "commands": []
         },
         {
-          "text": "war ich traurig.",
+          "text": "... war ich traurig.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53184,7 +53184,7 @@
           "commands": []
         },
         {
-          "text": "hatte ich das Gefühl, dass mich die Leute nicht leiden können.",
+          "text": "... hatte ich das Gefühl, dass mich die Leute nicht leiden können.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"
@@ -53204,7 +53204,7 @@
           "commands": []
         },
         {
-          "text": "konnte ich mich zu nichts aufraffen.",
+          "text": "... konnte ich mich zu nichts aufraffen.",
           "choice": [
             [
               "selten oder überhaupt nicht (weniger als 1 Tag)"

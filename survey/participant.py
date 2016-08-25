@@ -2,6 +2,7 @@ import pickle
 import sqlite3
 import time
 from admin import settings
+from telegram.ext import Job
 
 
 class Participant:
@@ -17,6 +18,7 @@ class Participant:
     timezone_ = ''
     conditions_ = []
     next_block = None
+    job_ = None
 
     q_set_ = None
     auto_queue_ = False
@@ -262,6 +264,11 @@ class Participant:
             if element not in self.conditions_:
                 return False
         return True
+
+    def pause(self):
+        self.active_ = False
+        self.job_ = None
+
 
 
 

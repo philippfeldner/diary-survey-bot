@@ -404,10 +404,10 @@
             "commands": []
           },
           {
-            "text": "Examinamos cómo el juego Pokémon GO y el ejercicio diario afectan tu bienestar. Por lo tanto, nos gustaría conocerte mejor.\n\nDurante la última semana...\nme molestaron las cosas que usualmente no me molestan.",
+            "text": "Examinamos cómo el juego Pokémon GO y el ejercicio diario afectan tu bienestar. Por lo tanto, nos gustaría conocerte mejor. Por favor, cuéntanos cómo has estado durante la última semana.\n\nDurante la última semana...\n... me molestaron las cosas que usualmente no me molestan.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -424,10 +424,10 @@
             "commands": []
           },
           {
-            "text": "me sentía que no podía quitarme de encima la tristeza, aún con la ayuda de mi familia o amigos.",
+            "text": "... me sentía que no podía quitarme de encima la tristeza, aún con la ayuda de mi familia o amigos.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -444,10 +444,10 @@
             "commands": []
           },
           {
-            "text": "tenía dificultad en mantener mi mente en lo que estaba haciendo.",
+            "text": "... tenía dificultad en mantener mi mente en lo que estaba haciendo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -464,10 +464,10 @@
             "commands": []
           },
           {
-            "text": "me sentía deprimido(a).",
+            "text": "... me sentía deprimido(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -484,10 +484,10 @@
             "commands": []
           },
           {
-            "text": "sentía que todo lo que hacía requería esfuerzo.",
+            "text": "... sentía que todo lo que hacía requería esfuerzo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -504,10 +504,10 @@
             "commands": []
           },
           {
-            "text": "pensé que mi vida había sido un fracaso.",
+            "text": "... pensé que mi vida había sido un fracaso.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -524,10 +524,10 @@
             "commands": []
           },
           {
-            "text": "me sentía con miedo.",
+            "text": "... me sentía con miedo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -544,10 +544,10 @@
             "commands": []
           },
           {
-            "text": "mi sue ño era inquieto.",
+            "text": "... mi sue ño era inquieto.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -564,10 +564,10 @@
             "commands": []
           },
           {
-            "text": "estaba contento(a).",
+            "text": "... estaba contento(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -584,10 +584,10 @@
             "commands": []
           },
           {
-            "text": "hablé menos de lo usual.",
+            "text": "... hablé menos de lo usual.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -604,10 +604,10 @@
             "commands": []
           },
           {
-            "text": "me sentía solo(a).",
+            "text": "... me sentía solo(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -624,10 +624,10 @@
             "commands": []
           },
           {
-            "text": "disfruté de la vida.",
+            "text": "... disfruté de la vida.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -644,10 +644,10 @@
             "commands": []
           },
           {
-            "text": "me sentía triste.",
+            "text": "... me sentía triste.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -664,10 +664,10 @@
             "commands": []
           },
           {
-            "text": "sentía que no le caía bien a la gente.",
+            "text": "... sentía que no le caía bien a la gente.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -684,10 +684,10 @@
             "commands": []
           },
           {
-            "text": "no tenía ganas de hacer nada.",
+            "text": "... no tenía ganas de hacer nada.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -704,7 +704,7 @@
             "commands": []
           },
           {
-            "text": "¿Qué tan bien las siguientes afirmaciones describen tu personalidad?\n\nMe veo a mi mismo-a como alguien que ...\nes reservado.",
+            "text": "¿Qué tan bien las siguientes afirmaciones describen tu personalidad?\n\nMe veo a mi mismo-a como alguien que ...\n... es reservado.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -727,7 +727,7 @@
             "commands": []
           },
           {
-            "text": "es generalmente confiando.",
+            "text": "... es generalmente confiando.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -750,7 +750,7 @@
             "commands": []
           },
           {
-            "text": "tiende a ser flojo, vago.",
+            "text": "... tiende a ser flojo, vago.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -773,7 +773,7 @@
             "commands": []
           },
           {
-            "text": "es calmado, controla bien el estrés.",
+            "text": "... es calmado, controla bien el estrés.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -796,7 +796,7 @@
             "commands": []
           },
           {
-            "text": "tiene pocos intereses artísticos.",
+            "text": "... tiene pocos intereses artísticos.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -819,7 +819,7 @@
             "commands": []
           },
           {
-            "text": "es extravertido, sociable.",
+            "text": "... es extravertido, sociable.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -842,7 +842,7 @@
             "commands": []
           },
           {
-            "text": "tiende a ser criticón.",
+            "text": "... tiende a ser criticón.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -865,7 +865,7 @@
             "commands": []
           },
           {
-            "text": "es minucioso en el trabajo.",
+            "text": "... es minucioso en el trabajo.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -888,7 +888,7 @@
             "commands": []
           },
           {
-            "text": "se pone nervioso con facilidad.",
+            "text": "... se pone nervioso con facilidad.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -911,7 +911,7 @@
             "commands": []
           },
           {
-            "text": "tiene una imaginación activa.",
+            "text": "... tiene una imaginación activa.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -929,13 +929,6 @@
                 "muy de acuerdo"
               ]
             ],
-            "condition_required": [],
-            "condition": [],
-            "commands": []
-          },
-          {
-            "text": "Gracias, eso es todo por hoy. A partir de mañana te enviaremos tres veces al día una serie de preguntas. Este será entre las 8:00 y las 22:00. Por favor trata de responder a las preguntas tan pronto como posible. Si tienes alguna pregunta, no vaciles en enviárnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at",
-            "choice": [],
             "condition_required": [],
             "condition": [],
             "commands": [
@@ -943,6 +936,13 @@
                 "Q_ON"
               ]
             ]
+          },
+          {
+            "text": "Gracias, eso es todo por hoy. A partir de mañana te enviaremos tres veces al día una serie de preguntas. Este será entre las 8:00 y las 22:00. Por favor trata de responder a las preguntas tan pronto como posible.\nSi tienes alguna pregunta, no vaciles en enviárnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.\n\nSi quieres invitar a amigos y amigas al estudio, por favor enviarles el enlace de nuestro sitio web: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
+            "choice": [],
+            "condition_required": [],
+            "condition": [],
+            "commands": []
           }
         ]
       }
@@ -7400,7 +7400,7 @@
             "commands": []
           },
           {
-            "text": "Gracias, eso es todo por hoy, hablamos mañana. Si tienes alguna pregunta, no vaciles en enviarnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.",
+            "text": "Gracias, eso es todo por hoy, hablamos mañana. Si tienes alguna pregunta, no vaciles en enviarnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.\n\nSi quieres invitar a amigos y amigas al estudio, por favor enviarles el enlace de nuestro sitio web: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -14939,7 +14939,7 @@
             "commands": []
           },
           {
-            "text": "Gracias, eso es todo por hoy, hablamos mañana. Si tienes alguna pregunta, no vaciles en enviarnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.",
+            "text": "Gracias, eso es todo por hoy, hablamos mañana. Si tienes alguna pregunta, no vaciles en enviarnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.\n\nSi quieres invitar a amigos y amigas al estudio, por favor enviarles el enlace de nuestro sitio web: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -22478,7 +22478,7 @@
             "commands": []
           },
           {
-            "text": "Gracias, eso es todo por hoy, hablamos mañana. Si tienes alguna pregunta, no vaciles en enviarnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.",
+            "text": "Gracias, eso es todo por hoy, hablamos mañana. Si tienes alguna pregunta, no vaciles en enviarnosla en un e-mail con el encabezado: 'Pokémon' a: pokemon@uni-graz.at.\n\nSi quieres invitar a amigos y amigas al estudio, por favor enviarles el enlace de nuestro sitio web: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -45095,10 +45095,10 @@
             "commands": []
           },
           {
-            "text": "Dado que este es el último día de la parte principal de nuestro estudio, nos gustaría saber cómo has estado últimamente.\n\nDurante la última semana...\nme molestaron las cosas usualmente no me molestan.",
+            "text": "Dado que este es el último día de la parte principal de nuestro estudio, nos gustaría saber cómo has estado últimamente.\n\nDurante la última semana...\n... me molestaron las cosas usualmente no me molestan.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45115,10 +45115,10 @@
             "commands": []
           },
           {
-            "text": "me sentía que no podía quitarme de encima la tristeza, aún con la ayuda de mi familia o amigos.",
+            "text": "... me sentía que no podía quitarme de encima la tristeza, aún con la ayuda de mi familia o amigos.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45135,10 +45135,10 @@
             "commands": []
           },
           {
-            "text": "tenía dificultad en mantener mi mente en lo que estaba haciendo.",
+            "text": "... tenía dificultad en mantener mi mente en lo que estaba haciendo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45155,10 +45155,10 @@
             "commands": []
           },
           {
-            "text": "me sentía deprimido(a).",
+            "text": "... me sentía deprimido(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45175,10 +45175,10 @@
             "commands": []
           },
           {
-            "text": "sentía que todo lo que hacía requería esfuerzo.",
+            "text": "... sentía que todo lo que hacía requería esfuerzo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45195,10 +45195,10 @@
             "commands": []
           },
           {
-            "text": "pensé que mi vida había sido un fracaso.",
+            "text": "... pensé que mi vida había sido un fracaso.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45215,10 +45215,10 @@
             "commands": []
           },
           {
-            "text": "me sentía con miedo.",
+            "text": "... me sentía con miedo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45235,10 +45235,10 @@
             "commands": []
           },
           {
-            "text": "mi sue?ño era inquieto.",
+            "text": "... mi sue ño era inquieto.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45255,10 +45255,10 @@
             "commands": []
           },
           {
-            "text": "estaba contento(a).",
+            "text": "... estaba contento(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45275,10 +45275,10 @@
             "commands": []
           },
           {
-            "text": "hablé menos de lo usual.",
+            "text": "... hablé menos de lo usual.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45295,10 +45295,10 @@
             "commands": []
           },
           {
-            "text": "me sentía solo(a).",
+            "text": "... me sentía solo(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45315,10 +45315,10 @@
             "commands": []
           },
           {
-            "text": "disfruté de la vida.",
+            "text": "... disfruté de la vida.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45335,10 +45335,10 @@
             "commands": []
           },
           {
-            "text": "me sentía triste.",
+            "text": "... me sentía triste.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45355,10 +45355,10 @@
             "commands": []
           },
           {
-            "text": "sentía que no le caía bien a la gente.",
+            "text": "... sentía que no le caía bien a la gente.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -45375,10 +45375,10 @@
             "commands": []
           },
           {
-            "text": "no tenía ganas de hacer nada.",
+            "text": "... no tenía ganas de hacer nada.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -52934,10 +52934,10 @@
             "commands": []
           },
           {
-            "text": "Bueno. Ya que este es el último día de nuestro estudio, nos gustaría saber cómo te has sentido últimamente.\n\nDurante la última semana...\nme molestaron las cosas usualmente no me molestan.",
+            "text": "Bueno. Ya que este es el último día de nuestro estudio, nos gustaría saber cómo te has sentido últimamente.\n\nDurante la última semana...\n... me molestaron las cosas usualmente no me molestan.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -52954,10 +52954,10 @@
             "commands": []
           },
           {
-            "text": "me sentía que no podía quitarme de encima la tristeza, aún con la ayuda de mi familia o amigos.",
+            "text": "... me sentía que no podía quitarme de encima la tristeza, aún con la ayuda de mi familia o amigos.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -52974,10 +52974,10 @@
             "commands": []
           },
           {
-            "text": "tenía dificultad en mantener mi mente en lo que estaba haciendo.",
+            "text": "... tenía dificultad en mantener mi mente en lo que estaba haciendo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -52994,10 +52994,10 @@
             "commands": []
           },
           {
-            "text": "me sentía deprimido(a).",
+            "text": "... me sentía deprimido(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53014,10 +53014,10 @@
             "commands": []
           },
           {
-            "text": "sentía que todo lo que hacía requería esfuerzo.",
+            "text": "... sentía que todo lo que hacía requería esfuerzo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53034,10 +53034,10 @@
             "commands": []
           },
           {
-            "text": "pensé que mi vida había sido un fracaso.",
+            "text": "... pensé que mi vida había sido un fracaso.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53054,10 +53054,10 @@
             "commands": []
           },
           {
-            "text": "me sentía con miedo.",
+            "text": "... me sentía con miedo.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53074,10 +53074,10 @@
             "commands": []
           },
           {
-            "text": "mi sue?ño era inquieto.",
+            "text": "... mi sue ño era inquieto.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53094,10 +53094,10 @@
             "commands": []
           },
           {
-            "text": "estaba contento(a).",
+            "text": "... estaba contento(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53114,10 +53114,10 @@
             "commands": []
           },
           {
-            "text": "hablé menos de lo usual.",
+            "text": "... hablé menos de lo usual.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53134,10 +53134,10 @@
             "commands": []
           },
           {
-            "text": "me sentía solo(a).",
+            "text": "... me sentía solo(a).",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53154,10 +53154,10 @@
             "commands": []
           },
           {
-            "text": "disfruté de la vida.",
+            "text": "... disfruté de la vida.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53174,10 +53174,10 @@
             "commands": []
           },
           {
-            "text": "me sentía triste.",
+            "text": "... me sentía triste.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53194,10 +53194,10 @@
             "commands": []
           },
           {
-            "text": "sentía que no le caía bien a la gente.",
+            "text": "... sentía que no le caía bien a la gente.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"
@@ -53214,10 +53214,10 @@
             "commands": []
           },
           {
-            "text": "no tenía ganas de hacer nada.",
+            "text": "... no tenía ganas de hacer nada.",
             "choice": [
               [
-                "escasamente (0 a 1 días)"
+                "escasamente (menos que 1 día)"
               ],
               [
                 "algo (1 a 2 días)"

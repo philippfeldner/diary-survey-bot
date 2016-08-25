@@ -365,187 +365,187 @@
             "commands": []
           },
           {
-            "text": "Nous étudions comment le jeu Pokémon GO affecte ton activité quotidienne et ton bien-être. Par consequent, nous voudrions mieux te connaître.\n\nPendant la sémaine dernière ...\nj'ai été contraié(e) par des choses qui d'habitude ne me dérangent pas.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "Nous étudions comment le jeu Pokémon GO affecte ton activité quotidienne et ton bien-être. Par consequent, nous voudrions mieux te connaître. Raconte-nous, s'il te plait, comment s' est déroulée ta semaine dernière.\n\nPendant la sémaine dernière ...\n... j'ai été contraié(e) par des choses qui d'habitude ne me dérangent pas.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai eu l'impression que je ne pouvais pas sortir du cafard, même avec l'aid de ma famille et de mes ami(e)s.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai eu l'impression que je ne pouvais pas sortir du cafard, même avec l'aid de ma famille et de mes ami(e)s.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai eu du mal à me concentrer sur ce que je faisais.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai eu du mal à me concentrer sur ce que je faisais.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "je me suis senti(e) déprimée.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... je me suis senti(e) déprimée.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai eu l'impression que toute action me demandait un effort.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai eu l'impression que toute action me demandait un effort.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai pensé que me vie était un échec.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai pensé que me vie était un échec.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "je me suis senti(e) craintif(ve).",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... je me suis senti(e) craintif(ve).",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "mon sommeil n'a pas été bon.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... mon sommeil n'a pas été bon.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai été heureux(se).",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai été heureux(se).",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai parlé moins que d'habitude.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai parlé moins que d'habitude.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "je me suis senti(e) seul(e)",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... je me suis senti(e) seul(e)",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai profité de la vie.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai profité de la vie.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "je me suis senti(e) triste.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... je me suis senti(e) triste.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai eu l'impression que les gens ne m'aimaient pas.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai eu l'impression que les gens ne m'aimaient pas.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "j'ai manqué d'entrain.",
-            "choice": [
-              ["jamais ou rarement"],
-              ["parfois"],
-              ["souvent"],
-              ["très souvent ou tout le temps"]
+            "text": "... j'ai manqué d'entrain.",
+			            "choice": [
+              ["jamais ou rarement (moins que 1 jour)"],
+              ["parfois (1-2 jours)"],
+              ["souvent (3-4 jours)"],
+              ["très souvent ou tout le temps (5-7 jours)"]
             ],
             "condition_required": [],
             "condition": [],
             "commands": []
           },
           {
-            "text": "Dans quelle mesure es-tu d'accord ou non acev chancune des propositions suivantes.\nJe me vois comme quelqu'un qui est réservé(e).",
+            "text": "Dans quelle mesure es-tu d'accord ou non acev chancune des propositions suivantes.\n\nJe me vois comme quelqu'un qui est réservé(e).",
             "choice": [
               [
                 "tout à fait en désaccord"
@@ -772,10 +772,10 @@
             ],
             "condition_required": [],
             "condition": [],
-            "commands": []
+            "commands": [["Q_ON"]]
           },
           {
-            "text": "Merci, on a fini pour aujourd'hui. A partir de demain, nous allons te demander trois fois par jour à quelques questions. Ce sera 8h00-à-22h00. S'il vous plaît essayer de répondre aux questions le plus rapidement possible.\nSi tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.",
+            "text": "Merci, on a fini pour aujourd'hui. A partir de demain, nous allons te demander trois fois par jour à quelques questions. Ce sera 8h00-à-22h00. S'il vous plaît essayer de répondre aux questions le plus rapidement possible.\nSi tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -7159,7 +7159,7 @@
           "commands": []
         },
         {
-          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.",
+          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -14607,7 +14607,7 @@
           "commands": []
         },
         {
-          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.",
+          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -22055,7 +22055,7 @@
           "commands": []
         },
         {
-          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.",
+          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -44401,10 +44401,10 @@
         {
           "text": "Alors, nous aimerions savoir comment tu as été récemment.\n\nPendant la sémaine dernière ...\nj'ai été contraié(e) par des choses qui d'habitude ne me dérangent pas.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44413,10 +44413,10 @@
         {
           "text": "j'ai eu l'impression que je ne pouvais pas sortir du cafard, même avec l'aid de ma famille et de mes ami(e)s.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44425,10 +44425,10 @@
         {
           "text": "j'ai eu du mal à me concentrer sur ce que je faisais.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44437,10 +44437,10 @@
         {
           "text": "je me suis senti(e) déprimée.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44449,10 +44449,10 @@
         {
           "text": "j'ai eu l'impression que toute action me demandait un effort.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44461,10 +44461,10 @@
         {
           "text": "j'ai pensé que me vie était un échec.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44473,10 +44473,10 @@
         {
           "text": "je me suis senti(e) craintif(ve).",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44485,10 +44485,10 @@
         {
           "text": "mon sommeil n'a pas été bon.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44497,10 +44497,10 @@
         {
           "text": "j'ai été heureux(se).",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44509,10 +44509,10 @@
         {
           "text": "j'ai parlé moins que d'habitude.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44521,10 +44521,10 @@
         {
           "text": "je me suis senti(e) seul(e)",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44533,10 +44533,10 @@
         {
           "text": "j'ai profité de la vie.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44545,10 +44545,10 @@
         {
           "text": "je me suis senti(e) triste.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44557,10 +44557,10 @@
         {
           "text": "j'ai eu l'impression que les gens ne m'aimaient pas.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -44569,10 +44569,10 @@
         {
           "text": "j'ai manqué d'entrain.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52029,10 +52029,10 @@
         {
           "text": "Alors, ceci est le dernier jour de notre étude. Nous aimerions savoir comment tu as été récemment.\n\nPendant la sémaine dernière ...\nj'ai été contraié(e) par des choses qui d'habitude ne me dérangent pas.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52041,10 +52041,10 @@
         {
           "text": "j'ai eu l'impression que je ne pouvais pas sortir du cafard, même avec l'aid de ma famille et de mes ami(e)s.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52053,10 +52053,10 @@
         {
           "text": "j'ai eu du mal à me concentrer sur ce que je faisais.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52065,10 +52065,10 @@
         {
           "text": "je me suis senti(e) déprimée.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52077,10 +52077,10 @@
         {
           "text": "j'ai eu l'impression que toute action me demandait un effort.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52089,10 +52089,10 @@
         {
           "text": "j'ai pensé que me vie était un échec.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52101,10 +52101,10 @@
         {
           "text": "je me suis senti(e) craintif(ve).",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52113,10 +52113,10 @@
         {
           "text": "mon sommeil n'a pas été bon.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52125,10 +52125,10 @@
         {
           "text": "j'ai été heureux(se).",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52137,10 +52137,10 @@
         {
           "text": "j'ai parlé moins que d'habitude.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52149,10 +52149,10 @@
         {
           "text": "je me suis senti(e) seul(e)",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52161,10 +52161,10 @@
         {
           "text": "j'ai profité de la vie.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52173,10 +52173,10 @@
         {
           "text": "je me suis senti(e) triste.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52185,10 +52185,10 @@
         {
           "text": "j'ai eu l'impression que les gens ne m'aimaient pas.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
@@ -52197,10 +52197,10 @@
         {
           "text": "j'ai manqué d'entrain.",
           "choice": [
-            ["jamais ou rarement"],
-            ["parfois"],
-            ["souvent"],
-            ["très souvent ou tout le temps"]
+            ["jamais ou rarement (moins que 1 jour)"],
+            ["parfois (1-2 jours)"],
+            ["souvent (3-4 jours)"],
+            ["très souvent ou tout le temps (5-7 jours)"]
           ],
           "condition_required": [],
           "condition": [],
