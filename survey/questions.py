@@ -162,8 +162,8 @@ def store_answer(user, message, question, job_queue):
             user.set_gender(message)
         elif element == "AGE":
             user.set_age(message)
-        elif element == "STOP":
-            True  # Todo
+        # elif element == "STOP":
+        #    user.pause() Todo
         elif element == "Q_ON":
             user.auto_queue_ = True
             next_day = user.set_next_block()
@@ -371,7 +371,7 @@ def continue_survey(user, bot, job_queue):
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
         user.set_q_idle(True)
 
-    if user.job_ is None:
+    if user.job_ is None and "MANDATORY" not in q_block["settings"]:
         user.block_complete_ = True
         next_day = user.set_next_block()
         element = user.next_block[2]

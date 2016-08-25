@@ -69,7 +69,10 @@
             ],
             "commands": [              [
                             "FORCE_KB_REPLY"
-                          ]]
+                          ],
+                          [
+                "STOP"
+              ]]
           },
           {
             "text": "Thank you for your participation! If you want to, we would appreciate a message why you don't feel like continuing the study. Anyway, if you change your mind, you can resume by sending us a message with the word \"/start\".",

@@ -67,9 +67,14 @@
                 "#NO_PARTICIPATION"
               ]
             ],
-            "commands": [              [
-                            "FORCE_KB_REPLY"
-                          ]]
+            "commands": [
+              [
+                "FORCE_KB_REPLY"
+              ],
+              [
+                "STOP"
+              ]
+            ]
           },
           {
             "text": "Vielen Dank für deine Teilnahme! Wenn du möchtest würden wir uns über eine Nachricht freuen, warum du nicht mehr weitermachen willst. Falls du es dir anders überlegst, kannst du jederzeit wieder teilnehmen, indem du uns eine Nachricht mit \"/start\" schickst.",

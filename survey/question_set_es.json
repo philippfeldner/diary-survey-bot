@@ -74,6 +74,9 @@
             "commands": [
               [
                 "FORCE_KB_REPLY"
+              ],
+              [
+                "STOP"
               ]
             ]
           },

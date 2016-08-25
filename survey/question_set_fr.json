@@ -68,8 +68,12 @@
               ]
             ],
             "commands": [              [
-                            "FORCE_KB_REPLY"
-                          ]]
+                "FORCE_KB_REPLY"
+                        ],
+              [
+                "STOP"
+              ]
+            ]
           },
           {
             "text": "Merci beaucoup pour ta participation. Si tu le souhaites, envoie-nous un message donnant les raisons pour lesquelles tu préfères arrêter de participer. Si tu changes d'avis, envoie-nous un message avec le mot \"/start\", tu pourras recommencer tout de suite.",
