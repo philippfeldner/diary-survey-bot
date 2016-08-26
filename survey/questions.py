@@ -3,11 +3,14 @@ import pickle
 
 from datetime import datetime
 from pytz import timezone
+from pytz.exceptions import UnknownTimeZoneError
+
 import random
 import csv
 
 from admin.settings import SCHEDULE_INTERVALS
 from admin.settings import QUICK_TEST
+from admin.settings import DEFAULT_TIMEZONE
 from admin.debug import debug
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide, Emoji
@@ -32,10 +35,13 @@ def calc_delta_t(time, days, zone=None):
 
     # Todo: Maybe catch timezone exception
     if zone is not None:
-        current = datetime.now(timezone(zone))
+        try:
+            current = datetime.now(timezone(zone))
+        except UnknownTimeZoneError:
+            current = datetime.now(timezone(DEFAULT_TIMEZONE))
     else:
         current = datetime.now()
-    future = datetime(current.year, current.month, current.day, int(hh), int(mm))
+    future = datetime(current.year, current.month, current.day, int(hh), int(mm), tzinfo=current.tzinfo)
     offset = future - current
     if offset.days == 0:
         return offset.seconds + 86400 + ((days - 1) * 86400)
@@ -139,7 +145,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         element = user.next_block[2]
         day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
-        due = calc_delta_t(time_t, day_offset)
+        due = calc_delta_t(time_t, day_offset, user.timezone_)
 
         debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
         new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
@@ -170,7 +176,7 @@ def store_answer(user, message, question, job_queue):
             element = user.next_block[2]
             day_offset = next_day - user.day_
             time_t = calc_block_time(element["time"])
-            due = calc_delta_t(time_t, day_offset)
+            due = calc_delta_t(time_t, day_offset, user.timezone_)
 
             debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
             new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
@@ -245,7 +251,7 @@ def queue_next(bot: Bot, job: Job):
         element = user.next_block[2]
         day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
-        due = calc_delta_t(time_t, day_offset)
+        due = calc_delta_t(time_t, day_offset, user.timezone_)
 
         # Add new job and to queue. The function basically calls itself recursively after x seconds.
         debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
@@ -273,7 +279,7 @@ def queue_next(bot: Bot, job: Job):
     element = user.next_block[2]
     day_offset = next_day - user.day_
     time_t = calc_block_time(element["time"])
-    due = calc_delta_t(time_t, day_offset)
+    due = calc_delta_t(time_t, day_offset, user.timezone_)
 
     debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
     new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
@@ -377,7 +383,7 @@ def continue_survey(user, bot, job_queue):
         element = user.next_block[2]
         day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
-        due = calc_delta_t(time_t, day_offset)
+        due = calc_delta_t(time_t, day_offset, user.timezone_)
 
         debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
         new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
@@ -422,7 +428,7 @@ def initialize_participants(job_queue: JobQueue):
                     element = user.next_block[2]  # Todo: Check if None!
                     day_offset = next_day - user.day_
                     time_t = calc_block_time(element["time"])
-                    due = calc_delta_t(time_t, day_offset)
+                    due = calc_delta_t(time_t, day_offset, user.timezone_)
 
                     debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
                     new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])

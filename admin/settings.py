@@ -23,10 +23,13 @@ DEBUG = True
 
 # For testing purposes. Sets all block scheduling to x seconds.
 # To deactivate set it to False (0)
-QUICK_TEST = 20
+QUICK_TEST = False
 
 # Default language if something goes wrong.
 DEFAULT_LANGUAGE = 'de'
+
+# Default timezone if something goes wrong.
+DEFAULT_TIMEZONE = 'Europe/Vienna'
 
 # Scheduling intervals for question blocks.
 SCHEDULE_INTERVALS = {
