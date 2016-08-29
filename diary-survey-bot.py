@@ -1,5 +1,6 @@
 from telegram import Bot, Update, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram import TelegramError
 
 from survey.keyboard_presets import languages
 
@@ -16,11 +17,14 @@ def start(bot: Bot, update: Update, job_queue):
     global data_set
     if update.message.chat_id not in data_set.participants:
         reply_markup = ReplyKeyboardMarkup(languages)
-        bot.send_message(chat_id=update.message.chat_id, text="Please choose a language:", reply_markup=reply_markup)
+        try:
+            bot.send_message(chat_id=update.message.chat_id, text="Please choose a language:", reply_markup=reply_markup)
+        except TelegramError as error:
+            if error.message == 'Unauthorized':
+                return
         participant = Participant(update.message.chat_id)
         data_set.participants[update.message.chat_id] = participant
     else:
-        chat_id = update.message.chat_id
         user = data_set.participants[update.message.chat_id]
         continue_survey(user, bot, job_queue)
 
@@ -33,7 +37,11 @@ def delete(bot: Bot, update: Update):
     user.delete_participant()
     del data_set.participants[update.message.chat_id]
     # Message for /stop
-    bot.send_message(chat_id=chat_id, text="Successfully deleted DB entry and user data. To restart enter /start")
+    try:
+        bot.send_message(chat_id=chat_id, text="Successfully deleted DB entry and user data. To restart enter /start")
+    except TelegramError as error:
+        if error.message == 'Unauthorized':
+            user.pause()
 
 
 def stop(bot: Bot, update: Update):
@@ -42,7 +50,11 @@ def stop(bot: Bot, update: Update):
     user = data_set.participants[update.message.chat_id]
     user.pause()
     # Message for /stop
-    bot.send_message(chat_id=chat_id, text="You have been set to inactive. If you want to continue enter /start")
+    try:
+        bot.send_message(chat_id=chat_id, text="You have been set to inactive. If you want to continue enter /start")
+    except TelegramError as error:
+        if error.message == 'Unauthorized':
+            user.pause()
 
 
 def msg_handler(bot, update, job_queue):

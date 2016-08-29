@@ -70,9 +70,6 @@
             "commands": [
               [
                 "FORCE_KB_REPLY"
-              ],
-              [
-                "STOP"
               ]
             ]
           },
@@ -86,7 +83,7 @@
               ]
             ],
             "condition": [],
-            "commands": []
+            "commands": [["STOP"]]
           },
           {
             "text": "Bevor es losgeht: Wir interessieren uns sehr für deine tägliche körperliche Aktivität. Wenn du gerne die doppelte Gewinnchance hättest, dann installiere bitte eine Schrittzähl-App und schreibe uns jeden Abend die von der App ermittelte Zeit die du zu Fuß unterwegs warst.\nWürdest du das machen?",

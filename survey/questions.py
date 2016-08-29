@@ -15,6 +15,8 @@ from admin.debug import debug
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide, Emoji
 from telegram.ext import Job, JobQueue
+from telegram import TelegramError
+
 
 from survey.data_set import DataSet
 from survey.participant import Participant
@@ -137,7 +139,14 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     if question is not None:
         message = question["text"]
         q_keyboard = get_keyboard(question["choice"], user)
-        bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        try:
+            bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        except TelegramError as error:
+            if error.message == 'Unauthorized':
+                user.pause()
+
+        if ["STOP"] in question["commands"]:
+            user.pause()
         user.set_q_idle(True)
     elif user.job_ is None:
         user.block_complete_ = True
@@ -264,10 +273,17 @@ def queue_next(bot: Bot, job: Job):
     # Sending the question
     question = element["questions"][user.question_]
 
-    q_text = question["text"]
+    message = question["text"]
     q_keyboard = get_keyboard(question["choice"], user)
-    bot.send_message(user.chat_id_, q_text, reply_markup=q_keyboard)
+    try:
+        bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+    except TelegramError as error:
+        if error.message == 'Unauthorized':
+            user.pause()
     user.set_q_idle(True)
+
+    if ["STOP"] in question["commands"]:
+        user.pause()
 
     # Check if there is a reason to queue again.
     if not user.auto_queue_:
@@ -372,13 +388,20 @@ def continue_survey(user, bot, job_queue):
     q_day = q_set[user.pointer_]
     q_block = q_day["blocks"][user.block_]
     question = q_block["questions"][user.question_]
+    if ["STOP"] in question["commands"]:
+        question = find_next_question(user)
+
     if question is not None:
         message = question["text"]
         q_keyboard = get_keyboard(question["choice"], user)
-        bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        try:
+            bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        except TelegramError as error:
+            if error.message == 'Unauthorized':
+                user.pause()
         user.set_q_idle(True)
 
-    if user.job_ is None and "MANDATORY" not in q_block["settings"]:
+    if user.job_ is None and ["MANDATORY"] not in q_block["settings"]:
         user.block_complete_ = True
         next_day = user.set_next_block()
         element = user.next_block[2]
