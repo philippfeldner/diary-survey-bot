@@ -131,8 +131,8 @@
               ]
             ],
             "condition": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "commands": [
               [

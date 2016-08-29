@@ -184,8 +184,9 @@ def store_answer(user, message, question, job_queue):
             job_queue.put(new_job)
 
     condition = question["condition"]
-    if condition != [] and message in condition[0]:
-        user.add_conditions(condition)
+    for element in condition:
+        if message in element[0]:
+            user.add_conditions(condition)
 
     if message in TRANSLATE_EMOJI:
         message = TRANSLATE_EMOJI[message]
