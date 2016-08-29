@@ -35,7 +35,6 @@ def calc_delta_t(time, days, zone=None):
     hh = time[:2]
     mm = time[3:]
 
-    # Todo: Maybe catch timezone exception
     if zone is not None:
         try:
             current = datetime.now(timezone(zone))
@@ -58,7 +57,8 @@ def calc_block_time(time_t):
     try:
         interval = SCHEDULE_INTERVALS[time_t]
     except KeyError:
-        return 0  # Todo
+        debug("BLOCK", "Error undefined schedule interval", log=True)
+        return "00:00"
 
     hh_start = int(interval[0][:2])
     hh_end = int(interval[1][:2])
@@ -134,7 +134,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
     if not user.active_:
         return
-    # Todo: Copy to /start
+
     question = find_next_question(user)
     if question is not None:
         message = question["text"]
@@ -167,44 +167,47 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 # Also the conditions, DB values get set here.
 def store_answer(user, message, question, job_queue):
     commands = question['commands']
-    for [element] in commands:
-        # -- DB TRIGGER for storing important user data -- #
-        if element == "TIMEZONE":
-            user.set_timezone(message)
-        elif element == "COUNTRY":
-            user.set_country(message)
-        elif element == "GENDER":
-            user.set_gender(message)
-        elif element == "AGE":
-            user.set_age(message)
-        # elif element == "STOP":
-        #    user.pause() Todo
-        elif element == "Q_ON":
-            user.auto_queue_ = True
-            next_day = user.set_next_block()
-            element = user.next_block[2]
-            day_offset = next_day - user.day_
-            time_t = calc_block_time(element["time"])
-            due = calc_delta_t(time_t, day_offset, user.timezone_)
+    if message != '':
+        for [element] in commands:
+            # -- DB TRIGGER for storing important user data -- #
+            if element == "TIMEZONE":
+                user.set_timezone(message)
+            elif element == "COUNTRY":
+                user.set_country(message)
+            elif element == "GENDER":
+                user.set_gender(message)
+            elif element == "AGE":
+                user.set_age(message)
+            elif element == "Q_ON":
+                user.auto_queue_ = True
+                next_day = user.set_next_block()
+                element = user.next_block[2]
+                day_offset = next_day - user.day_
+                time_t = calc_block_time(element["time"])
+                due = calc_delta_t(time_t, day_offset, user.timezone_)
 
-            debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
-            new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
-            user.job_ = new_job
-            job_queue.put(new_job)
+                debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
+                new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
+                user.job_ = new_job
+                job_queue.put(new_job)
 
-    condition = question["condition"]
-    for element in condition:
-        if message in element[0]:
-            user.add_conditions(condition)
+        condition = question["condition"]
+        for element in condition:
+            if message in element[0]:
+                user.add_conditions(condition)
 
-    if message in TRANSLATE_EMOJI:
-        message = TRANSLATE_EMOJI[message]
+        if message in TRANSLATE_EMOJI:
+            message = TRANSLATE_EMOJI[message]
 
-    if user.timezone_ == '':
+    if message == '':
+        timestamp = ''
+    elif user.timezone_ == '':
         timestamp = datetime.now().isoformat()
     else:
-        # Todo: Maybe catch tz exception
-        timestamp = datetime.now(timezone(user.timezone_)).isoformat()
+        try:
+            timestamp = datetime.now(timezone(user.timezone_)).isoformat()
+        except UnknownTimeZoneError:
+            timestamp = 'Invalid Timezone'
 
     q_text = question['text']
     q_text.replace('\n', ' ')
@@ -250,6 +253,7 @@ def queue_next(bot: Bot, job: Job):
     try:
         # Find next question that the user should get.
         while not user.check_requirements(element["questions"][user.question_]):
+            store_answer(user, '', element["questions"][user.question_], None)
             user.increase_question()
     except IndexError:
         # User did not fulfill any questions for the day so we reschedule.
@@ -312,11 +316,12 @@ def find_next_question(user):
     try:
         q_day = q_set[user.pointer_]
         q_block = q_day["blocks"][user.block_]
-        question = q_block["questions"]
+        element = q_block["questions"]
         user.increase_question()
-        while not user.check_requirements(question[user.question_]):
+        while not user.check_requirements(element[user.question_]):
+            store_answer(user, '', element[user.question_], None)
             user.increase_question()
-        return question[user.question_]
+        return element[user.question_]
     except IndexError:
         return None
 
@@ -449,7 +454,10 @@ def initialize_participants(job_queue: JobQueue):
                 if user.pointer_ > 0:
                     user.set_next_block()
                     next_day = user.set_next_block()
-                    element = user.next_block[2]  # Todo: Check if None!
+                    element = user.next_block[2]
+                    if element is None and user.active_ and user.pointer_ > -1:
+                        finished(user, job_queue)
+                        continue
                     day_offset = next_day - user.day_
                     time_t = calc_block_time(element["time"])
                     due = calc_delta_t(time_t, day_offset, user.timezone_)
@@ -459,8 +467,7 @@ def initialize_participants(job_queue: JobQueue):
                     job_queue.put(new_job)
             else:
                 user.next_block = None
-                if user.active_ and user.pointer_ > -1:
-                    finished(user, job_queue)
+
     except sqlite3.Error as error:
         print(error)
     return user_map

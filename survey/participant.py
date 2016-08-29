@@ -125,7 +125,7 @@ class Participant:
         return self.timezone_
 
     def add_conditions(self, conditions):
-        if conditions == []:  # Todo: Check!
+        if conditions == []:
             return
         self.conditions_ += conditions
         try:
