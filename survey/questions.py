@@ -1,5 +1,7 @@
 import sqlite3
 import pickle
+import shutil
+import os
 
 from datetime import datetime
 from pytz import timezone
@@ -122,7 +124,6 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             # Storing the answer and moving on the next question
 
             store_answer(user, update.message.text, q_prev, job_queue)
-            # Todo check last question
             user.set_q_idle(False)
         else:
             # User has send something without being asked a question.
@@ -144,12 +145,13 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
             if error.message == 'Unauthorized':
                 user.pause()
 
-        if ["STOP"] in question["commands"]:
-            user.pause()
         user.set_q_idle(True)
     elif user.job_ is None:
         user.block_complete_ = True
         next_day = user.set_next_block()
+        if next_day is None:
+            finished(user, job_queue)
+            return
         element = user.next_block[2]
         day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
@@ -180,6 +182,9 @@ def store_answer(user, message, question, job_queue):
             elif element == "Q_ON":
                 user.auto_queue_ = True
                 next_day = user.set_next_block()
+                if next_day is None:
+                    finished(user, job_queue)
+                    continue
                 element = user.next_block[2]
                 day_offset = next_day - user.day_
                 time_t = calc_block_time(element["time"])
@@ -209,12 +214,12 @@ def store_answer(user, message, question, job_queue):
             timestamp = 'Invalid Timezone'
 
     q_text = question['text']
-    q_text.replace('\n', ' ')
-    q_text.replace(';', ',')
-    message.replace('\n', ' ')
-    message.replace(';', ',')
+    q_text = q_text.replace('\n', ' ')
+    q_text = q_text.replace(';', ',')
+    message = message.replace('\n', ' ')
+    message = message.replace(';', ',')
 
-    with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+') as user_file:
+    with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+', newline='') as user_file:
         columns = [user.language_, user.gender_, user.age_, user.country_, user.timezone_, user.day_, user.block_,
                    timestamp, user.question_,  q_text, message]
         writer = csv.writer(user_file, delimiter=';')
@@ -233,6 +238,13 @@ def queue_next(bot: Bot, job: Job):
         return
     user.block_complete_ = False
     user.job_ = None
+
+    # Stores all unaswered questions to csv
+    prev = user.q_set_[user.pointer_]["blocks"][user.block_]["questions"]
+    for i in range(user.question_, len(prev)):
+        user.increase_question()
+        q_prev = prev[i]
+        store_answer(user, '', q_prev, job_queue)
     user.set_question(0)
     user.set_pointer(user.next_block[0])
     user.set_block(user.next_block[1])
@@ -284,9 +296,6 @@ def queue_next(bot: Bot, job: Job):
         if error.message == 'Unauthorized':
             user.pause()
     user.set_q_idle(True)
-
-    if ["STOP"] in question["commands"]:
-        user.pause()
 
     # Check if there is a reason to queue again.
     if not user.auto_queue_:
@@ -382,7 +391,13 @@ def finished(user, job_queue):
 def finalize(bot: Bot, job: Job):
     user = job.context
     user.set_active = False
-    # Todo File saving, maybe a final message
+    user.set_question(0xFFFF)
+    user.set_block(0xFFFF)
+    user.set_pointer(0xFFFF)
+
+    srcfile = 'survey/data_incomplete/' + str(user.chat_id_) + '.csv'
+    dstfile = 'survey/data_complete/' + str(user.chat_id_) + '.csv'
+    shutil.copyfile(srcfile, dstfile)
     return
 
 
@@ -392,8 +407,6 @@ def continue_survey(user, bot, job_queue):
     q_day = q_set[user.pointer_]
     q_block = q_day["blocks"][user.block_]
     question = q_block["questions"][user.question_]
-    if ["STOP"] in question["commands"]:
-        question = find_next_question(user)
 
     if question is not None:
         message = question["text"]
@@ -408,6 +421,9 @@ def continue_survey(user, bot, job_queue):
     if user.job_ is None and ["MANDATORY"] not in q_block["settings"]:
         user.block_complete_ = True
         next_day = user.set_next_block()
+        if next_day is None:
+            finished(user, job_queue)
+            return
         element = user.next_block[2]
         day_offset = next_day - user.day_
         time_t = calc_block_time(element["time"])
@@ -453,10 +469,10 @@ def initialize_participants(job_queue: JobQueue):
                 if user.pointer_ > 0:
                     user.set_next_block()
                     next_day = user.set_next_block()
-                    element = user.next_block[2]
-                    if element is None and user.active_ and user.pointer_ > -1:
+                    if next_day is None and user.active_ and user.pointer_ > -1:
                         finished(user, job_queue)
                         continue
+                    element = user.next_block[2]
                     day_offset = next_day - user.day_
                     time_t = calc_block_time(element["time"])
                     due = calc_delta_t(time_t, day_offset, user.timezone_)
@@ -464,8 +480,6 @@ def initialize_participants(job_queue: JobQueue):
                     debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
                     new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
                     job_queue.put(new_job)
-            else:
-                user.next_block = None
 
     except sqlite3.Error as error:
         print(error)

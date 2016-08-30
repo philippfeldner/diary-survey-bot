@@ -350,3 +350,495 @@ User:	19965814	registered.	00:00:57 08/30/16
 QUEUE		next block in 35647 seconds. User: 19965814
 User:	19965814	unregistered.	08:05:24 08/30/16
 User:	19965814	registered.	08:05:27 08/30/16
+User:	19965814	unregistered.	19:02:42 08/30/16
+User:	19965814	registered.	19:02:46 08/30/16
+User:	74921916	unregistered.	19:02:48 08/30/16
+User:	74921916	registered.	19:02:58 08/30/16
+User:	74921916	unregistered.	19:03:23 08/30/16
+User:	74921916	registered.	19:03:35 08/30/16
+User:	19965814	unregistered.	19:05:10 08/30/16
+User:	19965814	registered.	19:05:12 08/30/16
+User:	19965814	unregistered.	19:05:48 08/30/16
+User:	19965814	registered.	19:05:50 08/30/16
+User:	74921916	unregistered.	19:06:59 08/30/16
+User:	19965814	unregistered.	19:06:59 08/30/16
+User:	19965814	registered.	19:07:01 08/30/16
+User:	19965814	unregistered.	19:08:11 08/30/16
+User:	19965814	registered.	19:08:15 08/30/16
+User:	19965814	unregistered.	19:37:52 08/30/16
+User:	19965814	registered.	19:38:16 08/30/16
+User:	19965814	unregistered.	19:49:49 08/30/16
+User:	19965814	registered.	19:49:51 08/30/16
+User:	19965814	unregistered.	19:50:52 08/30/16
+User:	19965814	registered.	19:50:52 08/30/16
+User:	19965814	unregistered.	19:50:56 08/30/16
+User:	19965814	registered.	19:51:46 08/30/16
+User:	19965814	unregistered.	19:52:13 08/30/16
+User:	19965814	registered.	19:52:15 08/30/16
+User:	19965814	unregistered.	19:52:42 08/30/16
+User:	19965814	registered.	19:52:44 08/30/16
+User:	19965814	unregistered.	19:53:28 08/30/16
+User:	19965814	registered.	19:53:30 08/30/16
+User:	19965814	unregistered.	19:53:57 08/30/16
+User:	19965814	registered.	19:54:00 08/30/16
+User:	19965814	unregistered.	19:54:13 08/30/16
+User:	19965814	registered.	19:54:14 08/30/16
+User:	19965814	unregistered.	19:54:28 08/30/16
+User:	19965814	registered.	19:54:44 08/30/16
+User:	19965814	unregistered.	19:55:06 08/30/16
+User:	19965814	registered.	19:55:14 08/30/16
+User:	19965814	unregistered.	19:55:54 08/30/16
+User:	19965814	registered.	19:55:56 08/30/16
+User:	19965814	unregistered.	19:57:25 08/30/16
+User:	19965814	registered.	19:57:27 08/30/16
+User:	19965814	unregistered.	19:58:28 08/30/16
+User:	19965814	registered.	19:58:31 08/30/16
+User:	19965814	unregistered.	20:02:27 08/30/16
+User:	19965814	registered.	20:02:29 08/30/16
+User:	19965814	unregistered.	20:05:33 08/30/16
+User:	19965814	registered.	20:05:53 08/30/16
+User:	19965814	unregistered.	20:07:01 08/30/16
+User:	19965814	registered.	20:07:03 08/30/16
+User:	19965814	unregistered.	20:08:46 08/30/16
+User:	19965814	registered.	20:08:49 08/30/16
+User:	19965814	unregistered.	20:52:50 08/30/16
+User:	19965814	registered.	20:52:52 08/30/16
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+QUEUE		next block in 1 seconds. User: 19965814
+User:	19965814	unregistered.	20:58:25 08/30/16
+User:	19965814	registered.	21:00:05 08/30/16
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+User:	19965814	unregistered.	21:10:18 08/30/16
+User:	19965814	registered.	21:10:20 08/30/16
+QUEUE		next block in 0 seconds. User: 19965814
+User:	19965814	unregistered.	21:13:11 08/30/16
+User:	19965814	registered.	21:13:13 08/30/16
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814
+QUEUE		next block in 0 seconds. User: 19965814

@@ -57,21 +57,20 @@
                 "Oui, on y va"
               ],
               [
-                "Non, je préfère ne pas participer"
+                "/stop - Non, je préfère ne pas participer"
               ]
             ],
             "condition_required": [],
             "condition": [
               [
-                "Non, je préfère ne pas participer",
+                "/stop - Non, je préfère ne pas participer",
                 "#NO_PARTICIPATION"
               ]
             ],
-            "commands": [              [
-                "FORCE_KB_REPLY"
-                        ],
+            "commands":
+            [
               [
-                "STOP"
+                "FORCE_KB_REPLY"
               ]
             ]
           },
@@ -80,12 +79,14 @@
             "choice": [],
             "condition_required": [
               [
-                "Non, je préfère ne pas participer",
+                "/stop - Non, je préfère ne pas participer",
                 "#NO_PARTICIPATION"
               ]
             ],
             "condition": [],
-            "commands": []
+            "commands":
+            [
+            ]
           },
           {
             "text": "Avant de commencer : Nous nous intéressons beaucoup à ton activité physique quotidienne. Si tu veux doubler tes chances de gagner, installe un podomètre sur ton smartphone et écris-nous chaque soir pour nous dire combien de temps tu as marché dans la journée selon le podomètre.\nPourez-tu faire ça?",
@@ -124,8 +125,8 @@
               ]
             ],
             "condition": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "commands": [
               [
@@ -359,10 +360,6 @@
               [
                 "Je joue à Pokémon GO",
                 "#PLAY_IT"
-              ],
-              [
-                "J'y ai déjà joué, mais je n'y joue plus",
-                "#DID_PLAY_IT"
               ]
             ],
             "condition": [],
@@ -779,7 +776,7 @@
             "commands": [["Q_ON"]]
           },
           {
-            "text": "Merci, on a fini pour aujourd'hui. A partir de demain, nous allons te demander trois fois par jour à quelques questions. Ce sera 8h00-à-22h00. S'il vous plaît essayer de répondre aux questions le plus rapidement possible.\nSi tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
+            "text": "Merci, on a fini pour aujourd'hui. A partir de demain, nous allons te demander trois fois par jour à quelques questions. Ce sera 8h00-à-22h00. S'il vous plaît essayer de répondre aux questions le plus rapidement possible.\nSi tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nSi tu souhaites inviter des ami(e)s à participer à cette étude, merci de leur envoyer le lien de notre site : https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
             "choice": [],
             "condition_required": [],
             "condition": [],
@@ -1759,13 +1756,15 @@
             "commands": []
           },
           {
-            "text": "Quel est ton niveau dans le jeu en ce moment ?",
+            "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
             "choice": [],
             "condition_required": [
-              [
-                "oui",
-                "#HOUR_POKEMON_2.3"
-              ]
+              ["oui",
+                "#HOUR_POKEMON_2.1"],
+              ["oui",
+                "#HOUR_POKEMON_2.2"],
+              ["oui",
+                "#HOUR_POKEMON_2.3"]
             ],
             "condition": [],
             "commands": []
@@ -1774,8 +1773,8 @@
             "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
             "choice": [],
             "condition_required": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -1793,8 +1792,8 @@
 
             ],
             "condition_required": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -2823,13 +2822,15 @@
             "commands": []
           },
           {
-            "text": "Quel est ton niveau dans le jeu en ce moment ?",
+            "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
             "choice": [],
             "condition_required": [
-              [
-                "oui",
-                "#HOUR_POKEMON_3.3"
-              ]
+              ["oui",
+                "#HOUR_POKEMON_3.1"],
+              ["oui",
+                "#HOUR_POKEMON_3.2"],
+              ["oui",
+                "#HOUR_POKEMON_3.3"]
             ],
             "condition": [],
             "commands": []
@@ -2838,8 +2839,8 @@
             "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
             "choice": [],
             "condition_required": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -2857,8 +2858,8 @@
 
             ],
             "condition_required": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -3887,13 +3888,15 @@
             "commands": []
           },
           {
-            "text": "Quel est ton niveau dans le jeu en ce moment ?",
+            "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
             "choice": [],
             "condition_required": [
-              [
-                "oui",
-                "#HOUR_POKEMON_4.3"
-              ]
+              ["oui",
+                "#HOUR_POKEMON_4.1"],
+              ["oui",
+                "#HOUR_POKEMON_4.2"],
+              ["oui",
+                "#HOUR_POKEMON_4.3"]
             ],
             "condition": [],
             "commands": []
@@ -3902,8 +3905,8 @@
             "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
             "choice": [],
             "condition_required": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -3921,8 +3924,8 @@
 
             ],
             "condition_required": [
-              "C'est fait. Continuer",
-              "#PEDOMETER"
+              ["C'est fait. Continuer",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -4951,13 +4954,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_5.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_5.1"],
+            ["oui",
+              "#HOUR_POKEMON_5.2"],
+            ["oui",
+              "#HOUR_POKEMON_5.3"]
           ],
           "condition": [],
           "commands": []
@@ -4966,8 +4971,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -4985,8 +4990,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -6015,13 +6020,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_6.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_6.1"],
+            ["oui",
+              "#HOUR_POKEMON_6.2"],
+            ["oui",
+              "#HOUR_POKEMON_6.3"]
           ],
           "condition": [],
           "commands": []
@@ -6030,8 +6037,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -6049,8 +6056,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -7079,13 +7086,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_7.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_7.1"],
+            ["oui",
+              "#HOUR_POKEMON_7.2"],
+            ["oui",
+              "#HOUR_POKEMON_7.3"]
           ],
           "condition": [],
           "commands": []
@@ -7094,8 +7103,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -7113,8 +7122,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -7163,7 +7172,7 @@
           "commands": []
         },
         {
-          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
+          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nSi tu souhaites inviter des ami(e)s à participer à cette étude, merci de leur envoyer le lien de notre site : https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -8143,13 +8152,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_8.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_8.1"],
+            ["oui",
+              "#HOUR_POKEMON_8.2"],
+            ["oui",
+              "#HOUR_POKEMON_8.3"]
           ],
           "condition": [],
           "commands": []
@@ -8158,8 +8169,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -8177,8 +8188,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -9207,13 +9218,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_9.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_9.1"],
+            ["oui",
+              "#HOUR_POKEMON_9.2"],
+            ["oui",
+              "#HOUR_POKEMON_9.3"]
           ],
           "condition": [],
           "commands": []
@@ -9222,8 +9235,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -9241,8 +9254,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -10271,13 +10284,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_10.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_10.1"],
+            ["oui",
+              "#HOUR_POKEMON_10.2"],
+            ["oui",
+              "#HOUR_POKEMON_10.3"]
           ],
           "condition": [],
           "commands": []
@@ -10286,8 +10301,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -10305,8 +10320,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -11335,13 +11350,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_11.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_11.1"],
+            ["oui",
+              "#HOUR_POKEMON_11.2"],
+            ["oui",
+              "#HOUR_POKEMON_11.3"]
           ],
           "condition": [],
           "commands": []
@@ -11350,8 +11367,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -11369,8 +11386,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -12399,13 +12416,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_12.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_12.1"],
+            ["oui",
+              "#HOUR_POKEMON_12.2"],
+            ["oui",
+              "#HOUR_POKEMON_12.3"]
           ],
           "condition": [],
           "commands": []
@@ -12414,8 +12433,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -12433,8 +12452,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -13463,13 +13482,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_13.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_13.1"],
+            ["oui",
+              "#HOUR_POKEMON_13.2"],
+            ["oui",
+              "#HOUR_POKEMON_13.3"]
           ],
           "condition": [],
           "commands": []
@@ -13478,8 +13499,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -13497,8 +13518,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -14527,13 +14548,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_14.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_14.1"],
+            ["oui",
+              "#HOUR_POKEMON_14.2"],
+            ["oui",
+              "#HOUR_POKEMON_14.3"]
           ],
           "condition": [],
           "commands": []
@@ -14542,8 +14565,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -14561,8 +14584,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -14611,7 +14634,7 @@
           "commands": []
         },
         {
-          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
+          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nSi tu souhaites inviter des ami(e)s à participer à cette étude, merci de leur envoyer le lien de notre site : https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -15591,13 +15614,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_15.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_15.1"],
+            ["oui",
+              "#HOUR_POKEMON_15.2"],
+            ["oui",
+              "#HOUR_POKEMON_15.3"]
           ],
           "condition": [],
           "commands": []
@@ -15606,8 +15631,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -15625,8 +15650,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -16655,13 +16680,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_16.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_16.1"],
+            ["oui",
+              "#HOUR_POKEMON_16.2"],
+            ["oui",
+              "#HOUR_POKEMON_16.3"]
           ],
           "condition": [],
           "commands": []
@@ -16670,8 +16697,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -16689,8 +16716,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -17719,13 +17746,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_17.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_17.1"],
+            ["oui",
+              "#HOUR_POKEMON_17.2"],
+            ["oui",
+              "#HOUR_POKEMON_17.3"]
           ],
           "condition": [],
           "commands": []
@@ -17734,8 +17763,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -17753,8 +17782,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -18783,13 +18812,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_18.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_18.1"],
+            ["oui",
+              "#HOUR_POKEMON_18.2"],
+            ["oui",
+              "#HOUR_POKEMON_18.3"]
           ],
           "condition": [],
           "commands": []
@@ -18798,8 +18829,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -18817,8 +18848,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -19847,13 +19878,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_19.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_19.1"],
+            ["oui",
+              "#HOUR_POKEMON_19.2"],
+            ["oui",
+              "#HOUR_POKEMON_19.3"]
           ],
           "condition": [],
           "commands": []
@@ -19862,8 +19895,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -19881,8 +19914,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -20911,13 +20944,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_20.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_20.1"],
+            ["oui",
+              "#HOUR_POKEMON_20.2"],
+            ["oui",
+              "#HOUR_POKEMON_20.3"]
           ],
           "condition": [],
           "commands": []
@@ -20926,8 +20961,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -20945,8 +20980,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -21975,13 +22010,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_21.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_21.1"],
+            ["oui",
+              "#HOUR_POKEMON_21.2"],
+            ["oui",
+              "#HOUR_POKEMON_21.3"]
           ],
           "condition": [],
           "commands": []
@@ -21990,8 +22027,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -22009,8 +22046,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -22059,7 +22096,7 @@
           "commands": []
         },
         {
-          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nWenn du Freunde und Freundinnen zur Untersuchung einladen möchtest, schicke ihnen bitte den Link zu unserer Website: https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
+          "text": "Merci, on a fini pour aujourd’hui. À demain. Si tu as des questions, tu peux envoyer un e-mail à pokemon@uni-graz.at avec comme objet Pokemon.\n\nSi tu souhaites inviter des ami(e)s à participer à cette étude, merci de leur envoyer le lien de notre site : https://psychologie.uni-graz.at/en/social-psychology/the-team/lisa-eckerstorfer-bsc-msc/pokemon-go-study/",
           "choice": [],
           "condition_required": [],
           "condition": [],
@@ -23039,13 +23076,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_22.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_22.1"],
+            ["oui",
+              "#HOUR_POKEMON_22.2"],
+            ["oui",
+              "#HOUR_POKEMON_22.3"]
           ],
           "condition": [],
           "commands": []
@@ -23054,8 +23093,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -23073,8 +23112,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -24103,13 +24142,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_23.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_23.1"],
+            ["oui",
+              "#HOUR_POKEMON_23.2"],
+            ["oui",
+              "#HOUR_POKEMON_23.3"]
           ],
           "condition": [],
           "commands": []
@@ -24118,8 +24159,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -24137,8 +24178,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -25167,13 +25208,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_24.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_24.1"],
+            ["oui",
+              "#HOUR_POKEMON_24.2"],
+            ["oui",
+              "#HOUR_POKEMON_24.3"]
           ],
           "condition": [],
           "commands": []
@@ -25182,8 +25225,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -25201,8 +25244,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -26231,13 +26274,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_25.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_25.1"],
+            ["oui",
+              "#HOUR_POKEMON_25.2"],
+            ["oui",
+              "#HOUR_POKEMON_25.3"]
           ],
           "condition": [],
           "commands": []
@@ -26246,8 +26291,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -26265,8 +26310,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -27295,13 +27340,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_26.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_26.1"],
+            ["oui",
+              "#HOUR_POKEMON_26.2"],
+            ["oui",
+              "#HOUR_POKEMON_26.3"]
           ],
           "condition": [],
           "commands": []
@@ -27310,8 +27357,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -27329,8 +27376,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -28359,13 +28406,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_27.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_27.1"],
+            ["oui",
+              "#HOUR_POKEMON_27.2"],
+            ["oui",
+              "#HOUR_POKEMON_27.3"]
           ],
           "condition": [],
           "commands": []
@@ -28374,8 +28423,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -28393,8 +28442,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -29423,13 +29472,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_28.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_28.1"],
+            ["oui",
+              "#HOUR_POKEMON_28.2"],
+            ["oui",
+              "#HOUR_POKEMON_28.3"]
           ],
           "condition": [],
           "commands": []
@@ -29438,8 +29489,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -29457,8 +29508,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -30487,13 +30538,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_29.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_29.1"],
+            ["oui",
+              "#HOUR_POKEMON_29.2"],
+            ["oui",
+              "#HOUR_POKEMON_29.3"]
           ],
           "condition": [],
           "commands": []
@@ -30502,8 +30555,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -30521,8 +30574,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -31551,13 +31604,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_30.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_30.1"],
+            ["oui",
+              "#HOUR_POKEMON_30.2"],
+            ["oui",
+              "#HOUR_POKEMON_30.3"]
           ],
           "condition": [],
           "commands": []
@@ -31566,8 +31621,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -31585,8 +31640,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -32615,13 +32670,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_31.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_31.1"],
+            ["oui",
+              "#HOUR_POKEMON_31.2"],
+            ["oui",
+              "#HOUR_POKEMON_31.3"]
           ],
           "condition": [],
           "commands": []
@@ -32630,8 +32687,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -32649,8 +32706,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -33679,13 +33736,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_32.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_32.1"],
+            ["oui",
+              "#HOUR_POKEMON_32.2"],
+            ["oui",
+              "#HOUR_POKEMON_32.3"]
           ],
           "condition": [],
           "commands": []
@@ -33694,8 +33753,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -33713,8 +33772,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -34743,13 +34802,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_33.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_33.1"],
+            ["oui",
+              "#HOUR_POKEMON_33.2"],
+            ["oui",
+              "#HOUR_POKEMON_33.3"]
           ],
           "condition": [],
           "commands": []
@@ -34758,8 +34819,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -34777,8 +34838,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -35807,13 +35868,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_34.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_34.1"],
+            ["oui",
+              "#HOUR_POKEMON_34.2"],
+            ["oui",
+              "#HOUR_POKEMON_34.3"]
           ],
           "condition": [],
           "commands": []
@@ -35822,8 +35885,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -35841,8 +35904,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -36871,13 +36934,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_35.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_35.1"],
+            ["oui",
+              "#HOUR_POKEMON_35.2"],
+            ["oui",
+              "#HOUR_POKEMON_35.3"]
           ],
           "condition": [],
           "commands": []
@@ -36886,8 +36951,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -36905,8 +36970,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -37935,13 +38000,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_36.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_36.1"],
+            ["oui",
+              "#HOUR_POKEMON_36.2"],
+            ["oui",
+              "#HOUR_POKEMON_36.3"]
           ],
           "condition": [],
           "commands": []
@@ -37950,8 +38017,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -37969,8 +38036,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -38999,13 +39066,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_37.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_37.1"],
+            ["oui",
+              "#HOUR_POKEMON_37.2"],
+            ["oui",
+              "#HOUR_POKEMON_37.3"]
           ],
           "condition": [],
           "commands": []
@@ -39014,8 +39083,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -39033,8 +39102,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -40063,13 +40132,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_38.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_38.1"],
+            ["oui",
+              "#HOUR_POKEMON_38.2"],
+            ["oui",
+              "#HOUR_POKEMON_38.3"]
           ],
           "condition": [],
           "commands": []
@@ -40078,8 +40149,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -40097,8 +40168,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -41127,13 +41198,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_39.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_39.1"],
+            ["oui",
+              "#HOUR_POKEMON_39.2"],
+            ["oui",
+              "#HOUR_POKEMON_39.3"]
           ],
           "condition": [],
           "commands": []
@@ -41142,8 +41215,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -41161,8 +41234,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -42191,13 +42264,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_40.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_40.1"],
+            ["oui",
+              "#HOUR_POKEMON_40.2"],
+            ["oui",
+              "#HOUR_POKEMON_40.3"]
           ],
           "condition": [],
           "commands": []
@@ -42206,8 +42281,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -42225,8 +42300,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -43255,13 +43330,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_41.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_41.1"],
+            ["oui",
+              "#HOUR_POKEMON_41.2"],
+            ["oui",
+              "#HOUR_POKEMON_41.3"]
           ],
           "condition": [],
           "commands": []
@@ -43270,8 +43347,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -43289,8 +43366,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -44319,13 +44396,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_42.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_42.1"],
+            ["oui",
+              "#HOUR_POKEMON_42.2"],
+            ["oui",
+              "#HOUR_POKEMON_42.3"]
           ],
           "condition": [],
           "commands": []
@@ -44334,8 +44413,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -44353,8 +44432,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -45563,13 +45642,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_71.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_71.1"],
+            ["oui",
+              "#HOUR_POKEMON_71.2"],
+            ["oui",
+              "#HOUR_POKEMON_71.3"]
           ],
           "condition": [],
           "commands": []
@@ -45578,8 +45659,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -45597,8 +45678,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -46627,13 +46708,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_72.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_72.1"],
+            ["oui",
+              "#HOUR_POKEMON_72.2"],
+            ["oui",
+              "#HOUR_POKEMON_72.3"]
           ],
           "condition": [],
           "commands": []
@@ -46642,8 +46725,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -46661,8 +46744,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -47691,13 +47774,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_73.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_73.1"],
+            ["oui",
+              "#HOUR_POKEMON_73.2"],
+            ["oui",
+              "#HOUR_POKEMON_73.3"]
           ],
           "condition": [],
           "commands": []
@@ -47706,8 +47791,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -47725,8 +47810,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -48755,13 +48840,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_74.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_74.1"],
+            ["oui",
+              "#HOUR_POKEMON_74.2"],
+            ["oui",
+              "#HOUR_POKEMON_74.3"]
           ],
           "condition": [],
           "commands": []
@@ -48770,8 +48857,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -48789,8 +48876,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -49819,13 +49906,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_75.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_75.1"],
+            ["oui",
+              "#HOUR_POKEMON_75.2"],
+            ["oui",
+              "#HOUR_POKEMON_75.3"]
           ],
           "condition": [],
           "commands": []
@@ -49834,8 +49923,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -49853,8 +49942,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -50883,13 +50972,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_76.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_76.1"],
+            ["oui",
+              "#HOUR_POKEMON_76.2"],
+            ["oui",
+              "#HOUR_POKEMON_76.3"]
           ],
           "condition": [],
           "commands": []
@@ -50898,8 +50989,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -50917,8 +51008,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -51947,13 +52038,15 @@
           "commands": []
         },
         {
-          "text": "Quel est ton niveau dans le jeu en ce moment ?",
+          "text": "Quel est ton niveau dans le jeu Pokémon GO en ce moment ?",
           "choice": [],
           "condition_required": [
-            [
-              "oui",
-              "#HOUR_POKEMON_77.3"
-            ]
+            ["oui",
+              "#HOUR_POKEMON_77.1"],
+            ["oui",
+              "#HOUR_POKEMON_77.2"],
+            ["oui",
+              "#HOUR_POKEMON_77.3"]
           ],
           "condition": [],
           "commands": []
@@ -51962,8 +52055,8 @@
           "text": "Combien de temps as-tu marché ou couru selon ton podomètre ?\nS'il te plaît, entre les heures et les minutes au format hh:mm.",
           "choice": [],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -51981,8 +52074,8 @@
 
           ],
           "condition_required": [
-            "C'est fait. Continuer",
-            "#PEDOMETER"
+            ["C'est fait. Continuer",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []

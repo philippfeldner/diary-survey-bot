@@ -61,22 +61,19 @@
                 "Sí, empezemos"
               ],
               [
-                "No. He cambiado de opinión y no deseo participar"
+                "/stop - No. He cambiado de opinión y no deseo participar"
               ]
             ],
             "condition_required": [],
             "condition": [
               [
-                "No. He cambiado de opinión y no deseo participar",
+                "/stop - No. He cambiado de opinión y no deseo participar",
                 "#NO_PARTICIPATION"
               ]
             ],
             "commands": [
               [
                 "FORCE_KB_REPLY"
-              ],
-              [
-                "STOP"
               ]
             ]
           },
@@ -85,12 +82,14 @@
             "choice": [],
             "condition_required": [
               [
-                "No. He cambiado de opinión y no deseo participar",
+                "/stop - No. He cambiado de opinión y no deseo participar",
                 "#NO_PARTICIPATION"
               ]
             ],
             "condition": [],
-            "commands": []
+            "commands":
+            [
+            ]
           },
           {
             "text": "Antes de comenzar: estamos especialmente interesados en tu actividad física diaria. Si quisieras duplicar tu chance de ganar, por favor instala una aplicación que cuenta tus pasos por día y cuéntanos, de acuerdo a la aplicación cada noche el tiempo diario que caminaste.\n¿Te gustaría hacer eso?",
@@ -135,8 +134,8 @@
               ]
             ],
             "condition": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "commands": [
               [
@@ -200,7 +199,7 @@
             ]
           },
           {
-            "text": "¿En que zona horaria te encuentras ahora?",
+            "text": "¿En qué zona horaria te encuentras ahora?",
             "choice": [
               [
                 "KB_TIMEZONE"
@@ -397,10 +396,6 @@
               [
                 "Ya lo juego",
                 "#PLAY_IT"
-              ],
-              [
-                "Lo he jugado ya, pero lo dejé",
-                "#DID_PLAY_IT"
               ]
             ],
             "condition": [],
@@ -547,7 +542,7 @@
             "commands": []
           },
           {
-            "text": "... mi sue ño era inquieto.",
+            "text": "... mi sueño era inquieto.",
             "choice": [
               [
                 "escasamente (menos que 1 día)"
@@ -707,7 +702,7 @@
             "commands": []
           },
           {
-            "text": "¿Qué tan bien las siguientes afirmaciones describen tu personalidad?\n\nMe veo a mi mismo-a como alguien que ...\n... es reservado.",
+            "text": "¿Qué tan bien las siguientes afirmaciones describen tu personalidad?\n\nMe veo a mi mismo(a) como alguien que ...\n... es reservado.",
             "choice": [
               [
                 "muy en desacuerdo"
@@ -1921,13 +1916,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_2.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_2.1"],
+              ["sí",
+                "#HOUR_POKEMON_2.2"],
+              ["sí",
+                "#HOUR_POKEMON_2.3"]
             ],
             "condition": [],
             "commands": []
@@ -1936,8 +1933,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -1968,8 +1965,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -2998,13 +2995,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_3.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_3.1"],
+              ["sí",
+                "#HOUR_POKEMON_3.2"],
+              ["sí",
+                "#HOUR_POKEMON_3.3"]
             ],
             "condition": [],
             "commands": []
@@ -3013,8 +3012,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -3045,8 +3044,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -4075,13 +4074,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_4.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_4.1"],
+              ["sí",
+                "#HOUR_POKEMON_4.2"],
+              ["sí",
+                "#HOUR_POKEMON_4.3"]
             ],
             "condition": [],
             "commands": []
@@ -4090,8 +4091,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -4122,8 +4123,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -5152,13 +5153,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_5.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_5.1"],
+              ["sí",
+                "#HOUR_POKEMON_5.2"],
+              ["sí",
+                "#HOUR_POKEMON_5.3"]
             ],
             "condition": [],
             "commands": []
@@ -5167,8 +5170,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -5199,8 +5202,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -6229,13 +6232,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_6.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_6.1"],
+              ["sí",
+                "#HOUR_POKEMON_6.2"],
+              ["sí",
+                "#HOUR_POKEMON_6.3"]
             ],
             "condition": [],
             "commands": []
@@ -6244,8 +6249,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -6276,8 +6281,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -7306,13 +7311,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_7.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_7.1"],
+              ["sí",
+                "#HOUR_POKEMON_7.2"],
+              ["sí",
+                "#HOUR_POKEMON_7.3"]
             ],
             "condition": [],
             "commands": []
@@ -7321,8 +7328,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -7353,8 +7360,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -8383,13 +8390,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_8.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_8.1"],
+              ["sí",
+                "#HOUR_POKEMON_8.2"],
+              ["sí",
+                "#HOUR_POKEMON_8.3"]
             ],
             "condition": [],
             "commands": []
@@ -8398,8 +8407,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -8430,8 +8439,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -9460,13 +9469,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_9.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_9.1"],
+              ["sí",
+                "#HOUR_POKEMON_9.2"],
+              ["sí",
+                "#HOUR_POKEMON_9.3"]
             ],
             "condition": [],
             "commands": []
@@ -9475,8 +9486,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -9507,8 +9518,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -10537,13 +10548,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_10.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_10.1"],
+              ["sí",
+                "#HOUR_POKEMON_10.2"],
+              ["sí",
+                "#HOUR_POKEMON_10.3"]
             ],
             "condition": [],
             "commands": []
@@ -10552,8 +10565,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -10584,8 +10597,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -11614,13 +11627,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_11.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_11.1"],
+              ["sí",
+                "#HOUR_POKEMON_11.2"],
+              ["sí",
+                "#HOUR_POKEMON_11.3"]
             ],
             "condition": [],
             "commands": []
@@ -11629,8 +11644,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -11661,8 +11676,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -12691,13 +12706,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_12.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_12.1"],
+              ["sí",
+                "#HOUR_POKEMON_12.2"],
+              ["sí",
+                "#HOUR_POKEMON_12.3"]
             ],
             "condition": [],
             "commands": []
@@ -12706,8 +12723,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -12738,8 +12755,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -13768,13 +13785,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_13.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_13.1"],
+              ["sí",
+                "#HOUR_POKEMON_13.2"],
+              ["sí",
+                "#HOUR_POKEMON_13.3"]
             ],
             "condition": [],
             "commands": []
@@ -13783,8 +13802,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -13815,8 +13834,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -14845,13 +14864,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_14.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_14.1"],
+              ["sí",
+                "#HOUR_POKEMON_14.2"],
+              ["sí",
+                "#HOUR_POKEMON_14.3"]
             ],
             "condition": [],
             "commands": []
@@ -14860,8 +14881,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -14892,8 +14913,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -15922,13 +15943,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_15.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_15.1"],
+              ["sí",
+                "#HOUR_POKEMON_15.2"],
+              ["sí",
+                "#HOUR_POKEMON_15.3"]
             ],
             "condition": [],
             "commands": []
@@ -15937,8 +15960,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -15969,8 +15992,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -16999,13 +17022,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_16.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_16.1"],
+              ["sí",
+                "#HOUR_POKEMON_16.2"],
+              ["sí",
+                "#HOUR_POKEMON_16.3"]
             ],
             "condition": [],
             "commands": []
@@ -17014,8 +17039,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -17046,8 +17071,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -18076,13 +18101,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_17.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_17.1"],
+              ["sí",
+                "#HOUR_POKEMON_17.2"],
+              ["sí",
+                "#HOUR_POKEMON_17.3"]
             ],
             "condition": [],
             "commands": []
@@ -18091,8 +18118,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -18123,8 +18150,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -19153,13 +19180,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_18.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_18.1"],
+              ["sí",
+                "#HOUR_POKEMON_18.2"],
+              ["sí",
+                "#HOUR_POKEMON_18.3"]
             ],
             "condition": [],
             "commands": []
@@ -19168,8 +19197,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -19200,8 +19229,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -20230,13 +20259,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_19.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_19.1"],
+              ["sí",
+                "#HOUR_POKEMON_19.2"],
+              ["sí",
+                "#HOUR_POKEMON_19.3"]
             ],
             "condition": [],
             "commands": []
@@ -20245,8 +20276,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -20277,8 +20308,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -21307,13 +21338,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_20.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_20.1"],
+              ["sí",
+                "#HOUR_POKEMON_20.2"],
+              ["sí",
+                "#HOUR_POKEMON_20.3"]
             ],
             "condition": [],
             "commands": []
@@ -21322,8 +21355,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -21354,8 +21387,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -22384,13 +22417,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_21.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_21.1"],
+              ["sí",
+                "#HOUR_POKEMON_21.2"],
+              ["sí",
+                "#HOUR_POKEMON_21.3"]
             ],
             "condition": [],
             "commands": []
@@ -22399,8 +22434,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -22431,8 +22466,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -23461,13 +23496,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_22.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_22.1"],
+              ["sí",
+                "#HOUR_POKEMON_22.2"],
+              ["sí",
+                "#HOUR_POKEMON_22.3"]
             ],
             "condition": [],
             "commands": []
@@ -23476,8 +23513,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -23508,8 +23545,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -24538,13 +24575,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_23.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_23.1"],
+              ["sí",
+                "#HOUR_POKEMON_23.2"],
+              ["sí",
+                "#HOUR_POKEMON_23.3"]
             ],
             "condition": [],
             "commands": []
@@ -24553,8 +24592,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -24585,8 +24624,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -25615,13 +25654,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_24.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_24.1"],
+              ["sí",
+                "#HOUR_POKEMON_24.2"],
+              ["sí",
+                "#HOUR_POKEMON_24.3"]
             ],
             "condition": [],
             "commands": []
@@ -25630,8 +25671,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -25662,8 +25703,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -26692,13 +26733,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_25.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_25.1"],
+              ["sí",
+                "#HOUR_POKEMON_25.2"],
+              ["sí",
+                "#HOUR_POKEMON_25.3"]
             ],
             "condition": [],
             "commands": []
@@ -26707,8 +26750,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -26739,8 +26782,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -27769,13 +27812,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_26.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_26.1"],
+              ["sí",
+                "#HOUR_POKEMON_26.2"],
+              ["sí",
+                "#HOUR_POKEMON_26.3"]
             ],
             "condition": [],
             "commands": []
@@ -27784,8 +27829,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -27816,8 +27861,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -28846,13 +28891,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_27.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_27.1"],
+              ["sí",
+                "#HOUR_POKEMON_27.2"],
+              ["sí",
+                "#HOUR_POKEMON_27.3"]
             ],
             "condition": [],
             "commands": []
@@ -28861,8 +28908,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -28893,8 +28940,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -29923,13 +29970,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_28.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_28.1"],
+              ["sí",
+                "#HOUR_POKEMON_28.2"],
+              ["sí",
+                "#HOUR_POKEMON_28.3"]
             ],
             "condition": [],
             "commands": []
@@ -29938,8 +29987,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -29970,8 +30019,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -31000,13 +31049,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_29.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_29.1"],
+              ["sí",
+                "#HOUR_POKEMON_29.2"],
+              ["sí",
+                "#HOUR_POKEMON_29.3"]
             ],
             "condition": [],
             "commands": []
@@ -31015,8 +31066,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -31047,8 +31098,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -32077,13 +32128,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_30.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_30.1"],
+              ["sí",
+                "#HOUR_POKEMON_30.2"],
+              ["sí",
+                "#HOUR_POKEMON_30.3"]
             ],
             "condition": [],
             "commands": []
@@ -32092,8 +32145,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -32124,8 +32177,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -33154,13 +33207,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_31.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_31.1"],
+              ["sí",
+                "#HOUR_POKEMON_31.2"],
+              ["sí",
+                "#HOUR_POKEMON_31.3"]
             ],
             "condition": [],
             "commands": []
@@ -33169,8 +33224,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -33201,8 +33256,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -34231,13 +34286,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_32.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_32.1"],
+              ["sí",
+                "#HOUR_POKEMON_32.2"],
+              ["sí",
+                "#HOUR_POKEMON_32.3"]
             ],
             "condition": [],
             "commands": []
@@ -34246,8 +34303,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -34278,8 +34335,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -35308,13 +35365,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_33.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_33.1"],
+              ["sí",
+                "#HOUR_POKEMON_33.2"],
+              ["sí",
+                "#HOUR_POKEMON_33.3"]
             ],
             "condition": [],
             "commands": []
@@ -35323,8 +35382,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -35355,8 +35414,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -36385,13 +36444,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_34.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_34.1"],
+              ["sí",
+                "#HOUR_POKEMON_34.2"],
+              ["sí",
+                "#HOUR_POKEMON_34.3"]
             ],
             "condition": [],
             "commands": []
@@ -36400,8 +36461,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -36432,8 +36493,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -37462,13 +37523,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_35.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_35.1"],
+              ["sí",
+                "#HOUR_POKEMON_35.2"],
+              ["sí",
+                "#HOUR_POKEMON_35.3"]
             ],
             "condition": [],
             "commands": []
@@ -37477,8 +37540,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -37509,8 +37572,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -38539,13 +38602,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_36.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_36.1"],
+              ["sí",
+                "#HOUR_POKEMON_36.2"],
+              ["sí",
+                "#HOUR_POKEMON_36.3"]
             ],
             "condition": [],
             "commands": []
@@ -38554,8 +38619,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -38586,8 +38651,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -39616,13 +39681,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_37.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_37.1"],
+              ["sí",
+                "#HOUR_POKEMON_37.2"],
+              ["sí",
+                "#HOUR_POKEMON_37.3"]
             ],
             "condition": [],
             "commands": []
@@ -39631,8 +39698,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -39663,8 +39730,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -40693,13 +40760,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_38.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_38.1"],
+              ["sí",
+                "#HOUR_POKEMON_38.2"],
+              ["sí",
+                "#HOUR_POKEMON_38.3"]
             ],
             "condition": [],
             "commands": []
@@ -40708,8 +40777,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -40740,8 +40809,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -41770,13 +41839,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_39.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_39.1"],
+              ["sí",
+                "#HOUR_POKEMON_39.2"],
+              ["sí",
+                "#HOUR_POKEMON_39.3"]
             ],
             "condition": [],
             "commands": []
@@ -41785,8 +41856,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -41817,8 +41888,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -42847,13 +42918,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_40.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_40.1"],
+              ["sí",
+                "#HOUR_POKEMON_40.2"],
+              ["sí",
+                "#HOUR_POKEMON_40.3"]
             ],
             "condition": [],
             "commands": []
@@ -42862,8 +42935,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -42894,8 +42967,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -43924,13 +43997,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_41.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_41.1"],
+              ["sí",
+                "#HOUR_POKEMON_41.2"],
+              ["sí",
+                "#HOUR_POKEMON_41.3"]
             ],
             "condition": [],
             "commands": []
@@ -43939,8 +44014,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -43971,8 +44046,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -45001,13 +45076,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_42.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_42.1"],
+              ["sí",
+                "#HOUR_POKEMON_42.2"],
+              ["sí",
+                "#HOUR_POKEMON_42.3"]
             ],
             "condition": [],
             "commands": []
@@ -45016,8 +45093,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -45048,8 +45125,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -45238,7 +45315,7 @@
             "commands": []
           },
           {
-            "text": "... mi sue ño era inquieto.",
+            "text": "... mi sueño era inquieto.",
             "choice": [
               [
                 "escasamente (menos que 1 día)"
@@ -46378,13 +46455,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_71.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_71.1"],
+              ["sí",
+                "#HOUR_POKEMON_71.2"],
+              ["sí",
+                "#HOUR_POKEMON_71.3"]
             ],
             "condition": [],
             "commands": []
@@ -46393,8 +46472,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -46425,8 +46504,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -47455,13 +47534,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_72.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_72.1"],
+              ["sí",
+                "#HOUR_POKEMON_72.2"],
+              ["sí",
+                "#HOUR_POKEMON_72.3"]
             ],
             "condition": [],
             "commands": []
@@ -47470,8 +47551,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -47502,8 +47583,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -48532,13 +48613,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_73.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_73.1"],
+              ["sí",
+                "#HOUR_POKEMON_73.2"],
+              ["sí",
+                "#HOUR_POKEMON_73.3"]
             ],
             "condition": [],
             "commands": []
@@ -48547,8 +48630,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -48579,8 +48662,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -49609,13 +49692,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_74.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_74.1"],
+              ["sí",
+                "#HOUR_POKEMON_74.2"],
+              ["sí",
+                "#HOUR_POKEMON_74.3"]
             ],
             "condition": [],
             "commands": []
@@ -49624,8 +49709,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -49656,8 +49741,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -50686,13 +50771,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_75.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_75.1"],
+              ["sí",
+                "#HOUR_POKEMON_75.2"],
+              ["sí",
+                "#HOUR_POKEMON_75.3"]
             ],
             "condition": [],
             "commands": []
@@ -50701,8 +50788,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -50733,8 +50820,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -51763,13 +51850,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_76.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_76.1"],
+              ["sí",
+                "#HOUR_POKEMON_76.2"],
+              ["sí",
+                "#HOUR_POKEMON_76.3"]
             ],
             "condition": [],
             "commands": []
@@ -51778,8 +51867,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -51810,8 +51899,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -52840,13 +52929,15 @@
             "commands": []
           },
           {
-            "text": "¿Cuál es tu nivel actual?",
+            "text": "¿Cuál es tu nivel actual en Pokémon GO?",
             "choice": [],
             "condition_required": [
-              [
-                "sí",
-                "#HOUR_POKEMON_77.3"
-              ]
+              ["sí",
+                "#HOUR_POKEMON_77.1"],
+              ["sí",
+                "#HOUR_POKEMON_77.2"],
+              ["sí",
+                "#HOUR_POKEMON_77.3"]
             ],
             "condition": [],
             "commands": []
@@ -52855,8 +52946,8 @@
             "text": "De acuerdo a la aplicación para contar los pasos ¿Cuánto tiempo pasaste hoy caminando o corriendo?\nPor favor, indica las horas y los minutos en el formato hh:mm.",
             "choice": [],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -52887,8 +52978,8 @@
               ]
             ],
             "condition_required": [
-              "Hecho, Continuar",
-              "#PEDOMETER"
+              ["Hecho, Continuar",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -53077,7 +53168,7 @@
             "commands": []
           },
           {
-            "text": "... mi sue ño era inquieto.",
+            "text": "... mi sueño era inquieto.",
             "choice": [
               [
                 "escasamente (menos que 1 día)"

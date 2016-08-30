@@ -57,13 +57,13 @@
                 "Ja, starten wir"
               ],
               [
-                "Nein, ich möchte doch nicht mitmachen"
+                "/stop - Nein, ich möchte doch nicht mitmachen"
               ]
             ],
             "condition_required": [],
             "condition": [
               [
-                "Nein, ich möchte doch nicht mitmachen",
+                "/stop - Nein, ich möchte doch nicht mitmachen",
                 "#NO_PARTICIPATION"
               ]
             ],
@@ -78,12 +78,14 @@
             "choice": [],
             "condition_required": [
               [
-                "Nein, ich möchte doch nicht mitmachen",
+                "/stop - Nein, ich möchte doch nicht mitmachen",
                 "#NO_PARTICIPATION"
               ]
             ],
             "condition": [],
-            "commands": [["STOP"]]
+            "commands":
+            [
+            ]
           },
           {
             "text": "Bevor es losgeht: Wir interessieren uns sehr für deine tägliche körperliche Aktivität. Wenn du gerne die doppelte Gewinnchance hättest, dann installiere bitte eine Schrittzähl-App und schreibe uns jeden Abend die von der App ermittelte Zeit die du zu Fuß unterwegs warst.\nWürdest du das machen?",
@@ -128,7 +130,7 @@
               ]
             ],
             "condition": [
-              ["Erledigt und weiter",
+            [  "Erledigt und weiter",
               "#PEDOMETER"]
             ],
             "commands": [
@@ -325,10 +327,10 @@
             "text": "Hast du schon von der App Pokémon GO gehört?",
             "choice": [
               [
-                "ja, aber ich spiele nicht"
+                "Ja, aber ich spiele nicht"
               ],
               [
-                "nein"
+                "Nein"
               ],
               [
                 "Ich spiele Pokémon GO"
@@ -390,10 +392,6 @@
               [
                 "Ich spiele Pokémon GO",
                 "#PLAY_IT"
-              ],
-              [
-                "Ich habe schon gespielt, aber spiele jetzt nicht mehr",
-                "#DID_PLAY_IT"
               ]
             ],
             "condition": [],
@@ -1910,13 +1908,15 @@
             "commands": []
           },
           {
-            "text": "Auf welchem Level bist du gerade?",
+            "text": "Auf welchem Pokémon GO Level bist du gerade?",
             "choice": [],
             "condition_required": [
-              [
-                "ja",
-                "#HOUR_POKEMON_2.3"
-              ]
+              ["ja",
+                "#HOUR_POKEMON_2.1"],
+                ["ja",
+                  "#HOUR_POKEMON_2.2"],
+              ["ja",
+                "#HOUR_POKEMON_2.3"]
             ],
             "condition": [],
             "commands": []
@@ -1925,8 +1925,8 @@
             "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
             "choice": [],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+            [  "Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -1957,8 +1957,8 @@
               ]
             ],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -2987,13 +2987,15 @@
             "commands": []
           },
           {
-            "text": "Auf welchem Level bist du gerade?",
+            "text": "Auf welchem Pokémon GO Level bist du gerade?",
             "choice": [],
             "condition_required": [
-              [
-                "ja",
-                "#HOUR_POKEMON_3.3"
-              ]
+              ["ja",
+                "#HOUR_POKEMON_3.1"],
+                ["ja",
+                  "#HOUR_POKEMON_3.2"],
+              ["ja",
+                "#HOUR_POKEMON_3.3"]
             ],
             "condition": [],
             "commands": []
@@ -3002,8 +3004,8 @@
             "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
             "choice": [],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -3034,8 +3036,8 @@
               ]
             ],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -4064,13 +4066,15 @@
             "commands": []
           },
           {
-            "text": "Auf welchem Level bist du gerade?",
+            "text": "Auf welchem Pokémon GO Level bist du gerade?",
             "choice": [],
             "condition_required": [
-              [
-                "ja",
-                "#HOUR_POKEMON_4.3"
-              ]
+              ["ja",
+                "#HOUR_POKEMON_4.1"],
+                ["ja",
+                  "#HOUR_POKEMON_4.2"],
+              ["ja",
+                "#HOUR_POKEMON_4.3"]
             ],
             "condition": [],
             "commands": []
@@ -4079,8 +4083,8 @@
             "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
             "choice": [],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+            [  "Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -4111,8 +4115,8 @@
               ]
             ],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -5141,13 +5145,15 @@
             "commands": []
           },
           {
-            "text": "Auf welchem Level bist du gerade?",
+            "text": "Auf welchem Pokémon GO Level bist du gerade?",
             "choice": [],
             "condition_required": [
-              [
-                "ja",
-                "#HOUR_POKEMON_5.3"
-              ]
+              ["ja",
+                "#HOUR_POKEMON_5.1"],
+                ["ja",
+                  "#HOUR_POKEMON_5.2"],
+              ["ja",
+                "#HOUR_POKEMON_5.3"]
             ],
             "condition": [],
             "commands": []
@@ -5156,8 +5162,8 @@
             "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
             "choice": [],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -5188,8 +5194,8 @@
               ]
             ],
             "condition_required": [
-              "Erledigt und weiter",
-              "#PEDOMETER"
+              ["Erledigt und weiter",
+              "#PEDOMETER"]
             ],
             "condition": [],
             "commands": []
@@ -6218,13 +6224,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_6.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_6.1"],
+              ["ja",
+                "#HOUR_POKEMON_6.2"],
+            ["ja",
+              "#HOUR_POKEMON_6.3"]
           ],
           "condition": [],
           "commands": []
@@ -6233,8 +6241,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -6265,8 +6273,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -7295,13 +7303,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_7.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_7.1"],
+              ["ja",
+                "#HOUR_POKEMON_7.2"],
+            ["ja",
+              "#HOUR_POKEMON_7.3"]
           ],
           "condition": [],
           "commands": []
@@ -7310,8 +7320,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -7342,8 +7352,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -8372,13 +8382,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_8.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_8.1"],
+              ["ja",
+                "#HOUR_POKEMON_8.2"],
+            ["ja",
+              "#HOUR_POKEMON_8.3"]
           ],
           "condition": [],
           "commands": []
@@ -8387,8 +8399,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -8419,8 +8431,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -9449,13 +9461,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_9.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_9.1"],
+              ["ja",
+                "#HOUR_POKEMON_9.2"],
+            ["ja",
+              "#HOUR_POKEMON_9.3"]
           ],
           "condition": [],
           "commands": []
@@ -9464,8 +9478,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -9496,8 +9510,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -10526,13 +10540,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_10.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_10.1"],
+              ["ja",
+                "#HOUR_POKEMON_10.2"],
+            ["ja",
+              "#HOUR_POKEMON_10.3"]
           ],
           "condition": [],
           "commands": []
@@ -10541,8 +10557,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -10573,8 +10589,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -11603,13 +11619,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_11.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_11.1"],
+              ["ja",
+                "#HOUR_POKEMON_11.2"],
+            ["ja",
+              "#HOUR_POKEMON_11.3"]
           ],
           "condition": [],
           "commands": []
@@ -11618,8 +11636,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -11650,8 +11668,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -12680,13 +12698,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_12.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_12.1"],
+              ["ja",
+                "#HOUR_POKEMON_12.2"],
+            ["ja",
+              "#HOUR_POKEMON_12.3"]
           ],
           "condition": [],
           "commands": []
@@ -12695,8 +12715,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -12727,8 +12747,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -13757,13 +13777,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_13.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_13.1"],
+              ["ja",
+                "#HOUR_POKEMON_13.2"],
+            ["ja",
+              "#HOUR_POKEMON_13.3"]
           ],
           "condition": [],
           "commands": []
@@ -13772,8 +13794,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -13804,8 +13826,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -14834,13 +14856,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_14.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_14.1"],
+              ["ja",
+                "#HOUR_POKEMON_14.2"],
+            ["ja",
+              "#HOUR_POKEMON_14.3"]
           ],
           "condition": [],
           "commands": []
@@ -14849,8 +14873,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -14881,8 +14905,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -15911,13 +15935,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_15.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_15.1"],
+              ["ja",
+                "#HOUR_POKEMON_15.2"],
+            ["ja",
+              "#HOUR_POKEMON_15.3"]
           ],
           "condition": [],
           "commands": []
@@ -15926,8 +15952,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -15958,8 +15984,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -16988,13 +17014,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_16.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_16.1"],
+              ["ja",
+                "#HOUR_POKEMON_16.2"],
+            ["ja",
+              "#HOUR_POKEMON_16.3"]
           ],
           "condition": [],
           "commands": []
@@ -17003,8 +17031,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -17035,8 +17063,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -18065,13 +18093,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_17.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_17.1"],
+              ["ja",
+                "#HOUR_POKEMON_17.2"],
+            ["ja",
+              "#HOUR_POKEMON_17.3"]
           ],
           "condition": [],
           "commands": []
@@ -18080,8 +18110,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -18112,8 +18142,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -19142,13 +19172,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_18.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_18.1"],
+              ["ja",
+                "#HOUR_POKEMON_18.2"],
+            ["ja",
+              "#HOUR_POKEMON_18.3"]
           ],
           "condition": [],
           "commands": []
@@ -19157,8 +19189,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -19189,8 +19221,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -20219,13 +20251,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_19.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_19.1"],
+              ["ja",
+                "#HOUR_POKEMON_19.2"],
+            ["ja",
+              "#HOUR_POKEMON_19.3"]
           ],
           "condition": [],
           "commands": []
@@ -20234,8 +20268,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -20266,8 +20300,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -21296,13 +21330,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_20.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_20.1"],
+              ["ja",
+                "#HOUR_POKEMON_20.2"],
+            ["ja",
+              "#HOUR_POKEMON_20.3"]
           ],
           "condition": [],
           "commands": []
@@ -21311,8 +21347,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -21343,8 +21379,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -22373,13 +22409,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_21.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_21.1"],
+              ["ja",
+                "#HOUR_POKEMON_21.2"],
+            ["ja",
+              "#HOUR_POKEMON_21.3"]
           ],
           "condition": [],
           "commands": []
@@ -22388,8 +22426,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -22420,8 +22458,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -23450,13 +23488,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_22.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_22.1"],
+              ["ja",
+                "#HOUR_POKEMON_22.2"],
+            ["ja",
+              "#HOUR_POKEMON_22.3"]
           ],
           "condition": [],
           "commands": []
@@ -23465,8 +23505,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -23497,8 +23537,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -24527,13 +24567,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_23.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_23.1"],
+              ["ja",
+                "#HOUR_POKEMON_23.2"],
+            ["ja",
+              "#HOUR_POKEMON_23.3"]
           ],
           "condition": [],
           "commands": []
@@ -24542,8 +24584,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -24574,8 +24616,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -25604,13 +25646,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_24.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_24.1"],
+              ["ja",
+                "#HOUR_POKEMON_24.2"],
+            ["ja",
+              "#HOUR_POKEMON_24.3"]
           ],
           "condition": [],
           "commands": []
@@ -25619,8 +25663,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -25651,8 +25695,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -26681,13 +26725,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_25.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_25.1"],
+              ["ja",
+                "#HOUR_POKEMON_25.2"],
+            ["ja",
+              "#HOUR_POKEMON_25.3"]
           ],
           "condition": [],
           "commands": []
@@ -26696,8 +26742,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -26728,8 +26774,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -27758,13 +27804,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_26.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_26.1"],
+              ["ja",
+                "#HOUR_POKEMON_26.2"],
+            ["ja",
+              "#HOUR_POKEMON_26.3"]
           ],
           "condition": [],
           "commands": []
@@ -27773,8 +27821,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -27805,8 +27853,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -28835,13 +28883,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_27.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_27.1"],
+              ["ja",
+                "#HOUR_POKEMON_27.2"],
+            ["ja",
+              "#HOUR_POKEMON_27.3"]
           ],
           "condition": [],
           "commands": []
@@ -28850,8 +28900,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -28882,8 +28932,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -29912,13 +29962,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_28.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_28.1"],
+              ["ja",
+                "#HOUR_POKEMON_28.2"],
+            ["ja",
+              "#HOUR_POKEMON_28.3"]
           ],
           "condition": [],
           "commands": []
@@ -29927,8 +29979,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -29959,8 +30011,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -30989,13 +31041,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_29.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_29.1"],
+              ["ja",
+                "#HOUR_POKEMON_29.2"],
+            ["ja",
+              "#HOUR_POKEMON_29.3"]
           ],
           "condition": [],
           "commands": []
@@ -31004,8 +31058,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -31036,8 +31090,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -32066,13 +32120,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_30.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_30.1"],
+              ["ja",
+                "#HOUR_POKEMON_30.2"],
+            ["ja",
+              "#HOUR_POKEMON_30.3"]
           ],
           "condition": [],
           "commands": []
@@ -32081,8 +32137,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -32113,8 +32169,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -33143,13 +33199,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_31.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_31.1"],
+              ["ja",
+                "#HOUR_POKEMON_31.2"],
+            ["ja",
+              "#HOUR_POKEMON_31.3"]
           ],
           "condition": [],
           "commands": []
@@ -33158,8 +33216,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -33190,8 +33248,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -34220,13 +34278,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_32.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_32.1"],
+              ["ja",
+                "#HOUR_POKEMON_32.2"],
+            ["ja",
+              "#HOUR_POKEMON_32.3"]
           ],
           "condition": [],
           "commands": []
@@ -34235,8 +34295,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -34267,8 +34327,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -35297,13 +35357,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_33.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_33.1"],
+              ["ja",
+                "#HOUR_POKEMON_33.2"],
+            ["ja",
+              "#HOUR_POKEMON_33.3"]
           ],
           "condition": [],
           "commands": []
@@ -35312,8 +35374,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -35344,8 +35406,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -36374,13 +36436,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_34.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_34.1"],
+              ["ja",
+                "#HOUR_POKEMON_34.2"],
+            ["ja",
+              "#HOUR_POKEMON_34.3"]
           ],
           "condition": [],
           "commands": []
@@ -36389,8 +36453,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -36421,8 +36485,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -37451,13 +37515,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_35.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_35.1"],
+              ["ja",
+                "#HOUR_POKEMON_35.2"],
+            ["ja",
+              "#HOUR_POKEMON_35.3"]
           ],
           "condition": [],
           "commands": []
@@ -37466,8 +37532,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -37498,8 +37564,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -38528,13 +38594,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_36.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_36.1"],
+              ["ja",
+                "#HOUR_POKEMON_36.2"],
+            ["ja",
+              "#HOUR_POKEMON_36.3"]
           ],
           "condition": [],
           "commands": []
@@ -38543,8 +38611,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -38575,8 +38643,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -39605,13 +39673,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_37.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_37.1"],
+              ["ja",
+                "#HOUR_POKEMON_37.2"],
+            ["ja",
+              "#HOUR_POKEMON_37.3"]
           ],
           "condition": [],
           "commands": []
@@ -39620,8 +39690,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -39652,8 +39722,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -40682,13 +40752,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_38.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_38.1"],
+              ["ja",
+                "#HOUR_POKEMON_38.2"],
+            ["ja",
+              "#HOUR_POKEMON_38.3"]
           ],
           "condition": [],
           "commands": []
@@ -40697,8 +40769,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -40729,8 +40801,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -41759,13 +41831,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_39.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_39.1"],
+              ["ja",
+                "#HOUR_POKEMON_39.2"],
+            ["ja",
+              "#HOUR_POKEMON_39.3"]
           ],
           "condition": [],
           "commands": []
@@ -41774,8 +41848,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -41806,8 +41880,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -42836,13 +42910,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_40.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_40.1"],
+              ["ja",
+                "#HOUR_POKEMON_40.2"],
+            ["ja",
+              "#HOUR_POKEMON_40.3"]
           ],
           "condition": [],
           "commands": []
@@ -42851,8 +42927,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -42883,8 +42959,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -43913,13 +43989,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_41.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_41.1"],
+              ["ja",
+                "#HOUR_POKEMON_41.2"],
+            ["ja",
+              "#HOUR_POKEMON_41.3"]
           ],
           "condition": [],
           "commands": []
@@ -43928,8 +44006,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -43960,8 +44038,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -44990,13 +45068,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_42.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_42.1"],
+              ["ja",
+                "#HOUR_POKEMON_42.2"],
+            ["ja",
+              "#HOUR_POKEMON_42.3"]
           ],
           "condition": [],
           "commands": []
@@ -45005,8 +45085,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -45037,8 +45117,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -46367,13 +46447,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_71.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_71.1"],
+              ["ja",
+                "#HOUR_POKEMON_71.2"],
+            ["ja",
+              "#HOUR_POKEMON_71.3"]
           ],
           "condition": [],
           "commands": []
@@ -46382,8 +46464,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -46414,8 +46496,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+          [  "Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -47444,13 +47526,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_72.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_72.1"],
+              ["ja",
+                "#HOUR_POKEMON_72.2"],
+            ["ja",
+              "#HOUR_POKEMON_72.3"]
           ],
           "condition": [],
           "commands": []
@@ -47459,8 +47543,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -47491,8 +47575,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -48521,13 +48605,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_73.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_73.1"],
+              ["ja",
+                "#HOUR_POKEMON_73.2"],
+            ["ja",
+              "#HOUR_POKEMON_73.3"]
           ],
           "condition": [],
           "commands": []
@@ -48536,8 +48622,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -48568,8 +48654,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -49598,13 +49684,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_74.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_74.1"],
+              ["ja",
+                "#HOUR_POKEMON_74.2"],
+            ["ja",
+              "#HOUR_POKEMON_74.3"]
           ],
           "condition": [],
           "commands": []
@@ -49613,8 +49701,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -49645,8 +49733,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -50675,13 +50763,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_75.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_75.1"],
+              ["ja",
+                "#HOUR_POKEMON_75.2"],
+            ["ja",
+              "#HOUR_POKEMON_75.3"]
           ],
           "condition": [],
           "commands": []
@@ -50690,8 +50780,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -50722,8 +50812,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -51752,13 +51842,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_76.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_76.1"],
+              ["ja",
+                "#HOUR_POKEMON_76.2"],
+            ["ja",
+              "#HOUR_POKEMON_76.3"]
           ],
           "condition": [],
           "commands": []
@@ -51767,8 +51859,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -51799,8 +51891,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -52829,13 +52921,15 @@
           "commands": []
         },
         {
-          "text": "Auf welchem Level bist du gerade?",
+          "text": "Auf welchem Pokémon GO Level bist du gerade?",
           "choice": [],
           "condition_required": [
-            [
-              "ja",
-              "#HOUR_POKEMON_77.3"
-            ]
+            ["ja",
+              "#HOUR_POKEMON_77.1"],
+              ["ja",
+                "#HOUR_POKEMON_77.2"],
+            ["ja",
+              "#HOUR_POKEMON_77.3"]
           ],
           "condition": [],
           "commands": []
@@ -52844,8 +52938,8 @@
           "text": "Wie lange bist heute schon laut deiner Schrittzähl-App gegangen oder gelaufen?\nBitte gib die Zeit in Stunden und Minuten an.",
           "choice": [],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []
@@ -52876,8 +52970,8 @@
             ]
           ],
           "condition_required": [
-            "Erledigt und weiter",
-            "#PEDOMETER"
+            ["Erledigt und weiter",
+            "#PEDOMETER"]
           ],
           "condition": [],
           "commands": []

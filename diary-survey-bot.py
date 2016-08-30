@@ -10,6 +10,9 @@ from survey.questions import question_handler
 from survey.questions import continue_survey
 from survey.participant import Participant
 
+from admin.settings import INFO_TEXT
+from admin.settings import DEFAULT_LANGUAGE
+
 data_set = None
 
 
@@ -36,7 +39,6 @@ def delete(bot: Bot, update: Update):
     user.active_ = False
     user.delete_participant()
     del data_set.participants[update.message.chat_id]
-    # Message for /stop
     try:
         bot.send_message(chat_id=chat_id, text="Successfully deleted DB entry and user data. To restart enter /start")
     except TelegramError as error:
@@ -49,7 +51,6 @@ def stop(bot: Bot, update: Update):
     chat_id = update.message.chat_id
     user = data_set.participants[update.message.chat_id]
     user.pause()
-    # Message for /stop
     try:
         bot.send_message(chat_id=chat_id, text="You have been set to inactive. If you want to continue enter /start")
     except TelegramError as error:
@@ -63,8 +64,20 @@ def msg_handler(bot, update, job_queue):
     
 
 def info(bot: Bot, update: Update):
-    # Message for /info
-    bot.sendMessage(update.message.chat_id, text='')
+    global data_set
+    try:
+        user = data_set.participants[update.message.chat_id]
+        message = INFO_TEXT[user.language_]
+        try:
+            bot.sendMessage(update.message.chat_id, text=message)
+        except TelegramError:
+            return
+    except KeyError:
+        message = INFO_TEXT[DEFAULT_LANGUAGE]
+        try:
+            bot.sendMessage(update.message.chat_id, text=message)
+        except TelegramError:
+            return
 
 
 def main():
