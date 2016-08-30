@@ -2,7 +2,6 @@ import pickle
 import sqlite3
 import time
 from admin import settings
-from telegram.ext import Job
 
 
 class Participant:
@@ -268,23 +267,4 @@ class Participant:
     def pause(self):
         self.active_ = False
         self.job_ = None
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,14 +1,29 @@
+"""
+diary-survey-bot
+
+Developed in association with Uni-Graz.
+Idea: Lisa Eckerstorfer MSc.
+Supervisor: Univ.-Prof. Dr.phil. Dipl.-Psych. Katja Corcoran
+
+Software-Design: Philipp Feldner (Computer Science Student TU Graz)
+Documentation: https://github.com/philippfeldner/diary-survey-bot
+
+Telegram API:
+https://github.com/python-telegram-bot/python-telegram-bot
+"""
+
+
 from telegram import Bot, Update, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import TelegramError
-
-from survey.keyboard_presets import languages
 
 from survey.data_set import DataSet
 from survey.questions import initialize_participants
 from survey.questions import question_handler
 from survey.questions import continue_survey
 from survey.participant import Participant
+
+from survey.keyboard_presets import languages
 
 from admin.settings import INFO_TEXT
 from admin.settings import DEFAULT_LANGUAGE
@@ -29,6 +44,9 @@ def start(bot: Bot, update: Update, job_queue):
         data_set.participants[update.message.chat_id] = participant
     else:
         user = data_set.participants[update.message.chat_id]
+        # A user that has already completed the survey tries to do it again.
+        if user.pointer_ == 0xFFFF:
+            return
         continue_survey(user, bot, job_queue)
 
 
@@ -81,8 +99,10 @@ def info(bot: Bot, update: Update):
 
 
 def main():
-    updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
-    dp = updater.dispatcher
+    # Enter your own token here
+    updater = Updater("")
+
+    p = updater.dispatcher
     global data_set
     data_set = initialize_participants(dp.job_queue)
     dp.add_handler(CommandHandler('start', start, pass_job_queue=True))

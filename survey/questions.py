@@ -1,7 +1,6 @@
 import sqlite3
 import pickle
 import shutil
-import os
 
 from datetime import datetime
 from pytz import timezone
