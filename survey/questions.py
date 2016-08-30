@@ -44,6 +44,8 @@ def calc_delta_t(time, days, zone=None):
         current = datetime.now()
     future = datetime(current.year, current.month, current.day, int(hh), int(mm), tzinfo=current.tzinfo)
     offset = future - current
+    if offset.days == -1 and days > 0:
+        days -= 1
     return offset.seconds + (days * 86400)
 
 
