@@ -102,7 +102,7 @@ def main():
     # Enter your own token here
     updater = Updater("")
 
-    p = updater.dispatcher
+    dp = updater.dispatcher
     global data_set
     data_set = initialize_participants(dp.job_queue)
     dp.add_handler(CommandHandler('start', start, pass_job_queue=True))
