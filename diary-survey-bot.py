@@ -28,6 +28,7 @@ from survey.keyboard_presets import languages
 from admin.settings import INFO_TEXT
 from admin.settings import STOP_TEXT
 from admin.settings import DEFAULT_LANGUAGE
+from admin.settings import DELETE
 
 data_set = None
 
@@ -52,6 +53,9 @@ def start(bot: Bot, update: Update, job_queue):
 
 
 def delete(bot: Bot, update: Update):
+    if not DELETE:
+        return
+
     global data_set
     chat_id = update.message.chat_id
     user = data_set.participants[update.message.chat_id]
