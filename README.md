@@ -153,7 +153,7 @@ events. List of all (current) commands and their usage:
   ],
   "condition_required": [["Previous answer", #IDENTIFIER]],
   "condition": [["Sample Choice 1", #IDENTIFIER]],
-  "commands": []
+  "commands": [["FORCE_KB_REPLY"],["COUNTRY"]]
 }
 ```
 
