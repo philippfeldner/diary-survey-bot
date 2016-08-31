@@ -14,9 +14,12 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Usage](#usage)
-  - [Question format](#question format)
+  - [Question format](#question-format)
   - [Settings](#settings)
-- [Technical details](#technical details)
+- [Technical details](#technical-details)
+  - [Database](#database)
+  - [CSV](#csv)
+  - [Development](#development)
 
 
 ## Introduction:
