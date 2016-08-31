@@ -13,7 +13,7 @@ https://github.com/python-telegram-bot/python-telegram-bot
 """
 
 
-from telegram import Bot, Update, ReplyKeyboardMarkup
+from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import TelegramError
 
@@ -26,6 +26,7 @@ from survey.participant import Participant
 from survey.keyboard_presets import languages
 
 from admin.settings import INFO_TEXT
+from admin.settings import STOP_TEXT
 from admin.settings import DEFAULT_LANGUAGE
 
 data_set = None
@@ -70,7 +71,11 @@ def stop(bot: Bot, update: Update):
     user = data_set.participants[update.message.chat_id]
     user.pause()
     try:
-        bot.send_message(chat_id=chat_id, text="You have been set to inactive. If you want to continue enter /start")
+        message = STOP_TEXT[user.language_]
+        bot.send_message(chat_id=chat_id, text=message, reply_markup=ReplyKeyboardHide())
+    except KeyError:
+        message = STOP_TEXT[DEFAULT_LANGUAGE]
+        bot.send_message(chat_id=chat_id, text=message, reply_markup=ReplyKeyboardHide())
     except TelegramError as error:
         if error.message == 'Unauthorized':
             user.pause()

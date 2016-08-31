@@ -28,6 +28,27 @@ INFO_TEXT = {
                 "es": "pokemon@uni-graz.at"
             }
 
+STOP_TEXT = {
+                "de": "Vielen Dank für deine Teilnahme! "
+                      "Wenn du möchtest würden wir uns über eine Nachricht freuen,"
+                      " warum du nicht mehr weitermachen willst. Falls du es dir anders"
+                      " überlegst, kannst du jederzeit wieder teilnehmen, indem du uns eine"
+                      " Nachricht mit \"/start\" schickst.",
+                "en": "Thank you for your participation! If "
+                      "you want to, we would appreciate a message "
+                      "why you don't feel like continuing the study. "
+                      "Anyway, if you change your mind, you can resume "
+                      "by sending us a message with the word \"/start\".",
+                "es": "Gracias por tu participación. Si lo deseas, sería de gran utilidad"
+                      " si nos haces saber por qué no deseas continuar con el estudio."
+                      " De todas maneras, si cambias de opinión y deseas seguir participando,"
+                      " envíanos un mensaje que diga: \"/start\"",
+                "fr": "Merci beaucoup pour ta participation. Si tu le souhaites,"
+                      " envoie-nous un message donnant les raisons pour lesquelles"
+                      " tu préfères arrêter de participer. Si tu changes d'avis, envoie-nous"
+                      " un message avec le mot \"/start\", tu pourras recommencer tout de suite."
+            }
+
 
 
 
