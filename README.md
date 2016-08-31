@@ -1,5 +1,5 @@
 # diary-survey-bot
-*********
+
 **Developed in association with Uni-Graz.**  
 **Idea:** Lisa Eckerstorfer MSc.  
 **Supervisor:** Univ.-Prof. Dr.phil. Dipl.-Psych. Katja Corcoran
@@ -8,7 +8,7 @@
 **Twitter/Telegram:** @PhilippFeldner  
 **Email:** [feldnerphilipp@gmail.com](mailto:feldnerphilipp@gmail.com)  
 **Telegram API:** https://github.com/python-telegram-bot/python-telegram-bot
-*********
+
 
 ## Table of Contents:
 - [Introduction](#introduction)
