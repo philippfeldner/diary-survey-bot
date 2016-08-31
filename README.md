@@ -5,7 +5,7 @@
 **Supervisor:** Univ.-Prof. Dr.phil. Dipl.-Psych. Katja Corcoran
 
 **Software-Design:** Philipp Feldner (Computer Science Student TU Graz)  
-**Twitter/Telegram:** @PhilippFeldner  
+**Twitter/Telegram:** [@PhilippFeldner](https://twitter.com/PhilippFeldner)  
 **Email:** [feldnerphilipp@gmail.com](mailto:feldnerphilipp@gmail.com)  
 **Telegram API:** https://github.com/python-telegram-bot/python-telegram-bot
 
