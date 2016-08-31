@@ -151,8 +151,8 @@ events. List of all (current) commands and their usage:
     ["Sample Choice 1"],
     ["Sample Choice 2"]
   ],
-  "condition_required": [["Previous answer", #IDENTIFIER]],
-  "condition": [["Sample Choice 1", #IDENTIFIER]],
+  "condition_required": [["Previous answer", "#IDENTIFIER"]],
+  "condition": [["Sample Choice 1", "#IDENTIFIER"]],
   "commands": [["FORCE_KB_REPLY"],["COUNTRY"]]
 }
 ```
