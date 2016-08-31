@@ -26,8 +26,8 @@
 
 This is a chat-bot for the messaging app [Telegram](https://telegram.org/).
 It is intended to conduct surveys/studies that strech over longer time periods.
-Since there was no similar tool around to conduct those type of studies we decided
-to develope one on our own. The messaging app Telegram seemed fitting, because of
+Since there was no similar tool around to conduct those type of studies we
+developed one on our own. The messaging app Telegram seemed fitting, because of
 its decent API and popularity. The bot is written in python3 and uses this
 [API](https://github.com/python-telegram-bot/python-telegram-bot).
 
