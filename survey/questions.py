@@ -219,8 +219,8 @@ def store_answer(user, message, question, job_queue):
     message = message.replace(';', ',')
 
     with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+', newline='') as user_file:
-        columns = [user.language_, user.gender_, user.age_, user.country_, user.timezone_, user.day_, user.block_,
-                   timestamp, user.question_,  q_text, message]
+        columns = [str(user.chat_id_), user.language_, user.gender_, user.age_, user.country_, user.timezone_,
+                   user.day_, user.block_, user.question_, timestamp, q_text, message]
         writer = csv.writer(user_file, delimiter=';')
         writer.writerow(columns)
 

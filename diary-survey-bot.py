@@ -30,6 +30,8 @@ from admin.settings import STOP_TEXT
 from admin.settings import DEFAULT_LANGUAGE
 from admin.settings import DELETE
 
+import os
+
 data_set = None
 
 
@@ -61,6 +63,17 @@ def delete(bot: Bot, update: Update):
     user = data_set.participants[update.message.chat_id]
     user.active_ = False
     user.delete_participant()
+
+    try:
+        os.remove('survey/data_incomplete/' + str(user.chat_id_) + '.csv')
+    except OSError:
+        pass
+
+    try:
+        os.remove('survey/data_complete/' + str(user.chat_id_) + '.csv')
+    except OSError:
+        pass
+
     del data_set.participants[update.message.chat_id]
     try:
         bot.send_message(chat_id=chat_id, text="Successfully deleted DB entry and user data. To restart enter /start")
@@ -115,7 +128,7 @@ def main():
     global data_set
     data_set = initialize_participants(dp.job_queue)
     dp.add_handler(CommandHandler('start', start, pass_job_queue=True))
-    dp.add_handler(CommandHandler('delete', delete))
+    dp.add_handler(CommandHandler('delete_me', delete))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))
     dp.add_handler(MessageHandler(filters=[Filters.text], callback=msg_handler, pass_job_queue=True))
