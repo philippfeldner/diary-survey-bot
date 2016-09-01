@@ -122,7 +122,7 @@ def info(bot: Bot, update: Update):
 
 def main():
     # Enter your own token here
-    updater = Updater("")
+    updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
 
     dp = updater.dispatcher
     global data_set

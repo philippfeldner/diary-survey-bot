@@ -10,3 +10,38 @@ User:	19965814	unregistered.	12:06:50 08/31/16
 User:	19965814	registered.	12:06:51 08/31/16
 User:	19965814	unregistered.	12:09:43 08/31/16
 User:	19965814	registered.	12:09:46 08/31/16
+QUEUE		next block in 68607 seconds. User: 15342433
+QUEUE		next block in 58587 seconds. User: 74921916
+QUEUE		next block in 68067 seconds. User: 234173643
+QUEUE		next block in 62487 seconds. User: 235519443
+QUEUE		next block in 69687 seconds. User: 239949627
+QUEUE		next block in 59326 seconds. User: 15342433
+QUEUE		next block in 68566 seconds. User: 74921916
+QUEUE		next block in 68566 seconds. User: 234173643
+QUEUE		next block in 68326 seconds. User: 235519443
+QUEUE		next block in 68026 seconds. User: 239949627
+QUEUE		next block in 58814 seconds. User: 15342433
+QUEUE		next block in 66314 seconds. User: 74921916
+QUEUE		next block in 67334 seconds. User: 234173643
+QUEUE		next block in 58754 seconds. User: 235519443
+QUEUE		next block in 72074 seconds. User: 239949627
+QUEUE		next block in 67295 seconds. User: 15342433
+QUEUE		next block in 68435 seconds. User: 74921916
+QUEUE		next block in 63575 seconds. User: 234173643
+QUEUE		next block in 57035 seconds. User: 235519443
+QUEUE		next block in 70355 seconds. User: 239949627
+QUEUE		next block in 59832 seconds. User: 15342433
+QUEUE		next block in 59352 seconds. User: 74921916
+QUEUE		next block in 61152 seconds. User: 234173643
+QUEUE		next block in 66132 seconds. User: 235519443
+QUEUE		next block in 71412 seconds. User: 239949627
+QUEUE		next block in 68373 seconds. User: 15342433
+QUEUE		next block in 64053 seconds. User: 74921916
+QUEUE		next block in 67173 seconds. User: 234173643
+QUEUE		next block in 60813 seconds. User: 235519443
+QUEUE		next block in 68313 seconds. User: 239949627
+QUEUE		next block in 56445 seconds. User: 15342433
+QUEUE		next block in 61305 seconds. User: 74921916
+QUEUE		next block in 68325 seconds. User: 234173643
+QUEUE		next block in 66825 seconds. User: 235519443
+QUEUE		next block in 70485 seconds. User: 239949627

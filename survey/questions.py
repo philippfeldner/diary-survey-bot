@@ -356,17 +356,18 @@ def get_keyboard(choice, user):
 # answer is checked if it is really a choice
 # from the ReplyKeyboard.
 def valid_answer(question, message, user):
+
     commands = question['commands']
     if ['FORCE_KB_REPLY'] not in commands or question['choice'] == []:
         return True
 
-    if question['choice'][0][0] == 'KB_TIMEZONE':
-        return ReplyKeyboardMarkup(kb_presets.generate_timezone_kb(user.country_))
-
     try:
         choice = CUSTOM_KEYBOARDS[question['choice'][0][0]]
     except KeyError:
-        choice = question['choice']
+        if question['choice'][0][0] == 'KB_TIMEZONE':
+            choice = kb_presets.generate_timezone_kb(user.country_)
+        else:
+            choice = question['choice']
 
     if [message] in choice:
         return True
@@ -449,12 +450,12 @@ def initialize_participants(job_queue: JobQueue):
         for row in participants:
             user = Participant(row[0], init=False)
             user.conditions_ = pickle.loads(row[1])
-            user.age_ = row[2]
+            user.timezone_ = row[2]
             user.country_ = row[3]
             user.gender_ = row[4]
             user.language_ = row[5]
             user.question_ = row[6]
-            user.timezone_ = row[7]
+            user.age_ = row[7]
             user.day_ = row[8]
             user.q_idle_ = row[9]
             user.active_ = row[10]
