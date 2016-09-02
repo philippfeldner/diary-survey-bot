@@ -466,7 +466,7 @@ def initialize_participants(job_queue: JobQueue):
             if user.language_ != '':
                 q_set = user_map.return_question_set_by_language(user.language_)
                 user.q_set_ = q_set
-                if user.pointer_ > 0:
+                if user.country_ != '' and user.timezone_ != '' and user.gender_ != '':
                     user.set_next_block()
                     next_day = user.set_next_block()
                     if next_day is None and user.active_ and user.pointer_ > -1:
