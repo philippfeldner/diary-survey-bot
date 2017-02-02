@@ -18,6 +18,7 @@ class Participant:
     conditions_ = []
     next_block = None
     job_ = None
+    data_set_ = {}
 
     q_set_ = None
     auto_queue_ = False
@@ -31,10 +32,10 @@ class Participant:
         if init:
             try:
                 db = sqlite3.connect('survey/participants.db')
-                db.execute("INSERT INTO participants (ID, conditions, timezone,"
+                db.execute("INSERT INTO participants (ID, data_set, conditions, timezone,"
                            "country, gender, language, question, day, block, age, q_idle, active, pointer)"
-                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, pickle.dumps([]), '', '', '', '', -1, 1, -1, -1, 0, 1, 0))
+                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                           (chat_id, pickle.dumps({}), pickle.dumps([]), '', '', '', '', -1, 1, -1, -1, 0, 1, 0))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
@@ -73,6 +74,18 @@ class Participant:
         try:
             db = sqlite3.connect('survey/participants.db')
             db.execute("UPDATE participants SET gender=? WHERE ID=?", (gender, self.chat_id_))
+            db.commit()
+            db.close()
+        except sqlite3.Error as error:
+            print(error)
+        return
+
+    def set_data_set(self, data_set):
+        self.data_set_ = data_set
+        data_set = pickle.dumps(data_set)
+        try:
+            db = sqlite3.connect('survey/participants.db')
+            db.execute("UPDATE participants SET data_set=? WHERE ID=?", (data_set, self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
@@ -267,4 +280,3 @@ class Participant:
     def pause(self):
         self.active_ = False
         self.job_ = None
-

@@ -5,7 +5,7 @@ ADMINS = ['0x0', '0x0']
 DEBUG = True
 
 # /delete command enabled/disabled
-DELETE = False
+DELETE = True
 
 # For testing purposes. Sets all block scheduling to x seconds.
 # To deactivate set it to False (0)

@@ -1,6 +1,7 @@
 import sqlite3
 import pickle
 import shutil
+import re
 
 from datetime import datetime
 from pytz import timezone
@@ -13,11 +14,11 @@ from admin.settings import SCHEDULE_INTERVALS
 from admin.settings import QUICK_TEST
 from admin.settings import DEFAULT_TIMEZONE
 from admin.debug import debug
+from admin.survey_specific import survey_function
 
 from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide, Emoji
 from telegram.ext import Job, JobQueue
 from telegram import TelegramError
-
 
 from survey.data_set import DataSet
 from survey.participant import Participant
@@ -121,7 +122,6 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 user.set_q_idle(True)
                 return
             # Storing the answer and moving on the next question
-
             store_answer(user, update.message.text, q_prev, job_queue)
             user.set_q_idle(False)
         else:
@@ -168,17 +168,17 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 def store_answer(user, message, question, job_queue):
     commands = question['commands']
     if message != '':
-        for [element] in commands:
+        for element in commands:
             # -- DB TRIGGER for storing important user data -- #
-            if element == "TIMEZONE":
+            if element[0] == "TIMEZONE":
                 user.set_timezone(message)
-            elif element == "COUNTRY":
+            elif element[0] == "COUNTRY":
                 user.set_country(message)
-            elif element == "GENDER":
+            elif element[0] == "GENDER":
                 user.set_gender(message)
-            elif element == "AGE":
+            elif element[0] == "AGE":
                 user.set_age(message)
-            elif element == "Q_ON":
+            elif element[0] == "Q_ON":
                 user.auto_queue_ = True
                 next_day = user.set_next_block()
                 if next_day is None:
@@ -193,6 +193,17 @@ def store_answer(user, message, question, job_queue):
                 new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
                 user.job_ = new_job
                 job_queue.put(new_job)
+            elif element[0] == "DATA":
+                # Todo maybe further type checks!
+                if element[2] == "ADD":
+                    if element[1] not in user.data_set_:
+                        user.data_set_[element[1]] = []
+                    user.data_set_[element[1]] += [int(message)]
+                    user.set_data_set(user.data_set_)
+                elif element[2] == "CLEAR" or element[2] == "CLR":
+                    if element[1] in user.data_set_:
+                        del user.data_set_[element[1]]
+                        user.set_data_set(user.data_set_)
 
         condition = question["condition"]
         for element in condition:
@@ -238,7 +249,7 @@ def queue_next(bot: Bot, job: Job):
     user.block_complete_ = False
     user.job_ = None
 
-    # Stores all unaswered questions to csv
+    # Stores all unanswered questions to csv
     prev = user.q_set_[user.pointer_]["blocks"][user.block_]["questions"]
     for i in range(user.question_, len(prev)):
         user.increase_question()
@@ -328,7 +339,8 @@ def find_next_question(user):
         while not user.check_requirements(element[user.question_]):
             store_answer(user, '', element[user.question_], None)
             user.increase_question()
-        return element[user.question_]
+        question = parse_question(user, element[user.question_])
+        return question
     except IndexError:
         return None
 
@@ -356,7 +368,6 @@ def get_keyboard(choice, user):
 # answer is checked if it is really a choice
 # from the ReplyKeyboard.
 def valid_answer(question, message, user):
-
     commands = question['commands']
     if ['FORCE_KB_REPLY'] not in commands or question['choice'] == []:
         return True
@@ -399,6 +410,17 @@ def finalize(bot: Bot, job: Job):
     dstfile = 'survey/data_complete/' + str(user.chat_id_) + '.csv'
     shutil.copyfile(srcfile, dstfile)
     return
+
+
+# Todo
+def parse_question(user, question):
+    exp = u'<<(.*?)\|(.*?)\|(.*?)>>'
+    sol = re.findall(exp, question["text"])
+    for element in sol:
+        element = list(element)
+        question["text"] = question["text"].replace("<<" + element[0] + "|" + element[1] + "|" + element[2] + ">>",
+                                                    survey_function(user, user.data_set_[element[1]], element[2]))
+    return question
 
 
 def continue_survey(user, bot, job_queue):
@@ -447,21 +469,23 @@ def initialize_participants(job_queue: JobQueue):
         cursor.execute("SELECT * FROM participants ORDER BY (ID)")
         participants = cursor.fetchall()
         # print(participants)
+
         for row in participants:
-            user = Participant(row[0], init=False)
-            user.conditions_ = pickle.loads(row[1])
-            user.timezone_ = row[2]
-            user.country_ = row[3]
-            user.gender_ = row[4]
-            user.language_ = row[5]
-            user.question_ = row[6]
-            user.age_ = row[7]
-            user.day_ = row[8]
-            user.q_idle_ = row[9]
-            user.active_ = row[10]
-            user.block_ = row[11]
-            user.pointer_ = row[12]
-            user_map.participants[row[0]] = user
+            user = Participant(row[1], init=False)
+            user.conditions_ = pickle.loads(row[2])
+            user.data_set_ = pickle.loads(row[0])
+            user.timezone_ = row[3]
+            user.country_ = row[4]
+            user.gender_ = row[5]
+            user.language_ = row[6]
+            user.question_ = row[7]
+            user.age_ = row[8]
+            user.day_ = row[9]
+            user.q_idle_ = row[10]
+            user.active_ = row[11]
+            user.block_ = row[12]
+            user.pointer_ = row[13]
+            user_map.participants[row[1]] = user
 
             if user.language_ != '':
                 q_set = user_map.return_question_set_by_language(user.language_)
@@ -480,9 +504,6 @@ def initialize_participants(job_queue: JobQueue):
                     debug('QUEUE', 'next block in ' + str(due) + ' seconds. User: ' + str(user.chat_id_), log=True)
                     new_job = Job(queue_next, due, repeat=False, context=[user, job_queue])
                     job_queue.put(new_job)
-
     except sqlite3.Error as error:
         print(error)
     return user_map
-
-
