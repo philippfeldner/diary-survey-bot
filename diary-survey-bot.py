@@ -13,7 +13,7 @@ https://github.com/python-telegram-bot/python-telegram-bot
 """
 
 
-from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide
+from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import TelegramError
 
@@ -89,10 +89,10 @@ def stop(bot: Bot, update: Update):
     user.pause()
     try:
         message = STOP_TEXT[user.language_]
-        bot.send_message(chat_id=chat_id, text=message, reply_markup=ReplyKeyboardHide())
+        bot.send_message(chat_id=chat_id, text=message, reply_markup=ReplyKeyboardRemove())
     except KeyError:
         message = STOP_TEXT[DEFAULT_LANGUAGE]
-        bot.send_message(chat_id=chat_id, text=message, reply_markup=ReplyKeyboardHide())
+        bot.send_message(chat_id=chat_id, text=message, reply_markup=ReplyKeyboardRemove())
     except TelegramError as error:
         if error.message == 'Unauthorized':
             user.pause()
@@ -122,7 +122,7 @@ def info(bot: Bot, update: Update):
 
 def main():
     # Enter your own token here
-    updater = Updater("204036732:AAFFoO3Ew9D3nZ_gtXBGDXYpaHwPLn-oQb4")
+    updater = Updater("")
 
     dp = updater.dispatcher
     global data_set
@@ -131,11 +131,11 @@ def main():
     dp.add_handler(CommandHandler('delete_me', delete))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))
-    dp.add_handler(MessageHandler(filters=[Filters.text], callback=msg_handler, pass_job_queue=True))
+    # TODO handle warning: is getting deprecated
+    dp.add_handler(MessageHandler(Filters.text, callback=msg_handler, pass_job_queue=True))
 
     updater.start_polling()
     updater.idle()
-
 
 if __name__ == '__main__':
     main()

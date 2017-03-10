@@ -16,7 +16,7 @@ from admin.settings import DEFAULT_TIMEZONE
 from admin.debug import debug
 from admin.survey_specific import survey_function
 
-from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardHide, Emoji
+from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, Emoji
 from telegram.ext import Job, JobQueue
 from telegram import TelegramError
 
@@ -223,6 +223,7 @@ def store_answer(user, message, question, job_queue):
         except UnknownTimeZoneError:
             timestamp = 'Invalid Timezone'
 
+    q_var = question['variable']
     q_text = question['text']
     q_text = q_text.replace('\n', ' ')
     q_text = q_text.replace(';', ',')
@@ -231,7 +232,7 @@ def store_answer(user, message, question, job_queue):
 
     with open('survey/data_incomplete/' + str(user.chat_id_) + '.csv', 'a+', newline='') as user_file:
         columns = [str(user.chat_id_), user.language_, user.gender_, user.age_, user.country_, user.timezone_,
-                   user.day_, user.block_, user.question_, timestamp, q_text, message]
+                   user.day_, user.block_, user.question_, timestamp, q_text, message, q_var]
         writer = csv.writer(user_file, delimiter=';')
         writer.writerow(columns)
 
@@ -350,7 +351,7 @@ def find_next_question(user):
 # more complex ones are generated in survey/keyboard_presets.py
 def get_keyboard(choice, user):
     if choice == []:
-        return ReplyKeyboardHide()
+        return ReplyKeyboardRemove()
 
     # -------- Place to register dynamic keyboards -------- #
     if choice[0][0] == 'KB_TIMEZONE':
@@ -464,6 +465,7 @@ def continue_survey(user, bot, job_queue):
 def initialize_participants(job_queue: JobQueue):
     user_map = DataSet()
     try:
+        # Todo: auto-initalize function
         db = sqlite3.connect('survey/participants.db')
         cursor = db.cursor()
         cursor.execute("SELECT * FROM participants ORDER BY (ID)")

@@ -240,11 +240,11 @@ CUSTOM_KEYBOARDS = {
 
 # -------- Place to define values for Emojis for CSV -------- #
 TRANSLATE_EMOJI = {
-                    Emoji.FROWNING_FACE_WITH_OPEN_MOUTH: '1',
-                    Emoji.CONFUSED_FACE: '2',
-                    Emoji.NEUTRAL_FACE: '3',
-                    Emoji.SMILING_FACE_WITH_SMILING_EYES: '4',
-                    Emoji.SMILING_FACE_WITH_OPEN_MOUTH_AND_SMILING_EYES: '5'
+                    '😦': '1',
+                    '😕': '2',
+                    '😐': '3',
+                    '😊': '4',
+                    '😅': '5',
                   }
 
 
