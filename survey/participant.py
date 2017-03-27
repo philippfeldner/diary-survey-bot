@@ -136,10 +136,10 @@ class Participant:
             print(error)
         return self.timezone_
 
-    def add_conditions(self, conditions):
-        if conditions == []:
+    def add_conditions(self, condition):
+        if condition == []:
             return
-        self.conditions_ += conditions
+        self.conditions_.append(condition)
         try:
             db = sqlite3.connect('survey/participants.db')
             cond = pickle.dumps(self.conditions_)
