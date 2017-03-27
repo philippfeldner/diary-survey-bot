@@ -199,9 +199,7 @@ countries = [
 
 # -------- Place to define static keyboards -------- #
 languages = [["Deutsch"], ["English"], ["Español"], ["Français"]]
-emoji_scale_5 = [[Emoji.FROWNING_FACE_WITH_OPEN_MOUTH], [Emoji.CONFUSED_FACE],
-                 [Emoji.NEUTRAL_FACE], [Emoji.SMILING_FACE_WITH_SMILING_EYES],
-                 [Emoji.SMILING_FACE_WITH_OPEN_MOUTH_AND_SMILING_EYES]]
+emoji_scale_5 = [['😦'], ['😕'], ['😐'], ['😊'], ['😅']]
 
 
 # -------- Place to register functions for dynamic keyboards -------- #
