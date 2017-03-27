@@ -130,18 +130,19 @@ created within the python file survey/keyboard_presets.py and have to be
 registered in the CUSTOM_KEYBOARD dictionary.
 - **condition:** Conditions can be used to give questions certain requirements.
 If a user does not fulfill given requirements the question will be skipped for him.
-A condition is defined as a list, that contains the desired answer and a unique
-identifier to avoid collisions. Multiple conditions per question are supported too.
+Multiple conditions are possible.
 - **condition_required:** Previously defined conditions can be put here and
 if the user does not fulfill them the question will be skipped for him.
 - **commands:** Commands are basically signals for the program to trigger special
 events. List of all (current) commands and their usage:  
   -  *FORCE_KB_REPLY:* The user has to choose an option from the Keyboard to proceed.  
   -  *Q_ON:* See BLOCK settings - MANDATORY  
-  -  *COUNTRY:* Signals, that the user will respond with his country:  Relevant for database.  
-  -  *AGE:* Signals, that the user will respond with his age:      Relevant for database.  
-  -  *GENDER:* Signals, that the user will respond with his gender:   Relevant for database.  
-  -  *TIMEZONE:* Signals, that the user will respond with his timezone: Relevant for database.
+  -  *COUNTRY:* Signals that the user will respond with his country:  Relevant for database.  
+  -  *AGE:* Signals that the user will respond with his age:      Relevant for database.  
+  -  *GENDER:* Signals that the user will respond with his gender:   Relevant for database.  
+  -  *TIMEZONE:* Signals that the user will respond with his timezone: Relevant for database.
+  - *["DATA", "DATA_NAME", "COMMAND"]:* Signals that a certain operation shall be executed onto a
+    custom datastructure. (See Survey Specific Functions).
 
 *Example question:*
 ```
@@ -151,7 +152,7 @@ events. List of all (current) commands and their usage:
     ["Sample Choice 1"],
     ["Sample Choice 2"]
   ],
-  "condition_required": [["Previous answer", "#IDENTIFIER"]],
+  "condition_required": ["#IDENTIFIER"],
   "condition": [["Sample Choice 1", "#IDENTIFIER"]],
   "commands": [["FORCE_KB_REPLY"],["COUNTRY"]]
 }
@@ -168,7 +169,7 @@ Custom keyboards are defined in survey/keyboard_presets.py
 - **DEBUG:** Debug mode on/off (bool). For debugging purposes. If activated it
 also stores the debug info to a log.txt file.
 - **DELETE:** Activates (bool) the /delete_me command that allows the user to
-withdraw himself from the study and deltes all his records, including csv and
+withdraw himself from the study and deletes all his records, including csv and
 database entries.
 - **QUICK_TEST:** For testing purposes. If set to a different value than False
 it reduces the time of the scheduling blocks to n seconds.
@@ -198,16 +199,13 @@ that maps every country and its (possibly multiple) timezones. When creating
 dynamic keyboards register them in the CUSTOM\_KEYBOARD dictionary and I advice
 you to use the prefix KB\_ for easier recognition.
 
-#### Emojis in keyboards:
+#### Survey specific functions:
+If your survey requires custom replies depending on user answers ... #TODO
 
-If you want your keyboard to contain emojis (e.g. a scale) you should defined
-them in the survey/keyboard\_presets.py file. Telegram Emojis are defined in
-the python package telegram.Emoji and you can access them like this:
-Emoji.EMOJI\_NAME. You can look up the emoji names
-[here](http://unicode.org/emoji/charts/full-emoji-list.html).
-If you later want to translate your emojis for storing in the
-csv you can map the emojis to a string in the TRANSLATE\_EMOJI
-dict that is also located in survey/keyboard\_presets.py
+#### Emojis in keyboards:
+Emojis can simply be added as Unicode symbols into your text.
+[Link](http://unicode.org/emoji/charts/full-emoji-list.html).
+
 
 ## Technical Details:
 
