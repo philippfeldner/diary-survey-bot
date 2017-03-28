@@ -5,29 +5,28 @@ from admin import settings
 
 
 class Participant:
-    chat_id_ = 0
-    language_ = ''
-    gender_ = ''
-    country_ = ''
-    day_ = 0
-    block_ = -1
-    question_ = -1
-    pointer_ = 0
-    age_ = -1
-    timezone_ = ''
-    conditions_ = []
-    next_block = None
-    job_ = None
-    data_set_ = {}
-
-    q_set_ = None
-    auto_queue_ = False
-    block_complete_ = False
-    q_idle_ = False
-    active_ = True
-    last_ = False
-
     def __init__(self, chat_id=None, init=True):
+        self.chat_id_ = 0
+        self.language_ = ''
+        self.gender_ = ''
+        self.country_ = ''
+        self.day_ = 0
+        self.block_ = -1
+        self.question_ = -1
+        self.pointer_ = 0
+        self.age_ = -1
+        self.timezone_ = ''
+        self.conditions_ = []
+        self.next_block = None
+        self.job_ = None
+        self.data_set_ = {}
+
+        self.q_set_ = None
+        self.auto_queue_ = False
+        self.block_complete_ = False
+        self.q_idle_ = False
+        self.active_ = True
+        self.last_ = False
         self.chat_id_ = chat_id
         if init:
             try:
@@ -142,8 +141,8 @@ class Participant:
         self.conditions_.append(condition)
         try:
             db = sqlite3.connect('survey/participants.db')
-            cond = pickle.dumps(self.conditions_)
-            db.execute("UPDATE participants SET conditions=? WHERE ID=?", (cond, self.chat_id_))
+            db.execute("UPDATE participants SET conditions=? WHERE ID=?",
+                       (pickle.dumps(self.conditions_), self.chat_id_))
             db.commit()
             db.close()
         except sqlite3.Error as error:
@@ -272,10 +271,17 @@ class Participant:
         condition = question["condition_required"]
         if condition == []:
             return True
-        for element in condition:
-            if element not in self.conditions_:
-                return False
-        return True
+
+        if settings.CONDITION_SCHEME == "OR":
+            for element in condition:
+                if element in self.conditions_:
+                    return True
+            return False
+        elif settings.CONDITION_SCHEME == "AND":
+            for element in condition:
+                if element not in self.conditions_:
+                    return False
+            return True
 
     def pause(self):
         self.active_ = False

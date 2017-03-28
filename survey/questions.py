@@ -140,6 +140,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
         q_keyboard = get_keyboard(question["choice"], user)
         try:
             bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+            debug(flag="MSG", text=str(user.chat_id_) + ": " + message + "\n")
         except TelegramError as error:
             if error.message == 'Unauthorized':
                 user.pause()
@@ -194,7 +195,6 @@ def store_answer(user, message, question, job_queue):
                 user.job_ = new_job
                 job_queue.put(new_job)
             elif element[0] == "DATA":
-                # Todo maybe further type checks!
                 if element[2] == "ADD":
                     if element[1] not in user.data_set_:
                         user.data_set_[element[1]] = []
@@ -303,6 +303,7 @@ def queue_next(bot: Bot, job: Job):
     q_keyboard = get_keyboard(question["choice"], user)
     try:
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+        debug(flag="MSG", text=str(user.chat_id_) + ": " + message + "\n")
     except TelegramError as error:
         if error.message == 'Unauthorized':
             user.pause()
@@ -413,7 +414,6 @@ def finalize(bot: Bot, job: Job):
     return
 
 
-# Todo
 def parse_question(user, question):
     exp = u'<<(.*?)\|(.*?)\|(.*?)>>'
     sol = re.findall(exp, question["text"])
@@ -436,6 +436,7 @@ def continue_survey(user, bot, job_queue):
         q_keyboard = get_keyboard(question["choice"], user)
         try:
             bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
+            debug(flag="MSG", text=str(user.chat_id_) + ": " + message + "\n")
         except TelegramError as error:
             if error.message == 'Unauthorized':
                 user.pause()

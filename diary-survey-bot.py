@@ -131,7 +131,6 @@ def main():
     dp.add_handler(CommandHandler('delete_me', delete))
     dp.add_handler(CommandHandler('stop', stop))
     dp.add_handler(CommandHandler('info', info))
-    # TODO handle warning: is getting deprecated
     dp.add_handler(MessageHandler(Filters.text, callback=msg_handler, pass_job_queue=True))
 
     updater.start_polling()

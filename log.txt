@@ -1,0 +1,95 @@
+User:	19965814	unregistered.	14:02:06 03/28/17
+User:	19965814	registered.	14:02:13 03/28/17
+QUEUE		next block in 69704 seconds. User: 19965814
+User:	19965814	unregistered.	14:03:23 03/28/17
+User:	19965814	registered.	14:03:58 03/28/17
+QUEUE		next block in 30 seconds. User: 19965814
+QUEUE		next block in 30 seconds. User: 19965814
+QUEUE		next block in 30 seconds. User: 19965814
+QUEUE		next block in 30 seconds. User: 19965814
+User:	19965814	unregistered.	14:06:28 03/28/17
+User:	19965814	registered.	14:08:08 03/28/17
+User:	19965814	unregistered.	14:11:02 03/28/17
+User:	19965814	registered.	14:11:10 03/28/17
+User:	19965814	unregistered.	14:14:07 03/28/17
+User:	19965814	registered.	14:14:10 03/28/17
+User:	-164495892	registered.	18:53:53 03/28/17
+User:	19965814	unregistered.	20:32:10 03/28/17
+User:	19965814	registered.	20:32:12 03/28/17
+User:	19965814	unregistered.	20:32:45 03/28/17
+User:	19965814	registered.	20:33:00 03/28/17
+User:	-164495892	unregistered.	20:35:07 03/28/17
+User:	19965814	unregistered.	20:36:36 03/28/17
+User:	19965814	registered.	20:36:38 03/28/17
+User:	-164495892	unregistered.	20:38:03 03/28/17
+User:	-164495892	registered.	20:38:07 03/28/17
+User:	19965814	unregistered.	20:43:30 03/28/17
+User:	19965814	registered.	20:43:33 03/28/17
+User:	19965814	unregistered.	20:46:21 03/28/17
+User:	19965814	registered.	20:46:23 03/28/17
+User:	19965814	unregistered.	20:50:40 03/28/17
+User:	19965814	registered.	20:50:43 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	-164495892	unregistered.	20:51:04 03/28/17
+User:	-164495892	registered.	20:51:06 03/28/17
+User:	19965814	unregistered.	20:56:29 03/28/17
+User:	19965814	registered.	20:56:42 03/28/17
+User:	-164495892	registered.	20:57:59 03/28/17
+User:	-164495892	unregistered.	20:58:00 03/28/17
+User:	-164495892	registered.	20:59:53 03/28/17
+User:	19965814	registered.	21:00:28 03/28/17
+User:	-164495892	unregistered.	21:01:07 03/28/17
+User:	-164495892	registered.	21:01:13 03/28/17
+User:	19965814	registered.	21:01:59 03/28/17
+User:	-164495892	unregistered.	21:02:04 03/28/17
+User:	-164495892	registered.	21:02:06 03/28/17
+User:	19965814	unregistered.	21:05:21 03/28/17
+User:	19965814	registered.	21:05:22 03/28/17
+User:	-164495892	unregistered.	21:05:45 03/28/17
+User:	-164495892	registered.	21:05:48 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	19965814	registered.	21:06:43 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	-164495892	registered.	21:07:21 03/28/17
+User:	19965814	registered.	21:08:42 03/28/17
+User:	-164495892	registered.	21:09:43 03/28/17
+User:	19965814	registered.	21:13:54 03/28/17
+User:	-164495892	registered.	21:14:21 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	19965814	registered.	21:15:31 03/28/17
+QUEUE		next block in 90 seconds. User: -164495892
+User:	-164495892	unregistered.	21:16:04 03/28/17
+User:	-164495892	registered.	21:16:09 03/28/17
+User:	-164495892	unregistered.	21:16:46 03/28/17
+User:	-164495892	registered.	21:17:10 03/28/17
+User:	19965814	unregistered.	21:18:59 03/28/17
+User:	19965814	registered.	21:19:05 03/28/17
+QUEUE		next block in 90 seconds. User: -164495892
+User:	-164495892	unregistered.	21:19:35 03/28/17
+User:	-164495892	registered.	21:19:39 03/28/17
+User:	19965814	registered.	21:19:49 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	-164495892	registered.	21:19:54 03/28/17
+User:	-164495892	unregistered.	21:19:54 03/28/17
+User:	-164495892	registered.	21:19:55 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	19965814	registered.	21:23:46 03/28/17
+QUEUE		next block in 90 seconds. User: 19965814
+User:	19965814	registered.	21:25:14 03/28/17
+User:	-164495892	registered.	21:25:36 03/28/17
+User:	19965814	registered.	21:29:33 03/28/17
+User:	-164495892	registered.	21:32:51 03/28/17
+User:	56087207	registered.	21:37:43 03/28/17
+User:	56087207	registered.	21:38:24 03/28/17
+User:	19965814	registered.	21:38:55 03/28/17
+User:	56087207	registered.	21:43:19 03/28/17
+User:	19965814	registered.	21:44:07 03/28/17
+User:	56087207	registered.	21:46:24 03/28/17
+User:	19965814	registered.	21:48:25 03/28/17
+User:	56087207	registered.	21:50:30 03/28/17
+User:	19965814	unregistered.	22:07:12 03/28/17
+User:	19965814	registered.	22:07:16 03/28/17
+User:	56087207	unregistered.	22:07:42 03/28/17
+User:	56087207	registered.	22:07:45 03/28/17
+User:	19965814	registered.	22:11:18 03/28/17
+User:	56087207	registered.	22:12:06 03/28/17

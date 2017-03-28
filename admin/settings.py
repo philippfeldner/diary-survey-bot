@@ -17,6 +17,10 @@ DEFAULT_LANGUAGE = 'de'
 # Default timezone if something goes wrong.
 DEFAULT_TIMEZONE = 'Europe/Vienna'
 
+# OR    - One condition is enough
+# AND   - All conditions must hold
+CONDITION_SCHEME = 'OR'
+
 # Scheduling intervals for question blocks.
 SCHEDULE_INTERVALS = {
                         "RANDOM_1": ["08:00", "12:00"],
