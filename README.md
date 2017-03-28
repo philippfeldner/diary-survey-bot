@@ -200,7 +200,39 @@ dynamic keyboards register them in the CUSTOM\_KEYBOARD dictionary and I advice
 you to use the prefix KB\_ for easier recognition.
 
 #### Survey specific functions:
-If your survey requires custom replies depending on user answers ... #TODO
+If your survey requires custom replies you can generate them via your
+own python functions.
+- **Step 1:** Gathering Data: Likely you want to make your questions
+  depended on data from the users. Therefore every participant has
+  their own dictionary of datastructures. Using the command field
+  withing a question allows to create/delete a new datastructure.
+  Use the format ["DATA", "DATA_NAME", "COMMAND"]. "DATA" is the key
+  to recognize your intention. A unique "DATA_NAME" shall be chosen
+  to identify the datastructure. "COMMAND" shall be replaced by either
+  "ADD" or "CLR"(clear) to add the user response to the datastructure or
+  delete the datastructure entirely.
+- **Step 2:** Defining your own functions: Custom functions shall be
+  defined within admin/survey_specific.py. Every functions needs to
+  have a *unique* string as identifier to invoke them within the json
+  file. An example of how a function shall be registered:
+  ```
+  # Register your own functions here!
+  # Define them above.
+  def survey_function(user, data, function):
+      if function == "baseline":
+          return baseline_(data, user)
+      elif function == "another_function":
+          return another_function_(data, user)
+  ```
+  It makes sense to pass the parameters data and user to access
+  user specific data. The return value *needs* to be stringified
+  (str()) since it is going to be part of a message.
+- **Step 3:** Invoking a function within the json files:
+   <<DATA|data_name|function_name>> Placing this within a question
+   message will invoke your function and replace it with your return
+   value from this specific function.
+
+
 
 #### Emojis in keyboards:
 Emojis can simply be added as Unicode symbols into your text.
