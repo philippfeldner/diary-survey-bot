@@ -16,7 +16,7 @@ from admin.settings import DEFAULT_TIMEZONE
 from admin.debug import debug
 from admin.survey_specific import survey_function
 
-from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram import Bot, Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, Emoji
 from telegram.ext import Job, JobQueue
 from telegram import TelegramError
 
@@ -136,7 +136,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
 
     question = find_next_question(user)
     if question is not None:
-        message = parse_question(user, question["text"])
+        message = question["text"]
         q_keyboard = get_keyboard(question["choice"], user)
         try:
             bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
@@ -256,18 +256,20 @@ def queue_next(bot: Bot, job: Job):
         user.increase_question()
         q_prev = prev[i]
         store_answer(user, '', q_prev, job_queue)
-    user.set_question(0)
     try:
+        user.set_question(0)
         user.set_pointer(user.next_block[0])
         user.set_block(user.next_block[1])
         element = user.next_block[2]
-        user.set_day(user.q_set_[user.pointer_]['day'])
-        if ['MANDATORY'] in element['settings']:
-            user.auto_queue_ = False
-        else:
-            user.auto_queue_ = True
     except TypeError as t:
-        print(t)  # Todo possible bug!
+        print(t)
+
+    user.set_day(user.q_set_[user.pointer_]['day'])
+
+    if ['MANDATORY'] in element['settings']:
+        user.auto_queue_ = False
+    else:
+        user.auto_queue_ = True
 
     # Check if the user is currently active
     if not user.active_:
@@ -298,9 +300,8 @@ def queue_next(bot: Bot, job: Job):
         return
 
     # Sending the question
-    question = element["questions"][user.question_]
-
-    message = parse_question(user, question["text"])
+    question = parse_question(user, element["questions"][user.question_])
+    message = question["text"]
     q_keyboard = get_keyboard(question["choice"], user)
     try:
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
@@ -431,10 +432,10 @@ def continue_survey(user, bot, job_queue):
     q_day = q_set[user.pointer_]
     q_block = q_day["blocks"][user.block_]
     question = q_block["questions"][user.question_]
+    question = parse_question(user, question)
 
     if question is not None:
-        message = parse_question(user, question["text"])
-        
+        message = question["text"]
         q_keyboard = get_keyboard(question["choice"], user)
         try:
             bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
@@ -512,4 +513,3 @@ def initialize_participants(job_queue: JobQueue):
     except sqlite3.Error as error:
         print(error)
     return user_map
-
