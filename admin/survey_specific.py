@@ -3,7 +3,7 @@
 def baseline_(data, user):
     def mean(numbers):
         return float(sum(numbers)) / max(len(numbers), 1)
-    return str(int(mean(data)))
+    return str(int(mean(data)) + 3000)
 
 
 # Include your own functions here!

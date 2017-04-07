@@ -146,7 +146,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
                 user.pause()
 
         user.set_q_idle(True)
-    elif user.job_ is None:
+    elif user.auto_queue_ is False:
         user.block_complete_ = True
         next_day = user.set_next_block()
         if next_day is None:
