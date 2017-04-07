@@ -256,14 +256,11 @@ def queue_next(bot: Bot, job: Job):
         user.increase_question()
         q_prev = prev[i]
         store_answer(user, '', q_prev, job_queue)
-    try:
-        user.set_question(0)
-        user.set_pointer(user.next_block[0])
-        user.set_block(user.next_block[1])
-        element = user.next_block[2]
-    except TypeError as t:
-        print(t)
 
+    user.set_question(0)
+    user.set_pointer(user.next_block[0])
+    user.set_block(user.next_block[1])
+    element = user.next_block[2]
     user.set_day(user.q_set_[user.pointer_]['day'])
 
     if ['MANDATORY'] in element['settings']:
