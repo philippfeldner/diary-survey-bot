@@ -9,7 +9,7 @@ DELETE = True
 
 # For testing purposes. Sets all block scheduling to x seconds.
 # To deactivate set it to False (0)
-QUICK_TEST = False
+QUICK_TEST = 5
 
 # Default language if something goes wrong.
 DEFAULT_LANGUAGE = 'de'

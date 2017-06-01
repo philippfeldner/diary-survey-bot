@@ -134,7 +134,7 @@ def question_handler(bot: Bot, update: Update, user_map: DataSet, job_queue: Job
     if not user.active_:
         return
 
-    question = find_next_question(user)
+    message, question = find_next_question(user)
     if question is not None:
         message = question["text"]
         q_keyboard = get_keyboard(question["choice"], user)
@@ -297,8 +297,8 @@ def queue_next(bot: Bot, job: Job):
         return
 
     # Sending the question
-    question = parse_question(user, element["questions"][user.question_])
-    message = question["text"]
+    question = element["questions"][user.question_]
+    message = parse_question(user, element["questions"][user.question_])
     q_keyboard = get_keyboard(question["choice"], user)
     try:
         bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)
@@ -340,10 +340,11 @@ def find_next_question(user):
         while not user.check_requirements(element[user.question_]):
             store_answer(user, '', element[user.question_], None)
             user.increase_question()
-        question = parse_question(user, element[user.question_])
-        return question
+        question = element[user.question_]
+        message = parse_question(user, element[user.question_])
+        return message, question
     except IndexError:
-        return None
+        return None, None
 
 
 # This function returns the ReplyKeyboard for the user.
@@ -416,11 +417,17 @@ def finalize(bot: Bot, job: Job):
 def parse_question(user, question):
     exp = u'<<(.*?)\|(.*?)\|(.*?)>>'
     sol = re.findall(exp, question["text"])
+    message = question["text"]
     for element in sol:
         element = list(element)
-        question["text"] = question["text"].replace("<<" + element[0] + "|" + element[1] + "|" + element[2] + ">>",
-                                                    survey_function(user, user.data_set_[element[1]], element[2]))
-    return question
+        try:
+            replacement = survey_function(user, user.data_set_[element[1]], element[2])
+            message = question["text"].replace("<<" + element[0] + "|" + element[1] + "|" + element[2] + ">>",
+                                               replacement)
+        except KeyError:
+            print("The structure" + str(element[1]) + "is unknown!")
+
+    return message
 
 
 def continue_survey(user, bot, job_queue):
@@ -429,10 +436,9 @@ def continue_survey(user, bot, job_queue):
     q_day = q_set[user.pointer_]
     q_block = q_day["blocks"][user.block_]
     question = q_block["questions"][user.question_]
-    question = parse_question(user, question)
 
     if question is not None:
-        message = question["text"]
+        message = parse_question(user, question)
         q_keyboard = get_keyboard(question["choice"], user)
         try:
             bot.send_message(chat_id=user.chat_id_, text=message, reply_markup=q_keyboard)

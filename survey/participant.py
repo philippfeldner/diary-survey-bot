@@ -34,7 +34,7 @@ class Participant:
                 db.execute("INSERT INTO participants (ID, data_set, conditions, timezone,"
                            "country, gender, language, question, day, block, age, q_idle, active, pointer)"
                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           (chat_id, pickle.dumps({}), pickle.dumps([]), '', '', '', '', -1, 1, -1, -1, 0, 1, 0))
+                           (self.chat_id_, pickle.dumps({}), pickle.dumps([]), '', '', '', '', -1, 1, -1, -1, 0, 1, 0))
                 db.commit()
                 db.close()
                 text = "User:\t" + str(self.chat_id_) + "\tregistered.\t" + time.strftime("%X %x\n")
