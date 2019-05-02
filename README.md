@@ -1,3 +1,5 @@
+# !!! Development will be continued over [here](https://github.com/Catrobat/diary-survey-bot). !!!
+
 # diary-survey-bot
 
 **Developed in association with Uni-Graz.**  
